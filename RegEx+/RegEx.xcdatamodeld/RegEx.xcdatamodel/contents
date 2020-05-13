@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RegEx" representedClassName="RegEx" syncable="YES">
+        <attribute name="allowCommentsAndWhitespace" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="anchorsMatchLines" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="caseInsensitive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" defaultDateTimeInterval="599504400" usesScalarValueType="NO"/>
+        <attribute name="dotMatchesLineSeparators" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ignoreMetacharacters" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Untitled"/>
+        <attribute name="raw" optional="YES" attributeType="String"/>
+        <attribute name="sample" attributeType="String" defaultValueString=""/>
+        <attribute name="substitution" attributeType="String" defaultValueString=""/>
+        <attribute name="updatedAt" attributeType="Date" defaultDateTimeInterval="599504400" usesScalarValueType="NO"/>
+        <attribute name="useUnicodeWordBoundaries" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="useUnixLineSeparators" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <configuration name="Cloud" usedWithCloudKit="YES">
+        <memberEntity name="RegEx"/>
+    </configuration>
+    <elements>
+        <element name="RegEx" positionX="-63" positionY="-18" width="128" height="238"/>
+    </elements>
+</model>
