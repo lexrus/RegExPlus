@@ -10,6 +10,7 @@
 		D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D709006B245DB72C00326016 /* CloudKit.framework */; };
 		D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7090090245DB87C00326016 /* RegEx.xcdatamodeld */; };
 		D71871E6245EE9AC001F1E4E /* RegExFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71871E5245EE9AC001F1E4E /* RegExFetch.swift */; };
+		D71F8F10246F8E5300A11283 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F8F0F246F8E5300A11283 /* ActivityViewController.swift */; };
 		D721780B2451776000F17390 /* RegExTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721780A2451776000F17390 /* RegExTextView.swift */; };
 		D731F64B245EF4C500EEE17F /* RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F649245EF4C500EEE17F /* RegEx.swift */; };
 		D731F64E245EF77600EEE17F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F64D245EF77600EEE17F /* DataManager.swift */; };
@@ -43,6 +44,7 @@
 		D709006B245DB72C00326016 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D7090091245DB87C00326016 /* RegEx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegEx.xcdatamodel; sourceTree = "<group>"; };
 		D71871E5245EE9AC001F1E4E /* RegExFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExFetch.swift; sourceTree = "<group>"; };
+		D71F8F0F246F8E5300A11283 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		D721780A2451776000F17390 /* RegExTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExTextView.swift; sourceTree = "<group>"; };
 		D731F649245EF4C500EEE17F /* RegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegEx.swift; sourceTree = "<group>"; };
 		D731F64D245EF77600EEE17F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				D7732027245D185C003C0CF8 /* RegExTextView */,
 				D731F6552460F2BA00EEE17F /* SafariView.swift */,
+				D71F8F0F246F8E5300A11283 /* ActivityViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				D7CCA7EC244E038E00D81C74 /* LibraryView.swift in Sources */,
 				D7732035245D3456003C0CF8 /* MatchesTextView.swift in Sources */,
 				D71871E6245EE9AC001F1E4E /* RegExFetch.swift in Sources */,
+				D71F8F10246F8E5300A11283 /* ActivityViewController.swift in Sources */,
 				D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */,
 				D731F66C246139C700EEE17F /* View+KeyboardObserving.swift in Sources */,
 				D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */,

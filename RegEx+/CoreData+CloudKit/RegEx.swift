@@ -63,5 +63,18 @@ public class RegEx: NSManagedObject {
         }
         return options
     }
+    
+    public var flagOptions: String {
+        ""
+            + (caseInsensitive ? "i" : "")
+            + (allowCommentsAndWhitespace ? "x" : "")
+            + (dotMatchesLineSeparators ? "." : "")
+            + (anchorsMatchLines ? "m" : "")
+            + (useUnicodeWordBoundaries ? "w" : "")
+    }
+    
+    public override var description: String {
+        "/\(raw)/\(flagOptions)"
+    }
 
 }

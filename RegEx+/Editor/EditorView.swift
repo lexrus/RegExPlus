@@ -12,6 +12,7 @@ import SwiftUI
 struct EditorView: View {
     
     @ObservedObject var viewModel: EditorViewModel
+    @State private var isSharePresented = false
     
     init(regEx: RegEx) {
         self.viewModel = EditorViewModel(regEx: regEx)
@@ -47,7 +48,8 @@ struct EditorView: View {
         .keyboardObserving()
         .listStyle(GroupedListStyle())
         .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarItems(trailing: HStack(spacing: 30) {
+        .navigationBarItems(trailing: HStack(spacing: 8) {
+            shareButton
             cheatSheetButton
         })
         .navigationBarTitle(viewModel.regEx.name)
@@ -59,6 +61,19 @@ struct EditorView: View {
     private var dismissKeyboardDesture: some Gesture {
         DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+    }
+    
+    private var shareButton: some View {
+        Button(action: {
+            self.isSharePresented = true
+        }) {
+            Image(systemName: "square.and.arrow.up")
+                .imageScale(.large)
+                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 8))
+        }
+        .sheet(isPresented: $isSharePresented) {
+            ActivityViewController(activityItems: [self.viewModel.regEx.description])
         }
     }
     
