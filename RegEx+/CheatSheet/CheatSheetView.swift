@@ -114,6 +114,7 @@ struct CheatSheetView: View {
         }) {
             Image(systemName: "safari")
                 .imageScale(.large)
+                .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 0))
         }
         .sheet(isPresented: $showingSafari, content: {
             SafariView(url: URL(string: kNSRegularExpressionDocumentLink)!)

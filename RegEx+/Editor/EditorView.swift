@@ -65,6 +65,8 @@ struct EditorView: View {
     private var cheatSheetButton: some View {
         NavigationLink(destination: CheatSheetView()) {
             Image(systemName: "wand.and.stars")
+                .imageScale(.large)
+                .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 0))
         }
     }
 }
