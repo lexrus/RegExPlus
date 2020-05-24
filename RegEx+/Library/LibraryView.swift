@@ -32,7 +32,10 @@ struct LibraryView: View {
                 }
             }
         }
-        .navigationBarItems(leading: editButton, trailing: addButton)
+        .navigationBarItems(leading: editButton, trailing: HStack(spacing: 8) {
+            aboutButton.padding()
+            addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+        })
         .navigationBarTitle("RegEx+")
         .environment(\.editMode, $editMode)
     }
@@ -45,9 +48,16 @@ struct LibraryView: View {
         })
     }
     
+    private var aboutButton: some View {
+        NavigationLink(destination: AboutView()) {
+            Image(systemName: "info.circle")
+                .imageScale(.large)
+        }
+    }
+    
     private var addButton: some View {
         Button(action: addRegEx) {
-            Image(systemName: "plus")
+            Image(systemName: "plus.circle.fill")
                 .imageScale(.large)
         }
     }
@@ -56,8 +66,10 @@ struct LibraryView: View {
 #if DEBUG
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryView()
-            .environment(\.managedObjectContext, DataManager.shared.persistentContainer.viewContext)
+        NavigationView {
+            LibraryView()
+                .environment(\.managedObjectContext, DataManager.shared.persistentContainer.viewContext)
+        }
     }
 }
 #endif

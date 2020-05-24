@@ -24,10 +24,10 @@
 		D731F66C246139C700EEE17F /* View+KeyboardObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F666246139C700EEE17F /* View+KeyboardObserving.swift */; };
 		D731F66D246139C700EEE17F /* View+HideOnKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F667246139C700EEE17F /* View+HideOnKeyboard.swift */; };
 		D731F66E246139C700EEE17F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F668246139C700EEE17F /* Keyboard.swift */; };
+		D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BF66C247A3C0A0032EE35 /* AboutView.swift */; };
 		D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */; };
 		D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732032245D3388003C0CF8 /* String+NSRange.swift */; };
 		D7732035245D3456003C0CF8 /* MatchesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732034245D3456003C0CF8 /* MatchesTextView.swift */; };
-		D7BB73F7244F392200343AC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB73F6244F392200343AC5 /* SettingsView.swift */; };
 		D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB73F8244F47E400343AC5 /* EditorView.swift */; };
 		D7CCA7D5244E010D00D81C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D4244E010D00D81C74 /* AppDelegate.swift */; };
 		D7CCA7D7244E010D00D81C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D6244E010D00D81C74 /* SceneDelegate.swift */; };
@@ -58,10 +58,10 @@
 		D731F666246139C700EEE17F /* View+KeyboardObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+KeyboardObserving.swift"; sourceTree = "<group>"; };
 		D731F667246139C700EEE17F /* View+HideOnKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+HideOnKeyboard.swift"; sourceTree = "<group>"; };
 		D731F668246139C700EEE17F /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		D74BF66C247A3C0A0032EE35 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExSyntaxHighlighter.swift; sourceTree = "<group>"; };
 		D7732032245D3388003C0CF8 /* String+NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSRange.swift"; sourceTree = "<group>"; };
 		D7732034245D3456003C0CF8 /* MatchesTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTextView.swift; sourceTree = "<group>"; };
-		D7BB73F6244F392200343AC5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D7BB73F8244F47E400343AC5 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		D7CCA7D1244E010D00D81C74 /* RegEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CCA7D4244E010D00D81C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +147,14 @@
 			path = Vendors;
 			sourceTree = "<group>";
 		};
+		D74BF66E247A3C0E0032EE35 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D74BF66C247A3C0A0032EE35 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		D761DDC5245DC4DF00FE0678 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,14 +171,6 @@
 				D7CCA7EE244E041000D81C74 /* CheatSheetView.swift */,
 			);
 			path = CheatSheet;
-			sourceTree = "<group>";
-		};
-		D761DDC7245DC53600FE0678 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				D7BB73F6244F392200343AC5 /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		D7732027245D185C003C0CF8 /* RegExTextView */ = {
@@ -212,8 +212,8 @@
 				D7090093245DC43800326016 /* CoreData+CloudKit */,
 				D761DDC5245DC4DF00FE0678 /* Library */,
 				D7090094245DC46200326016 /* Editor */,
+				D74BF66E247A3C0E0032EE35 /* About */,
 				D761DDC6245DC52A00FE0678 /* CheatSheet */,
-				D761DDC7245DC53600FE0678 /* Settings */,
 				D7CCA7ED244E039D00D81C74 /* Views */,
 				D731F66F24613A4E00EEE17F /* Vendors */,
 				D7CCA7DA244E010F00D81C74 /* Assets.xcassets */,
@@ -336,7 +336,7 @@
 				D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */,
 				D731F652245F0B9A00EEE17F /* LibraryItemView.swift in Sources */,
 				D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */,
-				D7BB73F7244F392200343AC5 /* SettingsView.swift in Sources */,
+				D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */,
 				D731F66E246139C700EEE17F /* Keyboard.swift in Sources */,
 				D731F65424606F7800EEE17F /* RenameView.swift in Sources */,
 				D7CCA7D7244E010D00D81C74 /* SceneDelegate.swift in Sources */,
@@ -484,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "RegEx+/RegEx+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "RegEx+/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
@@ -495,6 +495,7 @@
 				);
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.lex.RegExCatalyst;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)App";
 				PRODUCT_NAME = RegEx;
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "RegEx+/RegEx+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "RegEx+/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
@@ -518,6 +519,7 @@
 				);
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.lex.RegExCatalyst;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)App";
 				PRODUCT_NAME = RegEx;
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

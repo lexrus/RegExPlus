@@ -49,8 +49,8 @@ struct EditorView: View {
         .listStyle(GroupedListStyle())
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarItems(trailing: HStack(spacing: 8) {
-            shareButton
-            cheatSheetButton
+            shareButton.padding()
+            cheatSheetButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
         })
         .navigationBarTitle(viewModel.regEx.name)
         .gesture(dismissKeyboardDesture)
@@ -70,7 +70,6 @@ struct EditorView: View {
         }) {
             Image(systemName: "square.and.arrow.up")
                 .imageScale(.large)
-                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 8))
         }
         .sheet(isPresented: $isSharePresented) {
             ActivityViewController(activityItems: [self.viewModel.regEx.description])
@@ -81,7 +80,6 @@ struct EditorView: View {
         NavigationLink(destination: CheatSheetView()) {
             Image(systemName: "wand.and.stars")
                 .imageScale(.large)
-                .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 0))
         }
     }
 }
