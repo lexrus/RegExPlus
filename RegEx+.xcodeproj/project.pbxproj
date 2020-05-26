@@ -271,7 +271,7 @@
 		D7CCA7C9244E010D00D81C74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Lex.sh;
 				TargetAttributes = {

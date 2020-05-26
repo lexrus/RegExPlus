@@ -1,6 +1,28 @@
 
-# Created by https://www.gitignore.io/api/xcode,macos
-# Edit at https://www.gitignore.io/?templates=xcode,macos
+# Created by https://www.gitignore.io/api/xcode,macos,fastlane
+# Edit at https://www.gitignore.io/?templates=xcode,macos,fastlane
+
+### fastlane ###
+# fastlane - A streamlined workflow tool for Cocoa deployment
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+# fastlane specific
+fastlane/report.xml
+fastlane/Appfile
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
+
+# scan temporary files
+fastlane/test_output
 
 ### macOS ###
 # General
@@ -32,7 +54,6 @@ Temporary Items
 
 ### Xcode ###
 # Xcode
-#
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
@@ -65,4 +86,4 @@ DerivedData/
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.gitignore.io/api/xcode,macos
+# End of https://www.gitignore.io/api/xcode,macos,fastlane
