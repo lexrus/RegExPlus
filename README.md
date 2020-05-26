@@ -3,7 +3,7 @@
 [![Swift 5.2](https://img.shields.io/badge/swift-5.2-ED523F.svg?style=flat)](https://swift.org/download/)
 [![@lexrus](https://img.shields.io/badge/contact-@lexrus-336699.svg?style=flat)](https://twitter.com/lexrus)
 
-My first SwiftUI learning-by-doing project! A Regular Exression tool.
+My first SwiftUI learning-by-doing project! A Regular Expression tool.
 
 <img src="https://user-images.githubusercontent.com/219689/81832928-a88edf00-9571-11ea-9917-d4c0f219878d.png"/>
 
