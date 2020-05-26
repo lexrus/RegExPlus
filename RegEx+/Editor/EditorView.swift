@@ -49,7 +49,9 @@ struct EditorView: View {
         .listStyle(GroupedListStyle())
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarItems(trailing: HStack(spacing: 8) {
+            #if !targetEnvironment(macCatalyst)
             shareButton.padding()
+            #endif
             cheatSheetButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
         })
         .navigationBarTitle(viewModel.regEx.name)
