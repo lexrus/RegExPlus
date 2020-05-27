@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>metacharacters</key>
+    <array>
+        <dict><key>exp</key><string>\a</string><key>des</key>
+        <string>Match a BELL, \u0007</string></dict>
+        <dict><key>exp</key><string>\A</string><key>des</key>
+        <string>Match at the beginning of the input. Differs from ^ in that \A will not match after a new line within the input.</string></dict>
+        <dict><key>exp</key><string>\b, outside of a [Set]</string><key>des</key>
+        <string>Match if the current position is a word boundary. Boundaries occur at the transitions between word (\w) and non-word (\W) characters, with combining marks ignored. For better word boundaries, see useUnicodeWordBoundaries.</string></dict>
+        <dict><key>exp</key><string>\b, within a [Set]</string><key>des</key>
+        <string>Match a BACKSPACE, \u0008.</string></dict>
+        <dict><key>exp</key><string>\B</string><key>des</key>
+        <string>Match if the current position is not a word boundary.</string></dict>
+        <dict><key>exp</key><string>\cX</string><key>des</key>
+        <string>Match a control-X character</string></dict>
+        <dict><key>exp</key><string>\d</string><key>des</key>
+        <string>Match any character with the Unicode General Category of Nd (Number, Decimal Digit.)</string></dict>
+        <dict><key>exp</key><string>\D</string><key>des</key>
+        <string>Match any character that is not a decimal digit.</string></dict>
+        <dict><key>exp</key><string>\e</string><key>des</key>
+        <string>Match an ESCAPE, \u001B.</string></dict>
+        <dict><key>exp</key><string>\E</string><key>des</key>
+        <string>Terminates a \Q ... \E quoted sequence.</string></dict>
+        <dict><key>exp</key><string>\f</string><key>des</key>
+        <string>Match a FORM FEED, \u000C.</string></dict>
+        <dict><key>exp</key><string>\G</string><key>des</key>
+        <string>Match if the current position is at the end of the previous match.</string></dict>
+        <dict><key>exp</key><string>\n</string><key>des</key>
+        <string>Match a LINE FEED, \u000A.</string></dict>
+        <dict><key>exp</key><string>\N{UNICODE CHARACTER NAME}</string><key>des</key>
+        <string>Match the named character.</string></dict>
+        <dict><key>exp</key><string>\p{UNICODE PROPERTY NAME}</string><key>des</key>
+        <string>Match any character with the specified Unicode Property.</string></dict>
+        <dict><key>exp</key><string>\P{UNICODE PROPERTY NAME}</string><key>des</key>
+        <string>Match any character not having the specified Unicode Property.</string></dict>
+        <dict><key>exp</key><string>\Q</string><key>des</key>
+        <string>Quotes all following characters until \E.</string></dict>
+        <dict><key>exp</key><string>\r</string><key>des</key>
+        <string>Match a CARRIAGE RETURN, \u000D.</string></dict>
+        <dict><key>exp</key><string>\s</string><key>des</key>
+        <string>Match a white space character. White space is defined as [\t\n\f\r\p{Z}].</string></dict>
+        <dict><key>exp</key><string>\S</string><key>des</key>
+        <string>Match a non-white space character.</string></dict>
+        <dict><key>exp</key><string>\t</string><key>des</key>
+        <string>Match a HORIZONTAL TABULATION, \u0009.</string></dict>
+        <dict><key>exp</key><string>\uhhhh</string><key>des</key>
+        <string>Match the character with the hex value hhhh.</string></dict>
+        <dict><key>exp</key><string>\Uhhhhhhhh</string><key>des</key>
+        <string>Match the character with the hex value hhhhhhhh. Exactly eight hex digits must be provided, even though the largest Unicode code point is \U0010ffff.</string></dict>
+        <dict><key>exp</key><string>\w</string><key>des</key>
+        <string>Match a word character. Word characters are [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string></dict>
+        <dict><key>exp</key><string>\W</string><key>des</key>
+        <string>Match a non-word character.</string></dict>
+        <dict><key>exp</key><string>\x{hhhh}</string><key>des</key>
+        <string>Match the character with hex value hhhh. From one to six hex digits may be supplied.</string></dict>
+        <dict><key>exp</key><string>\xhh</string><key>des</key>
+        <string>Match the character with two digit hex value hh.</string></dict>
+        <dict><key>exp</key><string>\X</string><key>des</key>
+        <string>Match a Grapheme Cluster.</string></dict>
+        <dict><key>exp</key><string>\Z</string><key>des</key>
+        <string>Match if the current position is at the end of input, but before the final line terminator, if one exists.</string></dict>
+        <dict><key>exp</key><string>\z</string><key>des</key>
+        <string>Match if the current position is at the end of input.</string></dict>
+        <dict><key>exp</key><string>\n</string><key>des</key>
+        <string>Back Reference. Match whatever the nth capturing group matched. n must be a number ≥ 1 and ≤ total number of capture groups in the pattern.</string></dict>
+        <dict><key>exp</key><string>\0ooo</string><key>des</key>
+        <string>Match an Octal character. ooo is from one to three octal digits. 0377 is the largest allowed Octal character. The leading zero is required; it distinguishes Octal constants from back references.</string></dict>
+        <dict><key>exp</key><string>[pattern]</string><key>des</key>
+        <string>Match any one character from the pattern.</string></dict>
+        <dict><key>exp</key><string>.</string><key>des</key>
+        <string>Match any character.</string></dict>
+        <dict><key>exp</key><string>^</string><key>des</key>
+        <string>Match at the beginning of a line.</string></dict>
+        <dict><key>exp</key><string>$</string><key>des</key>
+        <string>Match at the end of a line.</string></dict>
+        <dict><key>exp</key><string>\</string><key>des</key>
+        <string>Quotes the following character. Characters that must be quoted to be treated as literals are * ? + [ ( ) { } ^ $ | \ . /</string></dict>
+    </array>
+    <key>operators</key>
+    <array>
+        <dict><key>exp</key><string>|</string><key>des</key>
+        <string>Alternation. A|B matches either A or B.</string></dict>
+        <dict><key>exp</key><string>*</string><key>des</key>
+        <string>Match 0 or more times. Match as many times as possible.</string></dict>
+        <dict><key>exp</key><string>+</string><key>des</key>
+        <string>Match 1 or more times. Match as many times as possible.</string></dict>
+        <dict><key>exp</key><string>?</string><key>des</key>
+        <string>Match zero or one times. Prefer one.</string></dict>
+        <dict><key>exp</key><string>{n}</string><key>des</key>
+        <string>Match exactly n times.</string></dict>
+        <dict><key>exp</key><string>{n,}</string><key>des</key>
+        <string>Match at least n times. Match as many times as possible.</string></dict>
+        <dict><key>exp</key><string>{n,m}</string><key>des</key>
+        <string>Match between n and m times. Match as many times as possible, but not more than m.</string></dict>
+        <dict><key>exp</key><string>*?</string><key>des</key>
+        <string>Match 0 or more times. Match as few times as possible.</string></dict>
+        <dict><key>exp</key><string>+?</string><key>des</key>
+        <string>Match 1 or more times. Match as few times as possible.</string></dict>
+        <dict><key>exp</key><string>??</string><key>des</key>
+        <string>Match zero or one times. Prefer zero.</string></dict>
+        <dict><key>exp</key><string>{n}?</string><key>des</key>
+        <string>Match exactly n times.</string></dict>
+        <dict><key>exp</key><string>{n,}?</string><key>des</key>
+        <string>Match at least n times, but no more than required for an overall pattern match.</string></dict>
+        <dict><key>exp</key><string>{n,m}?</string><key>des</key>
+        <string>Match between n and m times. Match as few times as possible, but not less than n.</string></dict>
+        <dict><key>exp</key><string>*+</string><key>des</key>
+        <string>Match 0 or more times. Match as many times as possible when first encountered, do not retry with fewer even if overall match fails (Possessive Match).</string></dict>
+        <dict><key>exp</key><string>++</string><key>des</key>
+        <string>Match 1 or more times. Possessive match.</string></dict>
+        <dict><key>exp</key><string>?+</string><key>des</key>
+        <string>Match zero or one times. Possessive match.</string></dict>
+        <dict><key>exp</key><string>{n}+</string><key>des</key>
+        <string>Match exactly n times.</string></dict>
+        <dict><key>exp</key><string>{n,}+</string><key>des</key>
+        <string>Match at least n times. Possessive Match.</string></dict>
+        <dict><key>exp</key><string>{n,m}+</string><key>des</key>
+        <string>Match between n and m times. Possessive Match.</string></dict>
+        <dict><key>exp</key><string>(...)</string><key>des</key>
+        <string>Capturing parentheses. Range of input that matched the parenthesized subexpression is available after the match.</string></dict>
+        <dict><key>exp</key><string>(?:...)</string><key>des</key>
+        <string>Non-capturing parentheses. Groups the included pattern, but does not provide capturing of matching text. Somewhat more efficient than capturing parentheses.</string></dict>
+        <dict><key>exp</key><string>(?&gt;...)</string><key>des</key>
+        <string>Atomic-match parentheses. First match of the parenthesized subexpression is the only one tried; if it does not lead to an overall pattern match, back up the search for a match to a position before the "(?&gt;"</string></dict>
+        <dict><key>exp</key><string>(?# ... )</string><key>des</key>
+        <string>Free-format comment (?# comment ).</string></dict>
+        <dict><key>exp</key><string>(?= ... )</string><key>des</key>
+        <string>Look-ahead assertion. True if the parenthesized pattern matches at the current input position, but does not advance the input position.</string></dict>
+        <dict><key>exp</key><string>(?! ... )</string><key>des</key>
+        <string>Negative look-ahead assertion. True if the parenthesized pattern does not match at the current input position. Does not advance the input position.</string></dict>
+        <dict><key>exp</key><string>(?&lt;= ... )</string><key>des</key>
+        <string>Look-behind assertion. True if the parenthesized pattern matches text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string></dict>
+        <dict><key>exp</key><string>(?&lt;! ... )</string><key>des</key>
+        <string>Negative Look-behind assertion. True if the parenthesized pattern does not match text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string></dict>
+        <dict><key>exp</key><string>(?ismwx-ismwx: ... )</string><key>des</key>
+        <string>Flag settings. Evaluate the parenthesized expression with the specified flags enabled or -disabled. The flags are defined in Flag Options.</string></dict>
+        <dict><key>exp</key><string>(?ismwx-ismwx)</string><key>des</key>
+        <string>Flag settings. Change the flag settings. Changes apply to the portion of the pattern following the setting. For example, (?i) changes to a case insensitive match.The flags are defined in Flag Options.</string></dict>
+    </array>
+</dict>
+</plist>
