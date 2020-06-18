@@ -305,7 +305,7 @@
 			<key>exp</key>
 			<string>{n,m}?</string>
 			<key>des</key>
-			<string>Match between n and m times. Match as few times as possible, but not less than n.</string>
+			<string>匹配 n 到 m 次，尽可能少匹配，但不少于 n 次。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -329,7 +329,7 @@
 			<key>exp</key>
 			<string>{n}+</string>
 			<key>des</key>
-			<string>Match exactly n times.</string>
+			<string>明确匹配 n 次。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -347,13 +347,13 @@
 			<key>exp</key>
 			<string>(...)</string>
 			<key>des</key>
-			<string>Capturing parentheses. Range of input that matched the parenthesized subexpression is available after the match.</string>
+			<string>圆括号匹配。整个表达式匹配结束后，圆括号内的子表达式所捕获到的区域能从匹配信息中单独获得。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?:...)</string>
 			<key>des</key>
-			<string>Non-capturing parentheses. Groups the included pattern, but does not provide capturing of matching text. Somewhat more efficient than capturing parentheses.</string>
+			<string>非捕获圆括号。匹配括号内冒号之后的表达式但不做捕获，无法从匹配信息中获得，某些时候比捕获圆括号更加高效。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -365,7 +365,7 @@
 			<key>exp</key>
 			<string>(?# ... )</string>
 			<key>des</key>
-			<string>Free-format comment (?# comment ).</string>
+			<string>自由格式的注释 (?# 注释 ).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
