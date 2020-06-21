@@ -170,7 +170,7 @@
 			<key>exp</key>
 			<string>\X</string>
 			<key>des</key>
-			<string>Match a Grapheme Cluster.</string>
+			<string>匹配一个字符簇（Grapheme Cluster）。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -194,7 +194,7 @@
 			<key>exp</key>
 			<string>\0ooo</string>
 			<key>des</key>
-			<string>Match an Octal character. ooo is from one to three octal digits. 0377 is the largest allowed Octal character. The leading zero is required; it distinguishes Octal constants from back references.</string>
+			<string>匹配一个八进制字符。ooo 为一个到三个八进制数字。0377 是有效的最大八进制字符。前置的零是必须的；它将八进制常量与之后的引用值区分开来。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -299,7 +299,7 @@
 			<key>exp</key>
 			<string>{n,}?</string>
 			<key>des</key>
-			<string>Match at least n times, but no more than required for an overall pattern match.</string>
+			<string>匹配至少 n 次，但不超过整体模式匹配的要求。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -311,19 +311,19 @@
 			<key>exp</key>
 			<string>*+</string>
 			<key>des</key>
-			<string>Match 0 or more times. Match as many times as possible when first encountered, do not retry with fewer even if overall match fails (Possessive Match).</string>
+			<string>匹配零次或以上。第一次遇到时，尽量多匹配，即使整体匹配失败，也不要用较少的次数重试（独占模式）。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>++</string>
 			<key>des</key>
-			<string>Match 1 or more times. Possessive match.</string>
+			<string>匹配一次或多次，独占模式。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>?+</string>
 			<key>des</key>
-			<string>Match zero or one times. Possessive match.</string>
+			<string>匹配零次或一次，独占模式。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -335,13 +335,13 @@
 			<key>exp</key>
 			<string>{n,}+</string>
 			<key>des</key>
-			<string>Match at least n times. Possessive Match.</string>
+			<string>匹配至少 n 次，独占模式，匹配得越多越好。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,m}+</string>
 			<key>des</key>
-			<string>Match between n and m times. Possessive Match.</string>
+			<string>匹配 n 到 m 次，独占模式，匹配得越多越好。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -359,7 +359,7 @@
 			<key>exp</key>
 			<string>(?&gt;...)</string>
 			<key>des</key>
-			<string>Atomic-match parentheses. First match of the parenthesized subexpression is the only one tried; if it does not lead to an overall pattern match, back up the search for a match to a position before the &quot;(?&gt;&quot;</string>
+			<string>原子匹配圆括号。括号子表达式的第一次匹配是唯一一次尝试；如果没有导致整体模式匹配，则搜索匹配回到 &quot;(?&gt;&quot; 之前的位置。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
@@ -371,37 +371,37 @@
 			<key>exp</key>
 			<string>(?= ... )</string>
 			<key>des</key>
-			<string>Look-ahead assertion. True if the parenthesized pattern matches at the current input position, but does not advance the input position.</string>
+			<string>向后断言。当括号内的表达式在当前输入位置匹配时生效，但不移动输入位置。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?! ... )</string>
 			<key>des</key>
-			<string>Negative look-ahead assertion. True if the parenthesized pattern does not match at the current input position. Does not advance the input position.</string>
+			<string>否定的向后断言。当括号内的表达式在当前输入位置不匹配时生效。不移动输入位置。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?&lt;= ... )</string>
 			<key>des</key>
-			<string>Look-behind assertion. True if the parenthesized pattern matches text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string>
+			<string>向前断言。如果括号内的表达式与当前输入位置之前的文本相匹配，且匹配的最后一个字符是当前位置之前的输入字符，则生效，且不改变输入位置。向前断言模式匹配的字符串长度不能是无限制的（没有 * 或 + 运算符）。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?&lt;! ... )</string>
 			<key>des</key>
-			<string>Negative Look-behind assertion. True if the parenthesized pattern does not match text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string>
+			<string>否定的向前断言。如果括号内的表达式与当前输入位置之前的文本不匹配，则生效，匹配的最后一个字符是当前位置之前的输入字符。不改变输入位置。否定的向前断言模式匹配的字符串长度不能是无限制的（没有 * 或 + 运算符）。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?ismwx-ismwx: ... )</string>
 			<key>des</key>
-			<string>Flag settings. Evaluate the parenthesized expression with the specified flags enabled or -disabled. The flags are defined in Flag Options.</string>
+            <string>标志设置。在启用或禁用指定的标志时评估括号内的表达式。这些标志在标志选项中定义。例如，(?i:Aa) 启用不区分大小写，(?-i:Aa) 禁用不区分大小写。</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?ismwx-ismwx)</string>
 			<key>des</key>
-			<string>Flag settings. Change the flag settings. Changes apply to the portion of the pattern following the setting. For example, (?i) changes to a case insensitive match.The flags are defined in Flag Options.</string>
+			<string>标志设置。更改标志设置。更改适用于设置后的模式部分。例如，(?i) 改变为不区分大小写的匹配。标志在标志选项中定义。</string>
 		</dict>
 	</array>
 </dict>

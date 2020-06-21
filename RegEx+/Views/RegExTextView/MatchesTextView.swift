@@ -172,7 +172,6 @@ struct MatchesTextView_Previews: PreviewProvider {
                 print("Final text: \(test)")
             }
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.black))
-            Text("Something static here...")
             Spacer()
         }
         .padding()

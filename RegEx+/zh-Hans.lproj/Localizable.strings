@@ -1,69 +1,27 @@
-/* No comment provided by engineer. */
-"Acknowledgements" = "Acknowledgements";
-
-/* No comment provided by engineer. */
-"Allow Comments and Whitespace" = "Allow Comments and Whitespace";
-
-/* No comment provided by engineer. */
-"Anchors Match Lines" = "Anchors Match Lines";
-
-/* No comment provided by engineer. */
-"Case Insensitive" = "Case Insensitive";
-
-/* No comment provided by engineer. */
-"Description:" = "Description:";
-
-/* No comment provided by engineer. */
-"Dot Matches Line Separators" = "Dot Matches Line Separators";
-
-/* No comment provided by engineer. */
-"Ignore Metacharacters" = "Ignore Metacharacters";
-
-/* No comment provided by engineer. */
+"Acknowledgements" = "鸣谢";
+"Allow Comments and Whitespace" = "允许注释和空格";
+"Anchors Match Lines" = "锚点匹配行";
+"Case Insensitive" = "不区分大小写";
+"Description:" = "描述:";
+"Dot Matches Line Separators" = "点符号匹配行分隔符";
+"Ignore Metacharacters" = "忽略元字符";
 "KeyboardObserving" = "KeyboardObserving";
-
-/* No comment provided by engineer. */
-"Metacharacters" = "Metacharacters";
-
-/* No comment provided by engineer. */
-"Name" = "Name";
-
-/* No comment provided by engineer. */
-"New name" = "New name";
-
-/* No comment provided by engineer. */
-"Operators" = "Operators";
-
-/* No comment provided by engineer. */
-"Options" = "Options";
-
-/* No comment provided by engineer. */
-"Price: $$$1\\.$2\\n" = "Price: $$$1\\.$2\\n";
-
-/* No comment provided by engineer. */
-"Rate RegEx+" = "Rate RegEx+";
-
-/* No comment provided by engineer. */
-"Regular Expression" = "Regular Expression";
-
-/* No comment provided by engineer. */
-"Sample Text" = "Sample Text";
-
-/* No comment provided by engineer. */
-"Something static here..." = "Something static here...";
-
-/* No comment provided by engineer. */
-"Substitution Result" = "Substitution Result";
-
-/* No comment provided by engineer. */
-"Substitution Template" = "Substitution Template";
-
-/* No comment provided by engineer. */
-"Use Unicode Word Boundaries" = "Use Unicode Word Boundaries";
-
-/* No comment provided by engineer. */
-"Use Unix Line Separators" = "Use Unix Line Separators";
-
-/* No comment provided by engineer. */
-"Write a review" = "Write a review";
-
+"Metacharacters" = "元字符";
+"Name" = "名字";
+"New name" = "新的名字";
+"Operators" = "操作符";
+"Options" = "选项";
+"Price: $$$1\\.$2\\n" = "价格: $$$1\\.$2\\n";
+"Rate RegEx+" = "评论 RegEx+";
+"Regular Expression" = "正则表达式";
+"Sample Text" = "示例文字";
+"Substitution Result" = "替换结果";
+"Substitution Template" = "替换模板";
+"Use Unicode Word Boundaries" = "使用 Unicode 字符边界";
+"Use Unix Line Separators" = "使用 Unix 换行符";
+"Write a review" = "写评论";
+"Done" = "完成";
+"Edit" = "编辑";
+"1 match" = "一次匹配";
+"%lld matches" = "%d 次匹配";
+"Cheat Sheet" = "小抄";

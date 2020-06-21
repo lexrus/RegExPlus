@@ -161,16 +161,12 @@ private struct SampleFooterView: View {
 private struct SampleHeaderView: View {
     var count: Int
     
-    private var matchesString: String {
-        return self.count == 1 ? "1 match" : "\(count) matches"
-    }
-    
     var body: some View {
         HStack {
             Text("Sample Text")
             if count > 0 {
                 Spacer()
-                Text(matchesString)
+                Text(count == 1 ? "1 match" : "\(count) matches")
                     .font(.footnote)
                     .foregroundColor(Color.secondary)
                     .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
