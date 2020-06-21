@@ -80,6 +80,8 @@
 		D7CCA7E8244E011C00D81C74 /* RegEx+.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "RegEx+.entitlements"; sourceTree = "<group>"; };
 		D7CCA7EB244E038E00D81C74 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D7CCA7EE244E041000D81C74 /* CheatSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheetView.swift; sourceTree = "<group>"; };
+		D7D0E96F249F4FA800F6B9DF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/CheatSheet.plist"; sourceTree = "<group>"; };
+		D7D0E970249F4FA800F6B9DF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D7E9174A246C47D400F2BE17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D7EF73592453E7FB005974F0 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -296,6 +298,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
@@ -367,6 +370,7 @@
 			children = (
 				D77C796B247EAAF800D3B1B2 /* en */,
 				D77C796D247EAB0A00D3B1B2 /* zh-Hans */,
+				D7D0E970249F4FA800F6B9DF /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -376,6 +380,7 @@
 			children = (
 				D77C7971247EBC6D00D3B1B2 /* en */,
 				D77C7973247EBC7300D3B1B2 /* zh-Hans */,
+				D7D0E96F249F4FA800F6B9DF /* zh-Hant */,
 			);
 			name = CheatSheet.plist;
 			sourceTree = "<group>";

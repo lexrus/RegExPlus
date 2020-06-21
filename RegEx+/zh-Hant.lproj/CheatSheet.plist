@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>匹配一個警報聲, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>匹配輸入的開端。和 ^ 不同的是，\A 不會匹配換行後的開端。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, 在 [集合] 外</string>
+			<key>des</key>
+			<string>當前位置是詞語邊界時匹配。詞語邊界是指詞語 (\w) 和非詞語 (\W) 字符之間的界限，這種邊界會忽略連字符。為了更好地使用詞語邊界，請打開『使用 unicode 詞語邊界』選項。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, 在 [集合] 內</string>
+			<key>des</key>
+			<string>匹配一個退格, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>當前位置不是詞語邊界時匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>匹配一個 control-X 字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>匹配任何符合 Unicode 通用類別的數字字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>匹配任何不為數字的字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>匹配一個 ESCAPE, \u001B。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>終止一個 \Q ... \E 元字符引用序列。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>匹配換頁符, \u000C。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>當前位置是上一個匹配的結束位置時匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>匹配一個換行符, \u000A。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>匹配 Unicode 命名字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>匹配任意有指定 Unicode 屬性的字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>匹配任意不包括指定 Unicode 屬性的字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>開始元字符引用序列，直到遇到 \E。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>匹配一個 &lt;CR&gt; 回車, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>匹配一個空白字符，它的定義是 [\t\n\f\r\p{Z}]。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>匹配一個非空白字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>匹配一個橫向 TAB 縮進，\u0009。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>匹配 hex 值為 hhhh 的字符串。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>匹配 hex 值為 hhhhhhhh 的字符串。儘管最大的 Unicode 值是 \U0010ffff，但還是要提供完整的八個十六進制數字。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>匹配一個詞語字符，它的字符定義是 [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>匹配一個非詞語字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>匹配 hex 值為 hhhh 的字符串，可以是一到六位的十六進制數字。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>匹配 hex 值為 hh 的兩位十六進制數字對應的字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>匹配一個字符簇（Grapheme Cluster）。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>當前位置是輸入的結尾時匹配，但僅匹配到行尾標識前，如果有的話。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>當前位置是輸入的結尾時匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>換行引用。無論第 n 個捕獲組匹配到什麼，n 必須是一個 ≥ 1 並 ≤ 總捕獲數的數字。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>匹配一個八進制字符。ooo 為一個到三個八進制數字。0377 是有效的最大八進制字符。前置的零是必須的；它將八進制常量與之後的引用值區分開來。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>匹配任何在這個方括號內的字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>匹配所有字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>匹配行首。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>匹配行尾。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>轉義後續字符。有些字符必須轉義後才能被當成字面量使用，如 * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>可選匹配。A|B 表示是 A 或者是 B 的一個字符。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>匹配零次或多次，優先匹配多次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>匹配一次或多次，優先匹配多次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>匹配零到一次，優先匹配一次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>明確匹配 n 次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>匹配最少 n 次，最多無限次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>匹配 n 到 m 次，優先匹配儘可能多的次數，但不會超過 m 次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>匹配零次或多次，儘可能少匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>匹配一次或多次，儘可能少匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>匹配零次或一次，儘可能少匹配。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>明確匹配 n 次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>匹配至少 n 次，但不超過整體模式匹配的要求。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>匹配 n 到 m 次，儘可能少匹配，但不少於 n 次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>匹配零次或以上。第一次遇到時，儘量多匹配，即使整體匹配失敗，也不要用較少的次數重試（獨佔模式）。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>匹配一次或多次，獨佔模式。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>匹配零次或一次，獨佔模式。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>明確匹配 n 次。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>匹配至少 n 次，獨佔模式，匹配得越多越好。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>匹配 n 到 m 次，獨佔模式，匹配得越多越好。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>圓括號匹配。整個表達式匹配結束後，圓括號內的子表達式所捕獲到的區域能從匹配信息中單獨獲得。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>非捕獲圓括號。匹配括號內冒號之後的表達式但不做捕獲，無法從匹配信息中獲得，某些時候比捕獲圓括號更加高效。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>原子匹配圓括號。括號子表達式的第一次匹配是唯一一次嘗試；如果沒有導致整體模式匹配，則搜索匹配回到 &quot;(?&gt;&quot; 之前的位置。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>自由格式的註釋 (?# 註釋 ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>向後斷言。當括號內的表達式在當前輸入位置匹配時生效，但不移動輸入位置。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>否定的向後斷言。當括號內的表達式在當前輸入位置不匹配時生效。不移動輸入位置。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>向前斷言。如果括號內的表達式與當前輸入位置之前的文本相匹配，且匹配的最後一個字符是當前位置之前的輸入字符，則生效，且不改變輸入位置。向前斷言模式匹配的字符串長度不能是無限制的（沒有 * 或 + 運算符）。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>否定的向前斷言。如果括號內的表達式與當前輸入位置之前的文本不匹配，則生效，匹配的最後一個字符是當前位置之前的輸入字符。不改變輸入位置。否定的向前斷言模式匹配的字符串長度不能是無限制的（沒有 * 或 + 運算符）。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+            <string>標誌設置。在啟用或禁用指定的標誌時評估括號內的表達式。這些標誌在標誌選項中定義。例如，(?i:Aa) 啟用不區分大小寫，(?-i:Aa) 禁用不區分大小寫。</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>標誌設置。更改標誌設置。更改適用於設置後的模式部分。例如，(?i) 改變為不區分大小寫的匹配。標誌在標誌選項中定義。</string>
+		</dict>
+	</array>
+</dict>
+</plist>
