@@ -19,6 +19,7 @@
 		D731F65424606F7800EEE17F /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F65324606F7800EEE17F /* RenameView.swift */; };
 		D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F6552460F2BA00EEE17F /* SafariView.swift */; };
 		D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = D734CBE024AA40E300C1F385 /* KeyboardObserving */; };
+		D734CBE424AA45A900C1F385 /* RegEx+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D734CBE324AA45A900C1F385 /* RegEx+App.swift */; };
 		D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BF66C247A3C0A0032EE35 /* AboutView.swift */; };
 		D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */; };
 		D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732032245D3388003C0CF8 /* String+NSRange.swift */; };
@@ -26,8 +27,6 @@
 		D77C796A247EAAF800D3B1B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D77C796C247EAAF800D3B1B2 /* Localizable.strings */; };
 		D77C7970247EBC6D00D3B1B2 /* CheatSheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = D77C7972247EBC6D00D3B1B2 /* CheatSheet.plist */; };
 		D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB73F8244F47E400343AC5 /* EditorView.swift */; };
-		D7CCA7D5244E010D00D81C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D4244E010D00D81C74 /* AppDelegate.swift */; };
-		D7CCA7D7244E010D00D81C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D6244E010D00D81C74 /* SceneDelegate.swift */; };
 		D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D8244E010D00D81C74 /* HomeView.swift */; };
 		D7CCA7DB244E010F00D81C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CCA7DA244E010F00D81C74 /* Assets.xcassets */; };
 		D7CCA7DE244E010F00D81C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CCA7DD244E010F00D81C74 /* Preview Assets.xcassets */; };
@@ -49,6 +48,7 @@
 		D731F651245F0B9A00EEE17F /* LibraryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemView.swift; sourceTree = "<group>"; };
 		D731F65324606F7800EEE17F /* RenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameView.swift; sourceTree = "<group>"; };
 		D731F6552460F2BA00EEE17F /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		D734CBE324AA45A900C1F385 /* RegEx+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegEx+App.swift"; sourceTree = "<group>"; };
 		D74BF66C247A3C0A0032EE35 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExSyntaxHighlighter.swift; sourceTree = "<group>"; };
 		D7732032245D3388003C0CF8 /* String+NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSRange.swift"; sourceTree = "<group>"; };
@@ -59,8 +59,6 @@
 		D77C7973247EBC7300D3B1B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/CheatSheet.plist"; sourceTree = "<group>"; };
 		D7BB73F8244F47E400343AC5 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		D7CCA7D1244E010D00D81C74 /* RegEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7CCA7D4244E010D00D81C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7CCA7D6244E010D00D81C74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7CCA7D8244E010D00D81C74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D7CCA7DA244E010F00D81C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7CCA7DD244E010F00D81C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -175,8 +173,7 @@
 			children = (
 				D7E9174A246C47D400F2BE17 /* README.md */,
 				D7CCA7E8244E011C00D81C74 /* RegEx+.entitlements */,
-				D7CCA7D4244E010D00D81C74 /* AppDelegate.swift */,
-				D7CCA7D6244E010D00D81C74 /* SceneDelegate.swift */,
+				D734CBE324AA45A900C1F385 /* RegEx+App.swift */,
 				D7CCA7D8244E010D00D81C74 /* HomeView.swift */,
 				D7090093245DC43800326016 /* CoreData+CloudKit */,
 				D761DDC5245DC4DF00FE0678 /* Library */,
@@ -325,7 +322,7 @@
 				D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */,
 				D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */,
 				D721780B2451776000F17390 /* RegExTextView.swift in Sources */,
-				D7CCA7D5244E010D00D81C74 /* AppDelegate.swift in Sources */,
+				D734CBE424AA45A900C1F385 /* RegEx+App.swift in Sources */,
 				D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */,
 				D731F64E245EF77600EEE17F /* DataManager.swift in Sources */,
 				D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */,
@@ -333,7 +330,6 @@
 				D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */,
 				D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */,
 				D731F65424606F7800EEE17F /* RenameView.swift in Sources */,
-				D7CCA7D7244E010D00D81C74 /* SceneDelegate.swift in Sources */,
 				D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */,
 				D731F650245F053A00EEE17F /* LibraryView+Data.swift in Sources */,
 				D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */,
@@ -425,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -481,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

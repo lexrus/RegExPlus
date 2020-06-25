@@ -195,8 +195,19 @@ struct EditorView_Previews: PreviewProvider {
     }()
 
     static var previews: some View {
-        NavigationView {
-            EditorView(regEx: regEx)
+        Group {
+            NavigationView {
+                EditorView(regEx: regEx)
+            }
+            .environment(\.sizeCategory, .extraLarge)
+            .previewLayout(.device)
+            .previewDevice("iPhone 11")
+            NavigationView {
+                EditorView(regEx: regEx)
+            }
+            .previewDevice("iPhone 11")
+            .preferredColorScheme(.dark)
+            .environment(\.sizeCategory, .large)
         }
     }
 }

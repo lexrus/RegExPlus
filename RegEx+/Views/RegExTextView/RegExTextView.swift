@@ -145,13 +145,23 @@ struct RegExTextView_Previews: PreviewProvider {
     static var testBinding = Binding<String>(get: { test }, set: { test = $0 })
 
     static var previews: some View {
-        VStack(alignment: .leading) {
-            RegExTextView("Enter some text here", text: testBinding) {
-                print("Final text: \(test)")
+        Group {
+            VStack(alignment: .leading) {
+                RegExTextView("Enter some text here", text: testBinding) {
+                    print("Final text: \(test)")
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4).stroke(Color.black)
+                )
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 4).stroke(Color.black)
-            )
+            VStack(alignment: .leading) {
+                RegExTextView("Enter some text here", text: testBinding) {
+                    print("Final text: \(test)")
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4).stroke(Color.black)
+                )
+            }
         }
     }
 }
