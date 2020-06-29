@@ -14,7 +14,6 @@ struct RegExPlusApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Text(Date().advanced(by: -60), style: .relative)
             HomeView()
                 .environment(\.managedObjectContext, viewContext)
                 .onAppear {
