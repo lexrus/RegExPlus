@@ -1,0 +1,25 @@
+disabled_rules:
+  - todo
+  - trailing_whitespace
+  - colon
+  - identifier_name
+  - comma
+  - vertical_whitespace
+  - type_name
+  - trailing_comma
+  - multiple_closures_with_trailing_closure
+excluded:
+  - Carthage
+  - Pods
+line_length:
+  - 200
+  - 220
+function_body_length:
+  - 200
+  - 300
+type_body_length:
+  - 300
+  - 500
+file_length:
+  - 500
+  - 700

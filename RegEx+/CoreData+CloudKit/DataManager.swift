@@ -26,7 +26,7 @@ class DataManager {
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
         
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
@@ -77,8 +77,8 @@ class DataManager {
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
 
-                items.enumerated().forEach { index, item in
-                    print("NAME: \(item.name) !!!!")
+                items.forEach {
+                    print("NAME: \($0.name) !!!!")
                 }
                 
                 if context.hasChanges {

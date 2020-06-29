@@ -11,7 +11,7 @@ import Combine
 import UIKit
 
 
-fileprivate struct UITextViewWrapper: UIViewRepresentable {
+private struct UITextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
     @Binding var text: String
@@ -98,7 +98,7 @@ struct RegExTextView: View {
 
     @Binding private var text: String
     private var internalText: Binding<String> {
-        Binding<String>(get: { self.text } ) {
+        Binding<String>(get: { self.text }) {
             self.text = $0
             self.showingPlaceholder = $0.isEmpty
         }
@@ -133,10 +133,8 @@ struct RegExTextView: View {
 
 #if DEBUG
 struct MultilineTextField_Previews: PreviewProvider {
-    static var test:String = ""//some very very very long description string to be initially wider than screen"
-    static var testBinding = Binding<String>(get: { test }, set: {
-//        print("New value: \($0)")
-        test = $0 } )
+    static var test: String = ""
+    static var testBinding = Binding<String>(get: { test }, set: { test = $0 })
 
     static var previews: some View {
         VStack(alignment: .leading) {
@@ -195,24 +193,5 @@ class RegExSyntaxHighlighter: NSObject, NSTextStorageDelegate {
             ], range: textStorage.string.nsRange(from: range))
         }
         
-    }
-}
-
-
-extension String {
-    func nsRange(from range: Range<String.Index>) -> NSRange {
-        let startPos = self.distance(from: self.startIndex, to: range.lowerBound)
-        let endPos = self.distance(from: self.startIndex, to: range.upperBound)
-        return NSMakeRange(startPos, endPos - startPos)
-    }
-}
-
-extension String {
-    func ranges(of substring: String, options: CompareOptions = [], locale: Locale? = nil) -> [Range<Index>] {
-        var ranges: [Range<Index>] = []
-        while let range = range(of: substring, options: options, range: (ranges.last?.upperBound ?? self.startIndex)..<self.endIndex, locale: locale) {
-            ranges.append(range)
-        }
-        return ranges
     }
 }

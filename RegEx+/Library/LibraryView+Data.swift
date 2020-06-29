@@ -54,7 +54,7 @@ extension LibraryView {
     
 }
 
-fileprivate struct SampleItem {
+private struct SampleItem {
     let name: String
     let raw: String
     let sample: String

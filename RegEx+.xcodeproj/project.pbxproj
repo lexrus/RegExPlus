@@ -18,12 +18,7 @@
 		D731F652245F0B9A00EEE17F /* LibraryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F651245F0B9A00EEE17F /* LibraryItemView.swift */; };
 		D731F65424606F7800EEE17F /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F65324606F7800EEE17F /* RenameView.swift */; };
 		D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F6552460F2BA00EEE17F /* SafariView.swift */; };
-		D731F669246139C700EEE17F /* KeyboardObservingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F662246139C700EEE17F /* KeyboardObservingView.swift */; };
-		D731F66A246139C700EEE17F /* HiddenOnKeyboardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F664246139C700EEE17F /* HiddenOnKeyboardViewModifier.swift */; };
-		D731F66B246139C700EEE17F /* KeyboardObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F665246139C700EEE17F /* KeyboardObserving.swift */; };
-		D731F66C246139C700EEE17F /* View+KeyboardObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F666246139C700EEE17F /* View+KeyboardObserving.swift */; };
-		D731F66D246139C700EEE17F /* View+HideOnKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F667246139C700EEE17F /* View+HideOnKeyboard.swift */; };
-		D731F66E246139C700EEE17F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F668246139C700EEE17F /* Keyboard.swift */; };
+		D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = D734CBE024AA40E300C1F385 /* KeyboardObserving */; };
 		D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BF66C247A3C0A0032EE35 /* AboutView.swift */; };
 		D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */; };
 		D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732032245D3388003C0CF8 /* String+NSRange.swift */; };
@@ -54,12 +49,6 @@
 		D731F651245F0B9A00EEE17F /* LibraryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemView.swift; sourceTree = "<group>"; };
 		D731F65324606F7800EEE17F /* RenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameView.swift; sourceTree = "<group>"; };
 		D731F6552460F2BA00EEE17F /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		D731F662246139C700EEE17F /* KeyboardObservingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObservingView.swift; sourceTree = "<group>"; };
-		D731F664246139C700EEE17F /* HiddenOnKeyboardViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenOnKeyboardViewModifier.swift; sourceTree = "<group>"; };
-		D731F665246139C700EEE17F /* KeyboardObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserving.swift; sourceTree = "<group>"; };
-		D731F666246139C700EEE17F /* View+KeyboardObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+KeyboardObserving.swift"; sourceTree = "<group>"; };
-		D731F667246139C700EEE17F /* View+HideOnKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+HideOnKeyboard.swift"; sourceTree = "<group>"; };
-		D731F668246139C700EEE17F /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		D74BF66C247A3C0A0032EE35 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExSyntaxHighlighter.swift; sourceTree = "<group>"; };
 		D7732032245D3388003C0CF8 /* String+NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSRange.swift"; sourceTree = "<group>"; };
@@ -92,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */,
+				D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,35 +114,6 @@
 				D731F65324606F7800EEE17F /* RenameView.swift */,
 			);
 			path = Editor;
-			sourceTree = "<group>";
-		};
-		D731F661246139C700EEE17F /* KeyboardObserving */ = {
-			isa = PBXGroup;
-			children = (
-				D731F662246139C700EEE17F /* KeyboardObservingView.swift */,
-				D731F663246139C700EEE17F /* viewmodifier */,
-				D731F668246139C700EEE17F /* Keyboard.swift */,
-			);
-			path = KeyboardObserving;
-			sourceTree = "<group>";
-		};
-		D731F663246139C700EEE17F /* viewmodifier */ = {
-			isa = PBXGroup;
-			children = (
-				D731F664246139C700EEE17F /* HiddenOnKeyboardViewModifier.swift */,
-				D731F665246139C700EEE17F /* KeyboardObserving.swift */,
-				D731F666246139C700EEE17F /* View+KeyboardObserving.swift */,
-				D731F667246139C700EEE17F /* View+HideOnKeyboard.swift */,
-			);
-			path = viewmodifier;
-			sourceTree = "<group>";
-		};
-		D731F66F24613A4E00EEE17F /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				D731F661246139C700EEE17F /* KeyboardObserving */,
-			);
-			path = Vendors;
 			sourceTree = "<group>";
 		};
 		D74BF66E247A3C0E0032EE35 /* About */ = {
@@ -223,7 +184,6 @@
 				D74BF66E247A3C0E0032EE35 /* About */,
 				D761DDC6245DC52A00FE0678 /* CheatSheet */,
 				D7CCA7ED244E039D00D81C74 /* Views */,
-				D731F66F24613A4E00EEE17F /* Vendors */,
 				D7CCA7DA244E010F00D81C74 /* Assets.xcassets */,
 				D7CCA7DF244E010F00D81C74 /* LaunchScreen.storyboard */,
 				D7CCA7E2244E010F00D81C74 /* Info.plist */,
@@ -260,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7CCA7E5244E010F00D81C74 /* Build configuration list for PBXNativeTarget "RegEx+" */;
 			buildPhases = (
+				D734CBE224AA41E900C1F385 /* SwiftLint */,
 				D7CCA7CD244E010D00D81C74 /* Sources */,
 				D7CCA7CE244E010D00D81C74 /* Frameworks */,
 				D7CCA7CF244E010D00D81C74 /* Resources */,
@@ -270,6 +231,7 @@
 			);
 			name = "RegEx+";
 			packageProductDependencies = (
+				D734CBE024AA40E300C1F385 /* KeyboardObserving */,
 			);
 			productName = RegExPro;
 			productReference = D7CCA7D1244E010D00D81C74 /* RegEx.app */;
@@ -302,6 +264,7 @@
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
+				D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
 			);
 			productRefGroup = D7CCA7D2244E010D00D81C74 /* Products */;
 			projectDirPath = "";
@@ -327,6 +290,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D734CBE224AA41E900C1F385 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7CCA7CD244E010D00D81C74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -338,12 +322,9 @@
 				D71871E6245EE9AC001F1E4E /* RegExFetch.swift in Sources */,
 				D71F8F10246F8E5300A11283 /* ActivityViewController.swift in Sources */,
 				D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */,
-				D731F66C246139C700EEE17F /* View+KeyboardObserving.swift in Sources */,
 				D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */,
 				D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */,
 				D721780B2451776000F17390 /* RegExTextView.swift in Sources */,
-				D731F66D246139C700EEE17F /* View+HideOnKeyboard.swift in Sources */,
-				D731F669246139C700EEE17F /* KeyboardObservingView.swift in Sources */,
 				D7CCA7D5244E010D00D81C74 /* AppDelegate.swift in Sources */,
 				D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */,
 				D731F64E245EF77600EEE17F /* DataManager.swift in Sources */,
@@ -351,14 +332,11 @@
 				D731F652245F0B9A00EEE17F /* LibraryItemView.swift in Sources */,
 				D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */,
 				D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */,
-				D731F66E246139C700EEE17F /* Keyboard.swift in Sources */,
 				D731F65424606F7800EEE17F /* RenameView.swift in Sources */,
 				D7CCA7D7244E010D00D81C74 /* SceneDelegate.swift in Sources */,
 				D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */,
-				D731F66B246139C700EEE17F /* KeyboardObserving.swift in Sources */,
 				D731F650245F053A00EEE17F /* LibraryView+Data.swift in Sources */,
 				D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */,
-				D731F66A246139C700EEE17F /* HiddenOnKeyboardViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nickffox/KeyboardObserving";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D734CBE024AA40E300C1F385 /* KeyboardObserving */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
+			productName = KeyboardObserving;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7090090245DB87C00326016 /* RegEx.xcdatamodeld */ = {

@@ -13,7 +13,7 @@ import UIKit
 
 // Credit to: Asperi https://stackoverflow.com/users/12299030/asperi
 // https://stackoverflow.com/a/58639072/1209135
-fileprivate struct UITextViewWrapper: UIViewRepresentable {
+private struct UITextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
     @Binding var text: String
@@ -102,7 +102,7 @@ struct RegExTextView: View {
 
     @Binding private var text: String
     private var internalText: Binding<String> {
-        Binding<String>(get: { self.text } ) {
+        Binding<String>(get: { self.text }) {
             self.text = $0
             self.showingPlaceholder = $0.isEmpty
         }
@@ -142,7 +142,7 @@ struct RegExTextView: View {
 #if DEBUG
 struct RegExTextView_Previews: PreviewProvider {
     static var test = "^(\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2})"
-    static var testBinding = Binding<String>(get: { test }, set: { test = $0 } )
+    static var testBinding = Binding<String>(get: { test }, set: { test = $0 })
 
     static var previews: some View {
         VStack(alignment: .leading) {

@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 
-fileprivate struct UITextViewWrapper: UIViewRepresentable {
+private struct UITextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
     @Binding var text: String
@@ -115,7 +115,7 @@ struct MatchesTextView: View {
 
     @Binding private var text: String
     private var internalText: Binding<String> {
-        Binding<String>(get: { self.text } ) {
+        Binding<String>(get: { self.text }) {
             self.text = $0
             self.showingPlaceholder = $0.isEmpty
         }
@@ -158,7 +158,7 @@ struct MatchesTextView: View {
 #if DEBUG
 struct MatchesTextView_Previews: PreviewProvider {
     static var test = "^(\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2})"
-    static var testBinding = Binding<String>(get: { test }, set: { test = $0 } )
+    static var testBinding = Binding<String>(get: { test }, set: { test = $0 })
     static var matches = [NSTextCheckingResult]()
     static var matchesBinding = Binding<[NSTextCheckingResult]>(get: { matches }, set: { matches = $0 })
 
@@ -167,8 +167,7 @@ struct MatchesTextView_Previews: PreviewProvider {
             Text("Description:")
             MatchesTextView("Enter some text here",
                           text: testBinding,
-                          matches: matchesBinding)
-            {
+                          matches: matchesBinding) {
                 print("Final text: \(test)")
             }
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.black))
