@@ -21,10 +21,19 @@ struct AboutView: View {
     
     private var rateButton: some View {
         Button(action: {
-            guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-                return
+            #if targetEnvironment(macCatalyst)
+            SKStoreReviewController.requestReview()
+            #else
+            
+            if #available(iOS 14.0, *) {
+                guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                    return
+                }
+                SKStoreReviewController.requestReview(in: scene)
+            } else {
+                SKStoreReviewController.requestReview()
             }
-            SKStoreReviewController.requestReview(in: scene)
+            #endif
         }) {
             Text("Rate RegEx+")
         }

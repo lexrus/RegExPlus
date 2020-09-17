@@ -19,8 +19,9 @@
 		D731F65424606F7800EEE17F /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F65324606F7800EEE17F /* RenameView.swift */; };
 		D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F6552460F2BA00EEE17F /* SafariView.swift */; };
 		D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = D734CBE024AA40E300C1F385 /* KeyboardObserving */; };
-		D734CBE424AA45A900C1F385 /* RegEx+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D734CBE324AA45A900C1F385 /* RegEx+App.swift */; };
 		D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BF66C247A3C0A0032EE35 /* AboutView.swift */; };
+		D75902AD2513C6300032013F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75902AC2513C6300032013F /* AppDelegate.swift */; };
+		D75902B02513C6620032013F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75902AF2513C6620032013F /* SceneDelegate.swift */; };
 		D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */; };
 		D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732032245D3388003C0CF8 /* String+NSRange.swift */; };
 		D7732035245D3456003C0CF8 /* MatchesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732034245D3456003C0CF8 /* MatchesTextView.swift */; };
@@ -48,8 +49,9 @@
 		D731F651245F0B9A00EEE17F /* LibraryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemView.swift; sourceTree = "<group>"; };
 		D731F65324606F7800EEE17F /* RenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameView.swift; sourceTree = "<group>"; };
 		D731F6552460F2BA00EEE17F /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		D734CBE324AA45A900C1F385 /* RegEx+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegEx+App.swift"; sourceTree = "<group>"; };
 		D74BF66C247A3C0A0032EE35 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D75902AC2513C6300032013F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D75902AF2513C6620032013F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExSyntaxHighlighter.swift; sourceTree = "<group>"; };
 		D7732032245D3388003C0CF8 /* String+NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSRange.swift"; sourceTree = "<group>"; };
 		D7732034245D3456003C0CF8 /* MatchesTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTextView.swift; sourceTree = "<group>"; };
@@ -173,7 +175,8 @@
 			children = (
 				D7E9174A246C47D400F2BE17 /* README.md */,
 				D7CCA7E8244E011C00D81C74 /* RegEx+.entitlements */,
-				D734CBE324AA45A900C1F385 /* RegEx+App.swift */,
+				D75902AC2513C6300032013F /* AppDelegate.swift */,
+				D75902AF2513C6620032013F /* SceneDelegate.swift */,
 				D7CCA7D8244E010D00D81C74 /* HomeView.swift */,
 				D7090093245DC43800326016 /* CoreData+CloudKit */,
 				D761DDC5245DC4DF00FE0678 /* Library */,
@@ -320,9 +323,9 @@
 				D71F8F10246F8E5300A11283 /* ActivityViewController.swift in Sources */,
 				D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */,
 				D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */,
+				D75902B02513C6620032013F /* SceneDelegate.swift in Sources */,
 				D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */,
 				D721780B2451776000F17390 /* RegExTextView.swift in Sources */,
-				D734CBE424AA45A900C1F385 /* RegEx+App.swift in Sources */,
 				D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */,
 				D731F64E245EF77600EEE17F /* DataManager.swift in Sources */,
 				D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */,
@@ -331,6 +334,7 @@
 				D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */,
 				D731F65424606F7800EEE17F /* RenameView.swift in Sources */,
 				D7732029245D1877003C0CF8 /* RegExSyntaxHighlighter.swift in Sources */,
+				D75902AD2513C6300032013F /* AppDelegate.swift in Sources */,
 				D731F650245F053A00EEE17F /* LibraryView+Data.swift in Sources */,
 				D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */,
 			);
@@ -421,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -477,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

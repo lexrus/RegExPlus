@@ -11,6 +11,12 @@ import SwiftUI
 struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State private var selection = 0
+
+    #if targetEnvironment(macCatalyst)
+    let navViewStyle = DoubleColumnNavigationViewStyle()
+    #else
+    let navViewStyle = DefaultNavigationViewStyle()
+    #endif
     
     var body: some View {
         NavigationView {
@@ -23,7 +29,7 @@ struct HomeView: View {
             }
             .environment(\.managedObjectContext, managedObjectContext)
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .navigationViewStyle(navViewStyle)
     }
 }
 
