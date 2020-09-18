@@ -18,7 +18,7 @@ struct LibraryView: View {
     private var didSave =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
     
     @State private var editMode = EditMode.inactive
-    
+
     var body: some View {
         List {
             ForEach(regExItems, id: \.self) {
@@ -38,8 +38,9 @@ struct LibraryView: View {
         })
         .navigationBarTitle("RegEx+")
         .environment(\.editMode, $editMode)
+        .currentDeviceListStyle()
     }
-    
+
     private var editButton: some View {
         Button(action: {
             self.editMode = self.editMode.isEditing ? .inactive : .active
@@ -60,6 +61,16 @@ struct LibraryView: View {
             Image(systemName: "plus.circle.fill")
                 .imageScale(.large)
         }
+    }
+}
+
+private extension View {
+    func currentDeviceListStyle() -> AnyView {
+        #if targetEnvironment(macCatalyst)
+        return AnyView(self.listStyle(PlainListStyle()))
+        #else
+        return AnyView(self.listStyle(InsetGroupedListStyle()))
+        #endif
     }
 }
 

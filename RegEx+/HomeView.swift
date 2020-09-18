@@ -12,24 +12,36 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State private var selection = 0
 
-    #if targetEnvironment(macCatalyst)
-    let navViewStyle = DoubleColumnNavigationViewStyle()
-    #else
-    let navViewStyle = DefaultNavigationViewStyle()
-    #endif
-    
     var body: some View {
-        NavigationView {
-            LibraryView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "list.bullet")
-                        Text("Library")
-                    }
+        return NavigationView { LibraryView()
+            .tabItem {
+                VStack {
+                    Image(systemName: "list.bullet")
+                    Text("Library")
+                }
             }
             .environment(\.managedObjectContext, managedObjectContext)
+
         }
-        .navigationViewStyle(navViewStyle)
+        .currentDeviceNavigationViewStyle()
+    }
+}
+
+private extension View {
+    func currentDeviceNavigationViewStyle() -> AnyView {
+        #if targetEnvironment(macCatalyst)
+
+        return AnyView(self.navigationViewStyle(DoubleColumnNavigationViewStyle()))
+
+        #else
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return AnyView(self.navigationViewStyle(DoubleColumnNavigationViewStyle()))
+        } else {
+            return AnyView(self.navigationViewStyle(DefaultNavigationViewStyle()))
+        }
+
+        #endif
     }
 }
 

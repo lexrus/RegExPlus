@@ -26,7 +26,7 @@ struct LibraryItemView: View {
                 RegExTextView(text: rawBinding)
                     .disabled(true)
             }
-            .frame(minHeight: 50, maxHeight: 200)
+            .frame(minHeight: 60, maxHeight: 200)
         }
     }
 }
