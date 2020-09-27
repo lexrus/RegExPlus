@@ -84,7 +84,7 @@ struct AboutView: View {
             acknowledgementsSection
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("RegEx+")
+        .navigationTitle("RegEx+")
     }
 }
 

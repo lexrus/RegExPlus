@@ -32,11 +32,19 @@ struct LibraryView: View {
                 }
             }
         }
-        .navigationBarItems(leading: editButton, trailing: HStack(spacing: 8) {
-            aboutButton.padding()
-            addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-        })
-        .navigationBarTitle("RegEx+")
+        .navigationTitle("RegEx+")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                editButton
+            }
+
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack(spacing: 6) {
+                    aboutButton.padding()
+                    addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+                }
+            }
+        }
         .environment(\.editMode, $editMode)
         .currentDeviceListStyle()
     }
