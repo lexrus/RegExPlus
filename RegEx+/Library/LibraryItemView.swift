@@ -49,7 +49,7 @@ struct LibraryItemView_Previews: PreviewProvider {
                 LibraryItemView(regEx: regEx)
             }
         }
-        .navigationTitle("LibraryItemView")
+        .navigationBarTitle("LibraryItemView")
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

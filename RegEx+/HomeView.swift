@@ -21,7 +21,6 @@ struct HomeView: View {
                 }
             }
             .environment(\.managedObjectContext, managedObjectContext)
-
         }
         .currentDeviceNavigationViewStyle()
     }

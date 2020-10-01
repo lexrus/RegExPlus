@@ -25,28 +25,20 @@ struct LibraryView: View {
                 LibraryItemView(regEx: $0)
             }
             .onDelete(perform: deleteRegEx)
-            .id(self.refreshingId)
             .onReceive(self.didSave) { _ in
                 DispatchQueue.main.async {
                     self.refreshingId = UUID()
                 }
             }
         }
-        .navigationTitle("RegEx+")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                editButton
-            }
-
-            ToolbarItem(placement: .navigationBarTrailing) {
-                HStack(spacing: 6) {
-                    aboutButton.padding()
-                    addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-                }
-            }
-        }
         .environment(\.editMode, $editMode)
         .currentDeviceListStyle()
+        .id(self.refreshingId)
+        .navigationBarTitle("RegEx+")
+        .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
+            aboutButton.padding()
+            addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+        })
     }
 
     private var editButton: some View {
@@ -74,11 +66,15 @@ struct LibraryView: View {
 
 private extension View {
     func currentDeviceListStyle() -> AnyView {
-        #if targetEnvironment(macCatalyst)
-        return AnyView(self.listStyle(PlainListStyle()))
-        #else
-        return AnyView(self.listStyle(InsetGroupedListStyle()))
-        #endif
+            #if targetEnvironment(macCatalyst)
+            return AnyView(self.listStyle(PlainListStyle()))
+            #else
+            if #available(iOS 14.0, *) {
+                return AnyView(self.listStyle(InsetGroupedListStyle()))
+            } else {
+                return AnyView(self.listStyle(GroupedListStyle()))
+            }
+            #endif
     }
 }
 

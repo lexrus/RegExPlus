@@ -19,7 +19,7 @@ struct RenameView: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationTitle(viewModel.regEx.raw)
+        .navigationBarTitle(viewModel.regEx.raw)
     }
 
 }
@@ -35,7 +35,7 @@ struct RenameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             RenameView(viewModel: viewModel)
-                .navigationTitle(viewModel.regEx.name)
+                .navigationBarTitle(viewModel.regEx.name)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

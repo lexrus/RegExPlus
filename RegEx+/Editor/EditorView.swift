@@ -49,21 +49,13 @@ struct EditorView: View {
         .keyboardObserving()
         .listStyle(GroupedListStyle())
         .navigationViewStyle(StackNavigationViewStyle())
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                #if !targetEnvironment(macCatalyst)
-                shareButton.padding()
-                #endif
-                cheatSheetButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-            }
-        }
         .navigationBarItems(trailing: HStack(spacing: 8) {
             #if !targetEnvironment(macCatalyst)
             shareButton.padding()
             #endif
             cheatSheetButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
         })
-        .navigationTitle(viewModel.regEx.name)
+        .navigationBarTitle(viewModel.regEx.name)
         .gesture(dismissKeyboardDesture)
         
     }

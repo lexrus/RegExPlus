@@ -33,12 +33,8 @@ struct CheatSheetView: View {
                 }
             }
         }
-        .navigationTitle("Cheat Sheet")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                safariButton
-            }
-        }
+        .navigationBarTitle("Cheat Sheet")
+        .navigationBarItems(trailing: safariButton)
         .onAppear(perform: loadPlist)
     }
     
@@ -78,7 +74,7 @@ struct CheatSheetView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             CheatSheetView()
-                .navigationTitle("Cheat Sheet")
+                .navigationBarTitle("Cheat Sheet")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
