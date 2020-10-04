@@ -34,6 +34,7 @@
 		D7CCA7E1244E010F00D81C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7CCA7DF244E010F00D81C74 /* LaunchScreen.storyboard */; };
 		D7CCA7EC244E038E00D81C74 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7EB244E038E00D81C74 /* LibraryView.swift */; };
 		D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7EE244E041000D81C74 /* CheatSheetView.swift */; };
+		D7DC514A2529645F00A495E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC51492529645F00A495E2 /* SearchView.swift */; };
 		D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF73592453E7FB005974F0 /* EditorViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		D7CCA7EE244E041000D81C74 /* CheatSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheetView.swift; sourceTree = "<group>"; };
 		D7D0E96F249F4FA800F6B9DF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/CheatSheet.plist"; sourceTree = "<group>"; };
 		D7D0E970249F4FA800F6B9DF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7DC51492529645F00A495E2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D7E9174A246C47D400F2BE17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D7EF73592453E7FB005974F0 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 				D7732027245D185C003C0CF8 /* RegExTextView */,
 				D731F6552460F2BA00EEE17F /* SafariView.swift */,
 				D71F8F0F246F8E5300A11283 /* ActivityViewController.swift */,
+				D7DC51492529645F00A495E2 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				D75902B02513C6620032013F /* SceneDelegate.swift in Sources */,
 				D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */,
 				D721780B2451776000F17390 /* RegExTextView.swift in Sources */,
+				D7DC514A2529645F00A495E2 /* SearchView.swift in Sources */,
 				D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */,
 				D731F64E245EF77600EEE17F /* DataManager.swift in Sources */,
 				D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */,

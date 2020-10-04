@@ -16,29 +16,44 @@ struct LibraryView: View {
     
     @State private var refreshingId = UUID()
     private var didSave =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
-    
+
+    @State private var searchTerm = ""
     @State private var editMode = EditMode.inactive
 
     var body: some View {
-        List {
-            ForEach(regExItems, id: \.self) {
-                LibraryItemView(regEx: $0)
-            }
-            .onDelete(perform: deleteRegEx)
-            .onReceive(self.didSave) { _ in
-                DispatchQueue.main.async {
-                    self.refreshingId = UUID()
+        VStack {
+            SearchView(text: $searchTerm)
+                .padding(.horizontal, 18)
+
+            List {
+                ForEach(regExItems.filter(filterByTerm), id: \.self) {
+                    LibraryItemView(regEx: $0)
+                }
+                .onDelete(perform: deleteRegEx)
+                .onReceive(self.didSave) { _ in
+                    DispatchQueue.main.async {
+                        self.refreshingId = UUID()
+                    }
                 }
             }
+            .environment(\.editMode, $editMode)
+            .currentDeviceListStyle()
+            .id(self.refreshingId)
+            .navigationBarTitle("RegEx+")
+            .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
+                aboutButton.padding()
+                addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+            })
         }
-        .environment(\.editMode, $editMode)
-        .currentDeviceListStyle()
-        .id(self.refreshingId)
-        .navigationBarTitle("RegEx+")
-        .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
-            aboutButton.padding()
-            addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-        })
+    }
+
+    private func filterByTerm(_ item: FetchedResults<RegEx>.Element) -> Bool {
+        if searchTerm.isEmpty {
+            return true
+        }
+
+        return item.name.contains(searchTerm)
+            || item.raw.contains(searchTerm)
     }
 
     private var editButton: some View {
