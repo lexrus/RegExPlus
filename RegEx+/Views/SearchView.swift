@@ -14,12 +14,12 @@ struct SearchView: View {
     @State private var isEditing = false
 
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 0) {
             TextField("Search...", text: $text)
                 .padding(.horizontal, 32)
                 .padding(.vertical, 5)
                 .background(Color(.systemGray6))
-                .cornerRadius(15)
+                .cornerRadius(18)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -43,18 +43,25 @@ struct SearchView: View {
                 .onTapGesture {
                     self.isEditing = true
                 }
+                .transition(.move(edge: .trailing))
+                .animation(.easeOut)
 
             if isEditing {
                 Button(action: {
                     self.isEditing = false
                     self.text = ""
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    UIApplication.shared
+                        .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
-                    Text("Cancel")
-                        .font(.body)
+                    Text("Cancel").font(.body)
                 }
+                .padding(.leading, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.easeOut)
+            } else {
+                Button(action: {}) {
+                    Text(" ").font(.body)
+                }.frame(width: 0)
             }
         }
         .clipped()
@@ -63,7 +70,11 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(text: .constant(""))
-            .preferredColorScheme(.dark)
+        VStack {
+            SearchView(text: .constant(""))
+                .preferredColorScheme(.dark)
+        }
+        .padding()
+        .background(Color.white)
     }
 }
