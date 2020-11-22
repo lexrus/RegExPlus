@@ -52,8 +52,8 @@ struct LibraryView: View {
             return true
         }
 
-        return item.name.contains(searchTerm)
-            || item.raw.contains(searchTerm)
+        return item.name.lowercased().contains(searchTerm.lowercased())
+            || item.raw.lowercased().contains(searchTerm.lowercased())
     }
 
     private var editButton: some View {
