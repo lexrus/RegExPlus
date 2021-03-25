@@ -18,7 +18,6 @@
 		D731F652245F0B9A00EEE17F /* LibraryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F651245F0B9A00EEE17F /* LibraryItemView.swift */; };
 		D731F65424606F7800EEE17F /* RenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F65324606F7800EEE17F /* RenameView.swift */; };
 		D731F6562460F2BA00EEE17F /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731F6552460F2BA00EEE17F /* SafariView.swift */; };
-		D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = D734CBE024AA40E300C1F385 /* KeyboardObserving */; };
 		D74BF66D247A3C0A0032EE35 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BF66C247A3C0A0032EE35 /* AboutView.swift */; };
 		D75902AD2513C6300032013F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75902AC2513C6300032013F /* AppDelegate.swift */; };
 		D75902B02513C6620032013F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75902AF2513C6620032013F /* SceneDelegate.swift */; };
@@ -83,7 +82,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */,
-				D734CBE124AA40E300C1F385 /* KeyboardObserving in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +232,6 @@
 			);
 			name = "RegEx+";
 			packageProductDependencies = (
-				D734CBE024AA40E300C1F385 /* KeyboardObserving */,
 			);
 			productName = RegExPro;
 			productReference = D7CCA7D1244E010D00D81C74 /* RegEx.app */;
@@ -267,7 +264,6 @@
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
-				D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
 			);
 			productRefGroup = D7CCA7D2244E010D00D81C74 /* Products */;
 			projectDirPath = "";
@@ -430,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -489,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -508,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "RegEx+/RegEx+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "RegEx+/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
@@ -517,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.3;
+				MARKETING_VERSION = 0.6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.lex.RegExCatalyst;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)App";
 				PRODUCT_NAME = RegEx;
@@ -532,7 +528,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "RegEx+/RegEx+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "RegEx+/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
@@ -541,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.3;
+				MARKETING_VERSION = 0.6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.lex.RegExCatalyst;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)App";
 				PRODUCT_NAME = RegEx;
@@ -572,25 +568,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nickffox/KeyboardObserving";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D734CBE024AA40E300C1F385 /* KeyboardObserving */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D734CBDF24AA40E300C1F385 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
-			productName = KeyboardObserving;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7090090245DB87C00326016 /* RegEx.xcdatamodeld */ = {

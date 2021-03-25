@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import KeyboardObserving
 
 
 struct EditorView: View {
@@ -26,13 +25,11 @@ struct EditorView: View {
             Section(header: SampleHeaderView(count: viewModel.matches.count)) {
                 MatchesTextView("$56.78 $90.12", text: $viewModel.regEx.sample, matches: $viewModel.matches)
                     .padding(kTextFieldPadding)
-                    .background(kTextFieldBackground)
             }
             
             Section(header: Text("Substitution Template")) {
                 TextField("Price: $$$1\\.$2\\n", text: $viewModel.regEx.substitution)
                     .padding(kTextFieldPadding)
-                    .background(kTextFieldBackground)
             }
             
             if !viewModel.regEx.substitution.isEmpty {
@@ -46,8 +43,7 @@ struct EditorView: View {
             self.viewModel.updateLastModified()
             DataManager.shared.saveContext()
         })
-        .keyboardObserving()
-        .listStyle(GroupedListStyle())
+        .listStyle(InsetGroupedListStyle())
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarItems(trailing: HStack(spacing: 8) {
             #if !targetEnvironment(macCatalyst)
@@ -95,10 +91,9 @@ private struct RegExTextViewSection: View {
     var body: some View {
         Section(header: Text("Regular Expression")) {
             TextField("Name", text: $regEx.name)
-            
+
             RegExTextView("Type RegEx here", text: $regEx.raw)
                 .padding(kTextFieldPadding)
-                .background(kTextFieldBackground)
             
             Button(action: {
                 self.isOptionsVisible.toggle()
@@ -180,7 +175,6 @@ private struct SampleHeaderView: View {
     }
 }
 
-private let kTextFieldBackground = Color.secondary.opacity(0.05)
 private let kTextFieldPadding = EdgeInsets(top: 8, leading: 5, bottom: 8, trailing: 5)
 
 #if DEBUG

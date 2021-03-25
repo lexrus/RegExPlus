@@ -21,10 +21,6 @@ struct AboutView: View {
     
     private var rateButton: some View {
         Button(action: {
-            #if targetEnvironment(macCatalyst)
-            SKStoreReviewController.requestReview()
-            #else
-            
             if #available(iOS 14.0, *) {
                 guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
                     return
@@ -33,7 +29,6 @@ struct AboutView: View {
             } else {
                 SKStoreReviewController.requestReview()
             }
-            #endif
         }) {
             Text("Rate RegEx+")
         }
@@ -66,10 +61,10 @@ struct AboutView: View {
             Button(action: {
                 self.showingAcknowledgements.toggle()
             }) {
-                Text("KeyboardObserving")
+                Text("Some open-source lib")
             }
             .sheet(isPresented: $showingAcknowledgements) {
-                SafariView(url: URL(string: "https://github.com/nickffox/KeyboardObserving")!)
+                SafariView(url: URL(string: "https://github.com/awesome_people/awesome_lib")!)
             }
         }
     }
@@ -81,7 +76,6 @@ struct AboutView: View {
                 appStoreButton
                 gitHubButton
             }
-            acknowledgementsSection
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle("RegEx+")

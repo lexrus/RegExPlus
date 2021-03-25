@@ -108,7 +108,7 @@ struct RegExTextView: View {
         }
     }
     
-    @State private var dynamicHeight: CGFloat = 24
+    @State private var dynamicHeight: CGFloat = 22
     @State private var showingPlaceholder = false
 
     init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil) {
