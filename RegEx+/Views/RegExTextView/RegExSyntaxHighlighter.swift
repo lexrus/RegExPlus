@@ -12,18 +12,12 @@ import SwiftUI
 
 fileprivate extension NSTextStorage {
 
-    func highlight(text: String, color: UIColor = .red) {
-        string.ranges(of: text, options: .regularExpression).forEach { [weak self] range in
-            guard let self = self else {
-                return
-            }
-            
-            let r = self.string.nsRange(from: range)
-            self.removeAttribute(.foregroundColor, range: r)
-            self.addAttributes([
-                .foregroundColor: color
-            ], range: r)
-        }
+    func highlight(range: Range<String.Index>, color: UIColor) {
+        let nsRange = NSRange(range, in: string)
+        removeAttribute(.foregroundColor, range: nsRange)
+        addAttributes([
+            .foregroundColor: color
+        ], range: nsRange)
     }
 
 }
@@ -31,30 +25,53 @@ fileprivate extension NSTextStorage {
 class RegExSyntaxHighlighter: NSObject, NSTextStorageDelegate {
     
     weak var textStorage: NSTextStorage?
+
+    private var contentHash: Int = 0
     
     func highlightRegularExpression() {
         guard let ts = textStorage else {
             return
         }
-        
-        let r = NSRange(location: 0, length: ts.length)
-        ts.removeAttribute(.foregroundColor, range: r)
-        ts.addAttribute(.foregroundColor, value: UIColor.label, range: r)
-        
-        [
+
+        let regColorMap: [String: UIColor] = [
             #"[\?\*\.\+]"# :                 UIColor.systemGreen,
             #"(?:\{)[\d\w,]+(?:\})"# :       UIColor.systemPurple,
             #"[\^\[\$\]]"# :                 UIColor.systemTeal,
             #"\\[$$\w\.\u0023]"# :           UIColor.systemOrange,
             #"\s\u0023\s?[^\r\n]+[\r\n]*"# : UIColor.systemGray,
             #"[\(\)]"# :                     UIColor.systemPink,
-        ].forEach(ts.highlight)
+        ]
+        
+        let r = NSRange(location: 0, length: ts.length)
+        ts.removeAttribute(.foregroundColor, range: r)
+        ts.addAttribute(.foregroundColor, value: UIColor.label, range: r)
+
+        var colorMap = [Range<String.Index>: UIColor]()
+
+        regColorMap.forEach { regMap in
+            ts.string
+                .ranges(of: regMap.key, options: .regularExpression)
+                .forEach { range in
+                    colorMap[range] = regMap.value
+                }
+        }
+
+        colorMap.forEach(ts.highlight)
     }
 
-    func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorage.EditActions, range editedRange: NSRange, changeInLength delta: Int) {
-        
+    func textStorage(
+        _ textStorage: NSTextStorage,
+        didProcessEditing editedMask: NSTextStorage.EditActions,
+        range editedRange: NSRange,
+        changeInLength delta: Int
+    ) {
         self.textStorage = textStorage
-        highlightRegularExpression()
+
+        let hash = textStorage.string.hash
+        if hash != contentHash {
+            highlightRegularExpression()
+            contentHash = hash
+        }
     }
 
 }
