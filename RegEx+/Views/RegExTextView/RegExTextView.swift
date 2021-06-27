@@ -45,9 +45,11 @@ private struct UITextViewWrapper: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<UITextViewWrapper>) {
-        if uiView.text != self.text {
-            uiView.text = self.text
+        guard uiView.text != text else {
+            return
         }
+
+        uiView.text = text
         
         syntaxHighlighter.textStorage = uiView.textStorage
         syntaxHighlighter.highlightRegularExpression()
