@@ -53,7 +53,10 @@ private struct UITextViewWrapper: UIViewRepresentable {
         
         syntaxHighlighter.textStorage = uiView.textStorage
         syntaxHighlighter.highlightRegularExpression()
-        UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
+
+        DispatchQueue.main.async {
+            UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
+        }
     }
 
     fileprivate static func recalculateHeight(view: UIView, result: Binding<CGFloat>) {
@@ -121,9 +124,11 @@ struct RegExTextView: View {
     }
 
     var body: some View {
-        UITextViewWrapper(text: internalText,
-                          calculatedHeight: $dynamicHeight,
-                          onDone: onCommit)
+        UITextViewWrapper(
+            text: internalText,
+            calculatedHeight: $dynamicHeight,
+            onDone: onCommit
+        )
             .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
             .background(placeholderView, alignment: .topLeading)
     }
@@ -143,7 +148,7 @@ struct RegExTextView: View {
 
 #if DEBUG
 struct RegExTextView_Previews: PreviewProvider {
-    static var test = "^(\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2}) (\\d+)\\.(\\d{2})"
+    static var test = #"^(\d+)\.(\d{2}) (\d+)\.(\d{2}) (\d+)\.(\d{2}) (\d+)\.(\d{2})"#
     static var testBinding = Binding<String>(get: { test }, set: { test = $0 })
 
     static var previews: some View {

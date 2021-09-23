@@ -93,7 +93,7 @@ private struct RegExTextViewSection: View {
             TextField("Name", text: $regEx.name)
 
             RegExTextView("Type RegEx here", text: $regEx.raw)
-                .padding(kTextFieldPadding)
+                .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
             
             Button(action: {
                 self.isOptionsVisible.toggle()

@@ -35,7 +35,7 @@ struct LibraryItemView_Previews: PreviewProvider {
     private static var regEx: RegEx = {
         var r: RegEx = RegEx(context: DataManager.shared.persistentContainer.viewContext)
         r.name = "Dollars"
-        r.raw = "\\$?((\\d+)\\.?(\\d\\d)?)"
+        r.raw = #"\$?((\d+)\.?(\d\d)?)"#
         r.sample = "$100.00 12.50 $10"
         r.substitution = "$3"
         return r
