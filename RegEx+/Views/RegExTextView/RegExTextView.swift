@@ -40,7 +40,6 @@ private struct UITextViewWrapper: UIViewRepresentable {
             tv.returnKeyType = .done
         }
 
-        tv.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         return tv
     }
 
@@ -49,6 +48,8 @@ private struct UITextViewWrapper: UIViewRepresentable {
             return
         }
 
+        uiView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        uiView.textContainer.lineBreakMode = .byCharWrapping
         uiView.text = text
         
         syntaxHighlighter.textStorage = uiView.textStorage
