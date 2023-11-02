@@ -13,7 +13,8 @@ struct EditorView: View {
     
     @ObservedObject var viewModel: EditorViewModel
     @State private var isSharePresented = false
-    
+    @State private var copyButtonText = "Copy"
+
     init(regEx: RegEx) {
         self.viewModel = EditorViewModel(regEx: regEx)
     }
@@ -34,7 +35,22 @@ struct EditorView: View {
             
             if !viewModel.regEx.substitution.isEmpty {
                 Section(header: Text("Substitution Result")) {
-                    Text(viewModel.substitutionResult)
+                    HStack {
+                        Text(viewModel.substitutionResult)
+                        if !viewModel.substitutionResult.isEmpty {
+                            Spacer()
+                            Button(action: copyToClipboard) {
+                                Text("\(copyButtonText)")
+                                    .font(.footnote)
+                                    .foregroundColor(Color.accentColor)
+                                    .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .stroke(Color.accentColor, lineWidth: 1)
+                                    )
+                            }
+                        }
+                    }
                 }
             }
             
@@ -55,7 +71,15 @@ struct EditorView: View {
         .gesture(dismissKeyboardDesture)
         
     }
-    
+
+    private func copyToClipboard() {
+        UIPasteboard.general.string = viewModel.substitutionResult
+        copyButtonText = "Copied"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            copyButtonText = "Copy"
+        }
+    }
+
     // https://stackoverflow.com/questions/56491386/how-to-hide-keyboard-when-using-swiftui
     private var dismissKeyboardDesture: some Gesture {
         DragGesture().onChanged { _ in
