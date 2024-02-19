@@ -28,19 +28,27 @@ struct HomeView: View {
 
 private extension View {
     func currentDeviceNavigationViewStyle() -> AnyView {
-        #if targetEnvironment(macCatalyst)
+#if targetEnvironment(macCatalyst)
 
-        return AnyView(self.navigationViewStyle(DoubleColumnNavigationViewStyle()))
-
-        #else
-
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return AnyView(self.navigationViewStyle(DoubleColumnNavigationViewStyle()))
+        if #available(macCatalyst 16.0, *) {
+            return AnyView(
+                navigationViewStyle(DoubleColumnNavigationViewStyle())
+//                    .navigationSplitViewStyle(ProminentDetailNavigationSplitViewStyle())
+            )
         } else {
-            return AnyView(self.navigationViewStyle(DefaultNavigationViewStyle()))
+            return AnyView(
+                navigationViewStyle(DoubleColumnNavigationViewStyle())
+            )
         }
-
-        #endif
+#else
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                return AnyView(navigationViewStyle(DoubleColumnNavigationViewStyle()))
+            } else {
+                return AnyView(navigationViewStyle(DefaultNavigationViewStyle()))
+            }
+            
+#endif
     }
 }
 

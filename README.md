@@ -1,6 +1,6 @@
 # RegEx+
 
-[![Swift 5.3](https://img.shields.io/badge/swift-5.3-ED523F.svg?style=flat)](https://swift.org/download/)
+[![Swift 5.9](https://img.shields.io/badge/swift-5.9-ED523F.svg?style=flat)](https://swift.org/download/)
 [![@lexrus](https://img.shields.io/badge/contact-@lexrus-336699.svg?style=flat)](https://twitter.com/lexrus)
 
 [<img src="https://cloud.githubusercontent.com/assets/219689/5575342/963e0ee8-9013-11e4-8091-7ece67d64729.png" width="135" height="40" alt="AppStore"/>](https://apps.apple.com/us/app/regex/id1511763524)
@@ -12,14 +12,13 @@
 ## Features
 
 - [x] macOS app and iOS app in one codebase
-- [x] Regular Expression syntax highligh
+- [x] Regular Expression syntax highlight
 - [x] Sync data automatically with CloudKit
 - [x] Regular Expression Cheat Sheet
 - [x] Internationalization
   - [x] English
   - [x] Simplified Chinese
   - [x] Traditional Chinese
-- [ ] Cheat Sheet Widget for iOS 14
 
 ## License
 

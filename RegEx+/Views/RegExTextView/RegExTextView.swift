@@ -27,8 +27,10 @@ private struct UITextViewWrapper: UIViewRepresentable {
         tv.delegate = context.coordinator
         tv.textStorage.delegate = syntaxHighlighter
 
+        let font = UIFont.preferredFont(forTextStyle: .body)
+
         tv.isEditable = true
-        tv.font = UIFont.preferredFont(forTextStyle: .body)
+        tv.font = font.withSize(font.pointSize + 2)
         tv.isSelectable = true
         tv.isUserInteractionEnabled = true
         tv.isScrollEnabled = false
@@ -63,9 +65,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
     fileprivate static func recalculateHeight(view: UIView, result: Binding<CGFloat>) {
         let newSize = view.sizeThatFits(CGSize(width: view.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
         if result.wrappedValue != newSize.height {
-            DispatchQueue.main.async {
-                result.wrappedValue = newSize.height // !! must be called asynchronously
-            }
+            result.wrappedValue = newSize.height
         }
     }
 
@@ -114,7 +114,7 @@ struct RegExTextView: View {
         }
     }
     
-    @State private var dynamicHeight: CGFloat = 22
+    @State private var dynamicHeight: CGFloat = 20
     @State private var showingPlaceholder = false
 
     init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil) {

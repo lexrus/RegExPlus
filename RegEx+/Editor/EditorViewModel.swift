@@ -39,15 +39,15 @@ class EditorViewModel : ObservableObject {
             .map(\.sample)
             .throttle(for: 0.2, scheduler: RunLoop.main, latest: true)
             .removeDuplicates()
-        
+
         let substitutionObservalbe = $regEx
             .map(\.substitution)
             .throttle(for: 0.2, scheduler: RunLoop.main, latest: true)
             .removeDuplicates()
-        
+
         let subAndSampleObservable = substitutionObservalbe.combineLatest(sampleObservable)
-            .map { ($0.0, $0.1 )}
-            
+            .map { ($0.0, $0.1) }
+
         matchCancellable = regExObservable
             .combineLatest(sampleObservable)
             .sink { [weak self] (reg: NSRegularExpression, sample: String) in
@@ -62,7 +62,12 @@ class EditorViewModel : ObservableObject {
             .sink { [weak self] (reg: NSRegularExpression, sub: String, sample: String) in
                 let range = NSRange(location: 0, length: sample.count)
                 
-                self?.substitutionResult = reg.stringByReplacingMatches(in: sample, options: [], range: range, withTemplate: sub)
+                self?.substitutionResult = reg.stringByReplacingMatches(
+                    in: sample,
+                    options: [],
+                    range: range,
+                    withTemplate: sub
+                )
             }
     }
     

@@ -49,23 +49,29 @@ struct CheatSheetView: View {
         do {
             let data = try Data(contentsOf: url)
             let dict = try plistDecoder.decode(CheatSheetPlist.self, from: data)
-            self.metacharacters = dict.metacharacters
-            self.operators = dict.operators
+            metacharacters = dict.metacharacters
+            operators = dict.operators
         } catch {
             print(error.localizedDescription)
         }
     }
     
     private var safariButton: some View {
-        Button(action: {
-            self.showingSafari.toggle()
+        let url = URL(string: kNSRegularExpressionDocumentLink)!
+
+        return Button(action: {
+            #if targetEnvironment(macCatalyst)
+            UIApplication.shared.open(url)
+            #else
+            showingSafari.toggle()
+            #endif
         }) {
             Image(systemName: "safari")
                 .imageScale(.large)
                 .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 0))
         }
         .sheet(isPresented: $showingSafari, content: {
-            SafariView(url: URL(string: kNSRegularExpressionDocumentLink)!)
+            SafariView(url: url)
         })
     }
 }
@@ -92,6 +98,7 @@ private struct RowView: View {
             Text(content)
                 .font(.subheadline)
         }
+        .padding(.vertical, 6)
     }
 }
 

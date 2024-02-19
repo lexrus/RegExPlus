@@ -13,38 +13,54 @@ import CoreData
 struct LibraryView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: RegEx.fetchAllRegEx()) var regExItems: FetchedResults<RegEx>
-    
-    @State private var refreshingId = UUID()
-    private var didSave =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
 
     @State private var searchTerm = ""
-    @State private var editMode = EditMode.inactive
+    @State var editMode = EditMode.inactive
 
     var body: some View {
-        VStack {
-            SearchView(text: $searchTerm)
-                .padding(.horizontal, 18)
+        VStack(alignment: .leading) {
+            #if targetEnvironment(macCatalyst)
+            Text("RegEx+")
+                .font(.title)
+                .padding(.horizontal)
+            #endif
 
-            List {
-                ForEach(regExItems.filter(filterByTerm), id: \.self) {
-                    LibraryItemView(regEx: $0)
-                }
-                .onDelete(perform: deleteRegEx)
-                .onReceive(self.didSave) { _ in
-                    DispatchQueue.main.async {
-                        self.refreshingId = UUID()
+            SearchView(text: $searchTerm)
+                .padding(.horizontal)
+
+            if regExItems.isEmpty {
+                VStack(alignment: .center) {
+                    Text("Your RegEx+ library is empty")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    Button {
+                        addRegEx(withSample: true)
+                    } label: {
+                        Text("Create a sample")
                     }
+                    .buttonStyle(.bordered)
                 }
+                .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
+            } else {
+                List {
+                    ForEach(regExItems.filter(filterByTerm), id: \.self) {
+                        LibraryItemView(regEx: $0)
+                    }
+                    .onDelete(perform: deleteRegEx)
+                }
+                .currentDeviceListStyle()
+                .environment(\.editMode, $editMode)
             }
-            .environment(\.editMode, $editMode)
-            .currentDeviceListStyle()
-            .id(self.refreshingId)
-            .navigationBarTitle("RegEx+")
-            .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
-                aboutButton.padding()
-                addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-            })
         }
+        .navigationBarTitle("RegEx+")
+        .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
+            aboutButton.padding()
+#if targetEnvironment(macCatalyst)
+            addButton
+#else
+            addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+#endif
+        })
     }
 
     private func filterByTerm(_ item: FetchedResults<RegEx>.Element) -> Bool {
@@ -72,7 +88,9 @@ struct LibraryView: View {
     }
     
     private var addButton: some View {
-        Button(action: addRegEx) {
+        Button {
+            addRegEx(withSample: false)
+        } label: {
             Image(systemName: "plus.circle.fill")
                 .imageScale(.large)
         }
@@ -81,15 +99,15 @@ struct LibraryView: View {
 
 private extension View {
     func currentDeviceListStyle() -> AnyView {
-            #if targetEnvironment(macCatalyst)
-            return AnyView(self.listStyle(PlainListStyle()))
-            #else
-            if #available(iOS 14.0, *) {
-                return AnyView(self.listStyle(InsetGroupedListStyle()))
-            } else {
-                return AnyView(self.listStyle(GroupedListStyle()))
-            }
-            #endif
+#if targetEnvironment(macCatalyst)
+        return AnyView(listStyle(PlainListStyle()).padding(.horizontal))
+#else
+        if #available(iOS 14.0, *) {
+            return AnyView(listStyle(InsetGroupedListStyle()))
+        } else {
+            return AnyView(listStyle(GroupedListStyle()))
+        }
+#endif
     }
 }
 

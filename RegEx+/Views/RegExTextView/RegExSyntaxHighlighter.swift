@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 
-fileprivate extension NSTextStorage {
+fileprivate extension NSMutableAttributedString {
 
     func highlight(range: Range<String.Index>, color: UIColor) {
         let nsRange = NSRange(range, in: string)
@@ -33,6 +33,8 @@ class RegExSyntaxHighlighter: NSObject, NSTextStorageDelegate {
             return
         }
 
+        let str = NSMutableAttributedString(attributedString: ts)
+
         let regColorMap: [String: UIColor] = [
             #"[\?\*\.\+]"# :                 UIColor.systemGreen,
             #"(?:\{)[\d\w,]+(?:\})"# :       UIColor.systemPurple,
@@ -42,21 +44,23 @@ class RegExSyntaxHighlighter: NSObject, NSTextStorageDelegate {
             #"[\(\)]"# :                     UIColor.systemPink,
         ]
         
-        let r = NSRange(location: 0, length: ts.length)
-        ts.removeAttribute(.foregroundColor, range: r)
-        ts.addAttribute(.foregroundColor, value: UIColor.label, range: r)
+        let r = NSRange(location: 0, length: str.length)
+        str.removeAttribute(.foregroundColor, range: r)
+        str.addAttribute(.foregroundColor, value: UIColor.label, range: r)
 
         var colorMap = [Range<String.Index>: UIColor]()
 
         regColorMap.forEach { regMap in
-            ts.string
+            str.string
                 .ranges(of: regMap.key, options: .regularExpression)
                 .forEach { range in
                     colorMap[range] = regMap.value
                 }
         }
 
-        colorMap.forEach(ts.highlight)
+        colorMap.forEach(str.highlight)
+
+        ts.setAttributedString(str)
     }
 
     func textStorage(

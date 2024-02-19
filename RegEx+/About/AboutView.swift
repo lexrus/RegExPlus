@@ -35,40 +35,39 @@ struct AboutView: View {
     }
     
     private var appStoreButton: some View {
-        Button(action: {
-            self.showingAppStore.toggle()
+        let url = URL(string: kAppStoreReviewUrl)!
+
+        return Button(action: {
+#if targetEnvironment(macCatalyst)
+            UIApplication.shared.open(url)
+#else
+            showingAppStore.toggle()
+#endif
         }) {
             Text("Write a review")
         }
         .sheet(isPresented: $showingAppStore) {
-             SafariView(url: URL(string: kAppStoreReviewUrl)!)
+             SafariView(url: url)
         }
     }
     
     private var gitHubButton: some View {
-        Button(action: {
-            self.showingGitHub.toggle()
+        let url = URL(string: kGitHubUrl)!
+
+        return Button(action: {
+#if targetEnvironment(macCatalyst)
+            UIApplication.shared.open(url)
+#else
+            showingGitHub.toggle()
+#endif
         }) {
             Text(kGitHubUrl)
         }
         .sheet(isPresented: $showingGitHub) {
-            SafariView(url: URL(string: kGitHubUrl)!)
+            SafariView(url: url)
         }
     }
-    
-    private var acknowledgementsSection: some View {
-        Section(header: Text("Acknowledgements")) {
-            Button(action: {
-                self.showingAcknowledgements.toggle()
-            }) {
-                Text("Some open-source lib")
-            }
-            .sheet(isPresented: $showingAcknowledgements) {
-                SafariView(url: URL(string: "https://github.com/awesome_people/awesome_lib")!)
-            }
-        }
-    }
-    
+
     var body: some View {
         List {
             Section(header: Text("\(Bundle.main.releaseVersionNumber ?? "")")) {
@@ -77,7 +76,7 @@ struct AboutView: View {
                 gitHubButton
             }
         }
-        .listStyle(GroupedListStyle())
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("RegEx+")
     }
 }
@@ -96,8 +95,6 @@ extension Bundle {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            AboutView()
-        }
+        AboutView()
     }
 }

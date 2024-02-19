@@ -16,23 +16,28 @@ struct EditorView: View {
     @State private var copyButtonText = "Copy"
 
     init(regEx: RegEx) {
-        self.viewModel = EditorViewModel(regEx: regEx)
+        viewModel = EditorViewModel(regEx: regEx)
     }
     
     var body: some View {
         List {
+            Section(header: Text("Name")) {
+                TextField("Name", text: $viewModel.regEx.name)
+                    .font(.headline)
+            }
+
             RegExTextViewSection(regEx: $viewModel.regEx)
-            
+
             Section(header: SampleHeaderView(count: viewModel.matches.count)) {
                 MatchesTextView("$56.78 $90.12", text: $viewModel.regEx.sample, matches: $viewModel.matches)
                     .padding(kTextFieldPadding)
             }
-            
+
             Section(header: Text("Substitution Template")) {
                 TextField("Price: $$$1\\.$2\\n", text: $viewModel.regEx.substitution)
                     .padding(kTextFieldPadding)
             }
-            
+
             if !viewModel.regEx.substitution.isEmpty {
                 Section(header: Text("Substitution Result")) {
                     HStack {
@@ -53,23 +58,23 @@ struct EditorView: View {
                     }
                 }
             }
-            
+
         }
+        .navigationTitle(viewModel.regEx.name)
+        .navigationBarItems(trailing: HStack(spacing: 8) {
+#if !targetEnvironment(macCatalyst)
+            shareButton.padding()
+            cheatSheetButton().padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+#else
+            EmptyView()
+#endif
+        })
+        .gesture(dismissKeyboardDesture)
+        .listStyle(InsetGroupedListStyle())
         .onDisappear(perform: {
-            self.viewModel.updateLastModified()
+            viewModel.updateLastModified()
             DataManager.shared.saveContext()
         })
-        .listStyle(InsetGroupedListStyle())
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarItems(trailing: HStack(spacing: 8) {
-            #if !targetEnvironment(macCatalyst)
-            shareButton.padding()
-            #endif
-            cheatSheetButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-        })
-        .navigationBarTitle(viewModel.regEx.name)
-        .gesture(dismissKeyboardDesture)
-        
     }
 
     private func copyToClipboard() {
@@ -98,57 +103,86 @@ struct EditorView: View {
             ActivityViewController(activityItems: [self.viewModel.regEx.description])
         }
     }
-    
-    private var cheatSheetButton: some View {
+}
+
+private func cheatSheetButton() -> some View {
+#if targetEnvironment(macCatalyst)
+    ZStack {
+        Image(systemName: "wand.and.stars")
+            .imageScale(.large)
+            .foregroundColor(.accentColor)
         NavigationLink(destination: CheatSheetView()) {
-            Image(systemName: "wand.and.stars")
-                .imageScale(.large)
+            EmptyView()
         }
+        .opacity(0)
     }
+#else
+    NavigationLink(destination: CheatSheetView()) {
+        Image(systemName: "wand.and.stars")
+            .imageScale(.large)
+            .foregroundColor(.accentColor)
+    }
+#endif
 }
 
 private struct RegExTextViewSection: View {
     @Binding var regEx: RegEx
     @State private var isOptionsVisible = false
-    @State private var showingSheet = false
-    
+
+    static var cheatSheetWindow: UIWindow?
+
     var body: some View {
         Section(header: Text("Regular Expression")) {
-            TextField("Name", text: $regEx.name)
+            #if targetEnvironment(macCatalyst)
+
+            HStack {
+                RegExTextView("Type RegEx here", text: $regEx.raw)
+                    .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
+
+                cheatSheetButton()
+                    .frame(width: 20)
+            }
+
+            #else
 
             RegExTextView("Type RegEx here", text: $regEx.raw)
                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
-            
+
+            #endif
+
             Button(action: {
-                self.isOptionsVisible.toggle()
+                isOptionsVisible.toggle()
             }) {
                 HStack {
                     Text("Options")
-                    Spacer()
-                    VStack(alignment: .trailing) {
-                        if regEx.caseInsensitive {
-                            Text("Case Insensitive")
+
+                    if !isOptionsVisible {
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            if regEx.caseInsensitive {
+                                Text("Case Insensitive")
+                            }
+                            if regEx.allowCommentsAndWhitespace {
+                                Text("Allow Comments and Whitespace")
+                            }
+                            if regEx.ignoreMetacharacters {
+                                Text("Ignore Metacharacters")
+                            }
+                            if regEx.anchorsMatchLines {
+                                Text("Anchors Match Lines")
+                            }
+                            if regEx.dotMatchesLineSeparators {
+                                Text("Dot Matches Line Separators")
+                            }
+                            if regEx.useUnixLineSeparators {
+                                Text("Use Unix Line Separators")
+                            }
+                            if regEx.useUnicodeWordBoundaries {
+                                Text("Use Unicode Word Boundaries")
+                            }
                         }
-                        if regEx.allowCommentsAndWhitespace {
-                            Text("Allow Comments and Whitespace")
-                        }
-                        if regEx.ignoreMetacharacters {
-                            Text("Ignore Metacharacters")
-                        }
-                        if regEx.anchorsMatchLines {
-                            Text("Anchors Match Lines")
-                        }
-                        if regEx.dotMatchesLineSeparators {
-                            Text("Dot Matches Line Separators")
-                        }
-                        if regEx.useUnixLineSeparators {
-                            Text("Use Unix Line Separators")
-                        }
-                        if regEx.useUnicodeWordBoundaries {
-                            Text("Use Unicode Word Boundaries")
-                        }
+                        .font(.footnote)
                     }
-                    .font(.footnote)
                 }
                 .foregroundColor(isOptionsVisible ? .secondary : .accentColor)
             }
@@ -196,6 +230,7 @@ private struct SampleHeaderView: View {
                     )
             }
         }
+        .frame(minHeight: 20)
     }
 }
 

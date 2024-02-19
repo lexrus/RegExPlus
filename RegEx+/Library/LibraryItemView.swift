@@ -11,22 +11,34 @@ import SwiftUI
 
 struct LibraryItemView: View {
     @ObservedObject var regEx: RegEx
-    
+
     private var rawBinding: Binding<String> {
-        Binding<String>(get: { self.regEx.raw }, set: { self.regEx.raw = $0 })
+        Binding<String>(
+            get: {
+                regEx.raw
+            },
+            set: {
+                regEx.raw = $0
+            }
+        )
     }
     
     @State var isEditable: Bool = false
-    
+
     var body: some View {
         NavigationLink(destination: EditorView(regEx: regEx)) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(regEx.name)
                     .font(.headline)
-                RegExTextView(text: rawBinding)
-                    .disabled(true)
+
+                if !regEx.raw.isEmpty {
+                    Text(regEx.raw)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                }
             }
-            .frame(minHeight: 60, maxHeight: 200)
+            .frame(minHeight: 50, maxHeight: 200)
         }
     }
 }
@@ -49,7 +61,7 @@ struct LibraryItemView_Previews: PreviewProvider {
                 LibraryItemView(regEx: regEx)
             }
         }
-        .navigationBarTitle("LibraryItemView")
+        .navigationTitle(Text(verbatim: "Test"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

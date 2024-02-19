@@ -19,22 +19,23 @@ extension LibraryView {
         save()
     }
     
-    func addRegEx() {
+    func addRegEx(withSample: Bool) {
         let regEx = RegEx(context: managedObjectContext)
-        let data = sampleData()
-        let sampleItem = data[regExItems.count % data.count]
-        
-        if regExItems.count >= data.count {
-            regEx.name = "Untitled"
-            regEx.raw = ""
+
+        if withSample, let randomItem = sampleData().randomElement() {
+            regEx.name = randomItem.name
+            regEx.raw = randomItem.raw
+            regEx.sample = randomItem.sample
+            regEx.allowCommentsAndWhitespace = randomItem.allowComments
+            regEx.createdAt = Date()
         } else {
-            regEx.name = sampleItem.name
-            regEx.raw = sampleItem.raw
-            regEx.sample = sampleItem.sample
-            regEx.allowCommentsAndWhitespace = sampleItem.allowComments
+            regEx.name = NSLocalizedString("Untitled", comment: "Default item name")
+            regEx.raw = ""
+            regEx.createdAt = Date()
         }
-        
+
         save()
+        editMode = .inactive
     }
     
     private func save() {

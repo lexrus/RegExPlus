@@ -19,7 +19,6 @@ struct RenameView: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(viewModel.regEx.raw)
     }
 
 }

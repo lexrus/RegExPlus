@@ -56,7 +56,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
                     }
                     att.setAttributes([
                         .font: UIFont.preferredFont(forTextStyle: .body),
-                        .foregroundColor: UIColor.red
+                        .foregroundColor: UIColor.systemBlue
                     ], range: range)
                 }
             }
@@ -97,7 +97,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
         }
 
         func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if let onDone = self.onDone, text == "\n" {
+            if let onDone, text == "\n" {
                 textView.resignFirstResponder()
                 onDone()
                 return false

@@ -18,6 +18,7 @@ extension RegEx {
     @nonobjc public class func fetchAllRegEx() -> NSFetchRequest<RegEx> {
         let req: NSFetchRequest<RegEx> = RegEx.fetchRequest()
         req.sortDescriptors = [
+            NSSortDescriptor(key: "createdAt", ascending: false),
             NSSortDescriptor(key: "updatedAt", ascending: false)
         ]
         return req

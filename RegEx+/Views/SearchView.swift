@@ -13,13 +13,21 @@ struct SearchView: View {
 
     @State private var isEditing = false
 
+    private var cornerRadius: CGFloat {
+        #if targetEnvironment(macCatalyst)
+            5
+        #else
+            18
+        #endif
+    }
+
     var body: some View {
         HStack(spacing: 0) {
             TextField("Search...", text: $text)
                 .padding(.horizontal, 32)
                 .padding(.vertical, 5)
                 .background(Color(.systemGray6))
-                .cornerRadius(18)
+                .cornerRadius(cornerRadius)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -35,6 +43,7 @@ struct SearchView: View {
                                     .foregroundColor(.gray)
                                     .padding(.trailing, 8)
                             }
+                            .buttonStyle(.borderless)
                         }
                     }
                     .id(text)
@@ -44,7 +53,9 @@ struct SearchView: View {
                     self.isEditing = true
                 }
                 .transition(.move(edge: .trailing))
-                .animation(.easeOut)
+                .animation(.easeOut, value: isEditing)
+
+            #if !targetEnvironment(macCatalyst)
 
             if isEditing {
                 Button(action: {
@@ -59,10 +70,10 @@ struct SearchView: View {
                 .transition(.move(edge: .trailing))
                 .animation(.easeOut)
             } else {
-                Button(action: {}) {
-                    Text(" ").font(.body)
-                }.frame(width: 0)
+                EmptyView()
             }
+
+            #endif
         }
         .clipped()
     }
