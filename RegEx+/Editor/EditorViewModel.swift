@@ -10,8 +10,8 @@ import Foundation
 import Combine
 
 
-class EditorViewModel : ObservableObject {
-    
+class EditorViewModel : ObservableObject, Equatable {
+
     @Published var regEx: RegEx
     
     @Published var matches = [NSTextCheckingResult]()
@@ -75,6 +75,12 @@ class EditorViewModel : ObservableObject {
         if regEx.hasChanges {
             regEx.updatedAt = Date()
         }
+    }
+
+    static func == (lhs: EditorViewModel, rhs: EditorViewModel) -> Bool {
+        lhs.regEx.isEqual(to: rhs.regEx)
+        && lhs.substitutionResult == rhs.substitutionResult
+        && lhs.matches == rhs.matches
     }
 
 }

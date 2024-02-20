@@ -19,7 +19,6 @@ private struct UITextViewWrapper: UIViewRepresentable {
     var onDone: (() -> Void)?
 
     func makeUIView(context: UIViewRepresentableContext<UITextViewWrapper>) -> UITextView {
-        
         let tv = UITextView()
         tv.delegate = context.coordinator
 
@@ -41,9 +40,12 @@ private struct UITextViewWrapper: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<UITextViewWrapper>) {
+        if uiView.attributedText.string != text {
+            uiView.attributedText = NSAttributedString(string: text)
+        }
+
         if !text.isEmpty {
-            let att = NSMutableAttributedString(string: text)
-            att.setAttributes([
+            uiView.textStorage.setAttributes([
                 .font: UIFont.preferredFont(forTextStyle: .body),
                 .foregroundColor: UIColor.label
             ], range: NSRange(location: 0, length: uiView.text.count))
@@ -54,14 +56,12 @@ private struct UITextViewWrapper: UIViewRepresentable {
                     if range.location + range.length > uiView.attributedText.length {
                         return
                     }
-                    att.setAttributes([
+                    uiView.textStorage.setAttributes([
                         .font: UIFont.preferredFont(forTextStyle: .body),
                         .foregroundColor: UIColor.systemBlue
                     ], range: range)
                 }
             }
-            
-            uiView.attributedText = att
         }
         
         UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
@@ -108,7 +108,12 @@ private struct UITextViewWrapper: UIViewRepresentable {
 
 }
 
-struct MatchesTextView: View {
+struct MatchesTextView: View, Equatable {
+
+    static func == (lhs: MatchesTextView, rhs: MatchesTextView) -> Bool {
+        lhs.text == rhs.text
+        && lhs.matches == rhs.matches
+    }
 
     private var placeholder: String
     private var onCommit: (() -> Void)?
@@ -128,18 +133,20 @@ struct MatchesTextView: View {
     init (_ placeholder: String = "", text: Binding<String>, matches: Binding<[NSTextCheckingResult]>, onCommit: (() -> Void)? = nil) {
         self.placeholder = placeholder
         self.onCommit = onCommit
-        self._matches = matches
-        self._text = text
-        self._showingPlaceholder = State<Bool>(initialValue: self.text.isEmpty)
+        _matches = matches
+        _text = text
+        _showingPlaceholder = State<Bool>(initialValue: self.text.isEmpty)
     }
 
     var body: some View {
-        UITextViewWrapper(text: internalText,
-                          calculatedHeight: $dynamicHeight,
-                          matches: matches,
-                          onDone: onCommit)
-            .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
-            .background(placeholderView, alignment: .topLeading)
+        UITextViewWrapper(
+            text: internalText,
+            calculatedHeight: $dynamicHeight,
+            matches: matches,
+            onDone: onCommit
+        )
+        .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
+        .background(placeholderView, alignment: .topLeading)
     }
 
     var placeholderView: some View {

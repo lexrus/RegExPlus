@@ -50,7 +50,7 @@ class DataManager {
     // MARK: - Core Data Saving support
 
     func saveContext() {
-        let context = self.persistentContainer.viewContext
+        let context = persistentContainer.viewContext
         guard context.hasChanges else {
             return
         }

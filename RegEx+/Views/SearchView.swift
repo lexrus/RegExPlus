@@ -22,60 +22,35 @@ struct SearchView: View {
     }
 
     var body: some View {
-        HStack(spacing: 0) {
-            TextField("Search...", text: $text)
-                .padding(.horizontal, 32)
-                .padding(.vertical, 5)
-                .background(Color(.systemGray6))
-                .cornerRadius(cornerRadius)
-                .overlay(
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 10)
+        TextField("Search...", text: $text)
+            .padding(.horizontal, 32)
+            .padding(.vertical, 5)
+            .background(Color(.systemGray6))
+            .cornerRadius(cornerRadius)
+            .overlay(
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 10)
 
-                        if isEditing && !text.isEmpty {
-                            Button(action: {
-                                self.text = ""
-                            }) {
-                                Image(systemName: "multiply.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
-                            }
-                            .buttonStyle(.borderless)
+                    if isEditing && !text.isEmpty {
+                        Button(action: {
+                            self.text = ""
+                        }) {
+                            Image(systemName: "multiply.circle.fill")
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 8)
                         }
+                        .buttonStyle(.borderless)
                     }
+                }
                     .id(text)
-                )
-                .disableAutocorrection(true)
-                .onTapGesture {
-                    self.isEditing = true
-                }
-                .transition(.move(edge: .trailing))
-                .animation(.easeOut, value: isEditing)
-
-            #if !targetEnvironment(macCatalyst)
-
-            if isEditing {
-                Button(action: {
-                    self.isEditing = false
-                    self.text = ""
-                    UIApplication.shared
-                        .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }) {
-                    Text("Cancel").font(.body)
-                }
-                .padding(.leading, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.easeOut)
-            } else {
-                EmptyView()
+            )
+            .disableAutocorrection(true)
+            .onTapGesture {
+                self.isEditing = true
             }
-
-            #endif
-        }
-        .clipped()
     }
 }
 

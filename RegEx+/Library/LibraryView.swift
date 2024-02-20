@@ -10,7 +10,12 @@ import SwiftUI
 import CoreData
 
 
-struct LibraryView: View {
+struct LibraryView: View, Equatable {
+
+    static func == (lhs: LibraryView, rhs: LibraryView) -> Bool {
+        lhs.regExItems.map(\.objectID).hashValue == rhs.regExItems.map(\.objectID).hashValue
+    }
+
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: RegEx.fetchAllRegEx()) var regExItems: FetchedResults<RegEx>
 
@@ -43,8 +48,8 @@ struct LibraryView: View {
                 .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
             } else {
                 List {
-                    ForEach(regExItems.filter(filterByTerm), id: \.self) {
-                        LibraryItemView(regEx: $0)
+                    ForEach(regExItems.filter(filterByTerm), id: \.objectID) {
+                        LibraryItemView(regEx: $0).equatable()
                     }
                     .onDelete(perform: deleteRegEx)
                 }
@@ -52,7 +57,7 @@ struct LibraryView: View {
                 .environment(\.editMode, $editMode)
             }
         }
-        .navigationBarTitle("RegEx+")
+        .navigationTitle("RegEx+")
         .navigationBarItems(leading: editButton, trailing: HStack(spacing: 6) {
             aboutButton.padding()
 #if targetEnvironment(macCatalyst)
@@ -74,7 +79,7 @@ struct LibraryView: View {
 
     private var editButton: some View {
         Button(action: {
-            self.editMode = self.editMode.isEditing ? .inactive : .active
+            editMode = editMode.isEditing ? .inactive : .active
         }, label: {
             Text(editMode.isEditing ? "Done" : "Edit")
         })

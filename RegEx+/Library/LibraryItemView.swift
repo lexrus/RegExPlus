@@ -7,26 +7,19 @@
 //
 
 import SwiftUI
+import CoreData
 
 
-struct LibraryItemView: View {
+struct LibraryItemView: View, Equatable {
+
     @ObservedObject var regEx: RegEx
-
-    private var rawBinding: Binding<String> {
-        Binding<String>(
-            get: {
-                regEx.raw
-            },
-            set: {
-                regEx.raw = $0
-            }
-        )
-    }
     
     @State var isEditable: Bool = false
 
     var body: some View {
-        NavigationLink(destination: EditorView(regEx: regEx)) {
+        NavigationLink {
+            EditorView(regEx: regEx).equatable()
+        } label: {
             VStack(alignment: .leading, spacing: 4) {
                 Text(regEx.name)
                     .font(.headline)
@@ -40,6 +33,12 @@ struct LibraryItemView: View {
             }
             .frame(minHeight: 50, maxHeight: 200)
         }
+    }
+
+    static func == (lhs: LibraryItemView, rhs: LibraryItemView) -> Bool {
+        lhs.regEx.objectID == rhs.regEx.objectID
+            && lhs.regEx.name == rhs.regEx.name
+            && lhs.regEx.raw == rhs.regEx.raw
     }
 }
 

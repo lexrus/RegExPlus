@@ -12,7 +12,7 @@ import CoreData
 
 @objc(RegEx)
 public class RegEx: NSManagedObject {
-    
+
     @NSManaged public var name: String
     @NSManaged public var raw: String
     @NSManaged public var sample: String
@@ -75,6 +75,20 @@ public class RegEx: NSManagedObject {
     
     public override var description: String {
         "/\(raw)/\(flagOptions)"
+    }
+
+    public func isEqual(to object: RegEx) -> Bool {
+        name == object.name
+        && raw == object.raw
+        && sample == object.sample
+        && substitution == object.substitution
+        && allowCommentsAndWhitespace == object.allowCommentsAndWhitespace
+        && anchorsMatchLines == object.anchorsMatchLines
+        && caseInsensitive == object.caseInsensitive
+        && dotMatchesLineSeparators == object.dotMatchesLineSeparators
+        && ignoreMetacharacters == object.ignoreMetacharacters
+        && useUnicodeWordBoundaries == object.useUnicodeWordBoundaries
+        && useUnixLineSeparators == object.useUnixLineSeparators
     }
 
 }

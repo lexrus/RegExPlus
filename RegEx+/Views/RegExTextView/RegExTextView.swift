@@ -101,7 +101,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
 
 }
 
-struct RegExTextView: View {
+struct RegExTextView: View, Equatable {
 
     private var placeholder: String
     private var onCommit: (() -> Void)?
@@ -130,8 +130,8 @@ struct RegExTextView: View {
             calculatedHeight: $dynamicHeight,
             onDone: onCommit
         )
-            .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
-            .background(placeholderView, alignment: .topLeading)
+        .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
+        .background(placeholderView, alignment: .topLeading)
     }
 
     var placeholderView: some View {
@@ -143,6 +143,10 @@ struct RegExTextView: View {
                 }
             }
         }
+    }
+
+    static func == (lhs: RegExTextView, rhs: RegExTextView) -> Bool {
+        lhs.text == rhs.text
     }
 
 }

@@ -81,22 +81,6 @@
         }
       }
     },
-    "Cancel" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
-          }
-        }
-      }
-    },
     "Case Insensitive" : {
       "localizations" : {
         "zh-Hans" : {
@@ -225,45 +209,6 @@
         }
       }
     },
-    "KeyboardObserving" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KeyboardObserving"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KeyboardObserving"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KeyboardObserving"
-          }
-        }
-      }
-    },
-    "Library" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "仓库"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "倉庫"
-          }
-        }
-      }
-    },
     "Metacharacters" : {
       "localizations" : {
         "zh-Hans" : {
@@ -292,22 +237,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名字"
-          }
-        }
-      }
-    },
-    "New name" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新的名字"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新的名字"
           }
         }
       }

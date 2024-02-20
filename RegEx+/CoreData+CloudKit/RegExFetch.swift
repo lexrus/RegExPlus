@@ -12,7 +12,7 @@ import CoreData
 extension RegEx {
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<RegEx> {
-        return NSFetchRequest<RegEx>(entityName: "RegEx")
+        NSFetchRequest<RegEx>(entityName: "RegEx")
     }
 
     @nonobjc public class func fetchAllRegEx() -> NSFetchRequest<RegEx> {
@@ -21,6 +21,12 @@ extension RegEx {
             NSSortDescriptor(key: "createdAt", ascending: false),
             NSSortDescriptor(key: "updatedAt", ascending: false)
         ]
+        return req
+    }
+
+    @nonobjc public class func fetch(byID ID: NSManagedObjectID) -> NSFetchRequest<RegEx> {
+        let req: NSFetchRequest<RegEx> = RegEx.fetchRequest()
+        req.predicate = NSPredicate(format: "self.objectID IN %@", ID)
         return req
     }
 

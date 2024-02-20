@@ -8,9 +8,12 @@
 
 import SwiftUI
 
+struct EditorView: View, Equatable {
 
-struct EditorView: View {
-    
+    static func == (lhs: EditorView, rhs: EditorView) -> Bool {
+        lhs.viewModel == rhs.viewModel
+    }
+
     @ObservedObject var viewModel: EditorViewModel
     @State private var isSharePresented = false
     @State private var copyButtonText = "Copy"
@@ -18,7 +21,7 @@ struct EditorView: View {
     init(regEx: RegEx) {
         viewModel = EditorViewModel(regEx: regEx)
     }
-    
+
     var body: some View {
         List {
             Section(header: Text("Name")) {
@@ -29,8 +32,13 @@ struct EditorView: View {
             RegExTextViewSection(regEx: $viewModel.regEx)
 
             Section(header: SampleHeaderView(count: viewModel.matches.count)) {
-                MatchesTextView("$56.78 $90.12", text: $viewModel.regEx.sample, matches: $viewModel.matches)
-                    .padding(kTextFieldPadding)
+                MatchesTextView(
+                    "$56.78 $90.12",
+                    text: $viewModel.regEx.sample,
+                    matches: $viewModel.matches
+                )
+                .equatable()
+                .padding(kTextFieldPadding)
             }
 
             Section(header: Text("Substitution Template")) {
@@ -58,8 +66,8 @@ struct EditorView: View {
                     }
                 }
             }
-
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationTitle(viewModel.regEx.name)
         .navigationBarItems(trailing: HStack(spacing: 8) {
 #if !targetEnvironment(macCatalyst)
@@ -91,7 +99,7 @@ struct EditorView: View {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }
-    
+
     private var shareButton: some View {
         Button(action: {
             self.isSharePresented = true
@@ -126,29 +134,29 @@ private func cheatSheetButton() -> some View {
 }
 
 private struct RegExTextViewSection: View {
+
     @Binding var regEx: RegEx
     @State private var isOptionsVisible = false
 
-    static var cheatSheetWindow: UIWindow?
-
     var body: some View {
         Section(header: Text("Regular Expression")) {
-            #if targetEnvironment(macCatalyst)
+#if targetEnvironment(macCatalyst)
 
             HStack {
                 RegExTextView("Type RegEx here", text: $regEx.raw)
+                    .equatable()
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
                 cheatSheetButton()
                     .frame(width: 20)
             }
 
-            #else
+#else
 
             RegExTextView("Type RegEx here", text: $regEx.raw)
                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
-            #endif
+#endif
 
             Button(action: {
                 isOptionsVisible.toggle()
@@ -202,11 +210,11 @@ private struct RegExTextViewSection: View {
 
 private struct SampleFooterView: View {
     var count: Int
-    
+
     private var matchesString: String {
         return self.count == 1 ? "1 match" : "\(count) matches"
     }
-    
+
     var body: some View {
         Text(matchesString)
     }
@@ -214,7 +222,7 @@ private struct SampleFooterView: View {
 
 private struct SampleHeaderView: View {
     var count: Int
-    
+
     var body: some View {
         HStack {
             Text("Sample Text")
@@ -234,7 +242,7 @@ private struct SampleHeaderView: View {
     }
 }
 
-private let kTextFieldPadding = EdgeInsets(top: 8, leading: 5, bottom: 8, trailing: 5)
+private let kTextFieldPadding = EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5)
 
 #if DEBUG
 struct EditorView_Previews: PreviewProvider {
