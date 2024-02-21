@@ -50,6 +50,7 @@ struct EditorView: View, Equatable {
                 Section(header: Text("Substitution Result")) {
                     HStack {
                         Text(viewModel.substitutionResult)
+                            .padding(kTextFieldPadding)
                         if !viewModel.substitutionResult.isEmpty {
                             Spacer()
                             Button(action: copyToClipboard) {
