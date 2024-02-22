@@ -52,7 +52,6 @@ class EditorViewModel : ObservableObject, Equatable {
             .combineLatest(sampleObservable)
             .sink { [weak self] (reg: NSRegularExpression, sample: String) in
                 let range = NSRange(location: 0, length: sample.count)
-                
                 self?.matches = reg.matches(in: sample, options: [], range: range)
             }
         
@@ -61,7 +60,6 @@ class EditorViewModel : ObservableObject, Equatable {
             .map { ($0, $1.0, $1.1) }
             .sink { [weak self] (reg: NSRegularExpression, sub: String, sample: String) in
                 let range = NSRange(location: 0, length: sample.count)
-                
                 self?.substitutionResult = reg.stringByReplacingMatches(
                     in: sample,
                     options: [],

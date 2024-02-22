@@ -13,8 +13,6 @@ import CoreData
 struct LibraryItemView: View, Equatable {
 
     @ObservedObject var regEx: RegEx
-    
-    @State var isEditable: Bool = false
 
     var body: some View {
         NavigationLink {
@@ -32,7 +30,9 @@ struct LibraryItemView: View, Equatable {
                 }
             }
             .frame(minHeight: 50, maxHeight: 200)
+            .paddingVertical()
         }
+        .isDetailLink(true)
     }
 
     static func == (lhs: LibraryItemView, rhs: LibraryItemView) -> Bool {
@@ -40,6 +40,18 @@ struct LibraryItemView: View, Equatable {
             && lhs.regEx.name == rhs.regEx.name
             && lhs.regEx.raw == rhs.regEx.raw
     }
+}
+
+private extension View {
+
+    func paddingVertical() -> AnyView {
+        #if targetEnvironment(macCatalyst)
+        AnyView(padding(.vertical))
+        #else
+        AnyView(self)
+        #endif
+    }
+
 }
 
 struct LibraryItemView_Previews: PreviewProvider {

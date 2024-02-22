@@ -79,6 +79,7 @@ public class RegEx: NSManagedObject {
 
     public func isEqual(to object: RegEx) -> Bool {
         name == object.name
+        && regularExpressionOptions == object.regularExpressionOptions
         && raw == object.raw
         && sample == object.sample
         && substitution == object.substitution
