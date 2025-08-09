@@ -300,6 +300,7 @@
       }
     },
     "Rate RegEx+" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -470,6 +471,7 @@
 
     },
     "Write a review" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {

@@ -24,6 +24,7 @@
 		D7732033245D3388003C0CF8 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732032245D3388003C0CF8 /* String+NSRange.swift */; };
 		D7732035245D3456003C0CF8 /* MatchesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732034245D3456003C0CF8 /* MatchesTextView.swift */; };
 		D77C7970247EBC6D00D3B1B2 /* CheatSheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = D77C7972247EBC6D00D3B1B2 /* CheatSheet.plist */; };
+		D78E45502E4795E5002ACA56 /* AppAboutView in Frameworks */ = {isa = PBXBuildFile; productRef = D78E454F2E4795E5002ACA56 /* AppAboutView */; };
 		D7A925DC2B81057E0023E8EA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D7A925DB2B81057E0023E8EA /* Localizable.xcstrings */; };
 		D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB73F8244F47E400343AC5 /* EditorView.swift */; };
 		D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D8244E010D00D81C74 /* HomeView.swift */; };
@@ -78,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */,
+				D78E45502E4795E5002ACA56 /* AppAboutView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +229,7 @@
 			);
 			name = "RegEx+";
 			packageProductDependencies = (
+				D78E454F2E4795E5002ACA56 /* AppAboutView */,
 			);
 			productName = RegExPro;
 			productReference = D7CCA7D1244E010D00D81C74 /* RegEx.app */;
@@ -260,6 +263,7 @@
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
+				D78E454E2E4795E5002ACA56 /* XCRemoteSwiftPackageReference "AppAboutView" */,
 			);
 			productRefGroup = D7CCA7D2244E010D00D81C74 /* Products */;
 			projectDirPath = "";
@@ -413,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -474,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -498,6 +502,7 @@
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RegEx+/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +531,7 @@
 				DEVELOPMENT_TEAM = 5SKD83S59G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RegEx+/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,6 +571,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D78E454E2E4795E5002ACA56 /* XCRemoteSwiftPackageReference "AppAboutView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lexrus/AppAboutView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D78E454F2E4795E5002ACA56 /* AppAboutView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D78E454E2E4795E5002ACA56 /* XCRemoteSwiftPackageReference "AppAboutView" */;
+			productName = AppAboutView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7090090245DB87C00326016 /* RegEx.xcdatamodeld */ = {
