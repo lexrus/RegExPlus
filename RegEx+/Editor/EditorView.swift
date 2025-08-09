@@ -11,79 +11,89 @@ import SwiftUI
 struct EditorView: View, Equatable {
 
     static func == (lhs: EditorView, rhs: EditorView) -> Bool {
-        lhs.viewModel == rhs.viewModel
+        lhs.regEx.objectID == rhs.regEx.objectID
     }
 
-    @ObservedObject var viewModel: EditorViewModel
+    let regEx: RegEx
+    @StateObject private var viewModel = EditorViewModel()
     @State private var isSharePresented = false
     @State private var copyButtonText = "Copy"
 
     init(regEx: RegEx) {
-        viewModel = EditorViewModel(regEx: regEx)
+        self.regEx = regEx
     }
 
     var body: some View {
-        List {
-            Section(header: Text("Name")) {
-                TextField("Name", text: $viewModel.regEx.name)
-                    .font(.headline)
-            }
+        Group {
+            if let regExBinding = Binding($viewModel.regEx) {
+                List {
+                    Section(header: Text("Name")) {
+                        TextField("Name", text: regExBinding.name)
+                            .font(.headline)
+                    }
 
-            RegExTextViewSection(regEx: $viewModel.regEx)
+                    RegExTextViewSection(regEx: regExBinding)
 
-            Section(header: SampleHeaderView(count: viewModel.matches.count)) {
-                MatchesTextView(
-                    "$56.78 $90.12",
-                    text: $viewModel.regEx.sample,
-                    matches: $viewModel.matches
-                )
-                .equatable()
-                .padding(kTextFieldPadding)
-            }
+                    Section(header: SampleHeaderView(count: viewModel.matches.count)) {
+                        MatchesTextView(
+                            "$56.78 $90.12",
+                            text: regExBinding.sample,
+                            matches: $viewModel.matches
+                        )
+                        .equatable()
+                        .padding(kTextFieldPadding)
+                    }
 
-            Section(header: Text("Substitution Template")) {
-                TextField("Price: $$$1\\.$2\\n", text: $viewModel.regEx.substitution)
-                    .padding(kTextFieldPadding)
-            }
-
-            if !viewModel.regEx.substitution.isEmpty {
-                Section(header: Text("Substitution Result")) {
-                    HStack {
-                        Text(viewModel.substitutionResult)
+                    Section(header: Text("Substitution Template")) {
+                        TextField("Price: $$$1\\.$2\\n", text: regExBinding.substitution)
                             .padding(kTextFieldPadding)
-                        if !viewModel.substitutionResult.isEmpty {
-                            Spacer()
-                            Button(action: copyToClipboard) {
-                                Text("\(copyButtonText)")
-                                    .font(.footnote)
-                                    .foregroundColor(Color.accentColor)
-                                    .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .stroke(Color.accentColor, lineWidth: 1)
-                                    )
+                    }
+
+                    if !regExBinding.wrappedValue.substitution.isEmpty {
+                        Section(header: Text("Substitution Result")) {
+                            HStack {
+                                Text(viewModel.substitutionResult)
+                                    .padding(kTextFieldPadding)
+                                if !viewModel.substitutionResult.isEmpty {
+                                    Spacer()
+                                    Button(action: copyToClipboard) {
+                                        Text("\(copyButtonText)")
+                                            .font(.footnote)
+                                            .foregroundColor(Color.accentColor)
+                                            .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .stroke(Color.accentColor, lineWidth: 1)
+                                            )
+                                    }
+                                }
                             }
                         }
                     }
                 }
+                .navigationTitle(regExBinding.name)
+                .toolbar {
+#if !targetEnvironment(macCatalyst)
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        shareButton.padding()
+                        cheatSheetButton().padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 0))
+                    }
+#endif
+                }
+                .gesture(dismissKeyboardDesture)
+                .listStyle(InsetGroupedListStyle())
+                .onDisappear(perform: {
+                    viewModel.updateLastModified()
+                    DataManager.shared.saveContext()
+                })
+            } else {
+                Text("Loading...")
+                    .navigationTitle("RegEx+")
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationTitle(viewModel.regEx.name)
-        .navigationBarItems(trailing: HStack(spacing: 8) {
-#if !targetEnvironment(macCatalyst)
-            shareButton.padding()
-            cheatSheetButton().padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
-#else
-            EmptyView()
-#endif
-        })
-        .gesture(dismissKeyboardDesture)
-        .listStyle(InsetGroupedListStyle())
-        .onDisappear(perform: {
-            viewModel.updateLastModified()
-            DataManager.shared.saveContext()
-        })
+        .onAppear {
+            viewModel.configure(with: regEx)
+        }
     }
 
     private func copyToClipboard() {
@@ -109,7 +119,9 @@ struct EditorView: View, Equatable {
                 .imageScale(.large)
         }
         .sheet(isPresented: $isSharePresented) {
-            ActivityViewController(activityItems: [self.viewModel.regEx.description])
+            if let regEx = viewModel.regEx {
+                ActivityViewController(activityItems: [regEx.description])
+            }
         }
     }
 }

@@ -12,14 +12,21 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
 
     var body: some View {
-        return NavigationView {
-            LibraryView()
-                .environment(\.managedObjectContext, managedObjectContext)
-            Text(verbatim: "RegEx+")
-                .font(.largeTitle)
+        if #available(iOS 16.0, macOS 13.0, *) {
+            NavigationSplitView {
+                LibraryView()
+            } detail: {
+                Text(verbatim: "RegEx+")
+                    .font(.largeTitle)
+            }
+        } else {
+            NavigationView {
+                LibraryView()
+                Text(verbatim: "RegEx+")
+                    .font(.largeTitle)
+            }
+            .currentDeviceNavigationViewStyle()
         }
-        .environment(\.managedObjectContext, managedObjectContext)
-        .currentDeviceNavigationViewStyle()
     }
 }
 

@@ -16,7 +16,9 @@ struct LibraryItemView: View, Equatable {
 
     var body: some View {
         NavigationLink {
-            EditorView(regEx: regEx).equatable()
+            EditorView(regEx: regEx)
+                .equatable()
+                .id(regEx.objectID)
         } label: {
             VStack(alignment: .leading, spacing: 4) {
                 Text(regEx.name)
@@ -73,6 +75,5 @@ struct LibraryItemView_Previews: PreviewProvider {
             }
         }
         .navigationTitle(Text(verbatim: "Test"))
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

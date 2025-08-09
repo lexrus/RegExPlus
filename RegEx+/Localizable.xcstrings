@@ -130,6 +130,7 @@
       }
     },
     "Description:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -208,6 +209,9 @@
           }
         }
       }
+    },
+    "Loading..." : {
+
     },
     "Metacharacters" : {
       "localizations" : {
