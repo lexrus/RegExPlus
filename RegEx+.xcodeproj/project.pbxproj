@@ -57,6 +57,9 @@
 		D7732034245D3456003C0CF8 /* MatchesTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTextView.swift; sourceTree = "<group>"; };
 		D77C7971247EBC6D00D3B1B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D77C7973247EBC7300D3B1B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/CheatSheet.plist"; sourceTree = "<group>"; };
+		D78E45B82E47A2B0002ACA56 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/CheatSheet.plist; sourceTree = "<group>"; };
+		D78E45B92E47A2D2002ACA56 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/CheatSheet.plist; sourceTree = "<group>"; };
+		D78E45BA2E47A2DD002ACA56 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D7A925DB2B81057E0023E8EA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D7BB73F8244F47E400343AC5 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		D7CCA7D1244E010D00D81C74 /* RegEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +263,9 @@
 				"zh-Hans",
 				"zh-Hant",
 				Base,
+				ja,
+				de,
+				es,
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
@@ -348,6 +354,9 @@
 				D77C7971247EBC6D00D3B1B2 /* en */,
 				D77C7973247EBC7300D3B1B2 /* zh-Hans */,
 				D7D0E96F249F4FA800F6B9DF /* zh-Hant */,
+				D78E45B82E47A2B0002ACA56 /* ja */,
+				D78E45B92E47A2D2002ACA56 /* de */,
+				D78E45BA2E47A2DD002ACA56 /* es */,
 			);
 			name = CheatSheet.plist;
 			sourceTree = "<group>";

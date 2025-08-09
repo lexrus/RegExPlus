@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Entspricht einem BELL, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Entspricht dem Anfang der Eingabe. Unterscheidet sich von ^ dadurch, dass \A nicht nach einem Zeilenumbruch innerhalb der Eingabe entspricht.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Entspricht, wenn die aktuelle Position eine Wortgrenze ist. Grenzen treten bei Übergängen zwischen Wort- (\w) und Nicht-Wort-Zeichen (\W) auf, wobei kombinierende Zeichen ignoriert werden. Für bessere Wortgrenzen siehe useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Entspricht einem BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Entspricht, wenn die aktuelle Position keine Wortgrenze ist.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Entspricht einem Control-X-Zeichen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Entspricht jedem Zeichen der Unicode-Kategorie Nd (Number, Decimal Digit)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Entspricht jedem Zeichen, das keine Dezimalziffer ist</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Entspricht einem ESCAPE, \u001B</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Beendet eine \Q ... \E-Quotierung</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Entspricht einem FORM FEED, \u000C</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Entspricht, wenn die aktuelle Position am Ende der vorherigen Übereinstimmung ist</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Entspricht einem LINE FEED, \u000A</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Entspricht dem benannten Zeichen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Entspricht jedem Zeichen mit der angegebenen Unicode-Eigenschaft</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Entspricht jedem Zeichen ohne die angegebene Unicode-Eigenschaft</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Quotiert alle folgenden Zeichen bis \E</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Entspricht einem CARRIAGE RETURN, \u000D</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Entspricht einem Leerzeichen. Leerzeichen sind definiert als [\t\n\f\r\p{Z}]</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Entspricht einem Nicht-Leerzeichen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Entspricht einem HORIZONTAL TABULATION, \u0009</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Entspricht dem Zeichen mit dem Hexadezimalwert hhhh</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Entspricht dem Zeichen mit dem Hexadezimalwert hhhhhhhh. Genau acht Hexadezimalziffern müssen angegeben werden, obwohl der größte Unicode-Codepunkt \U0010ffff ist</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Entspricht einem Wortzeichen. Wortzeichen sind [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Entspricht einem Nicht-Wortzeichen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Entspricht dem Zeichen mit dem Hexadezimalwert hhhh. Ein bis sechs Hexadezimalziffern können angegeben werden</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Entspricht dem Zeichen mit dem zweistelligen Hexadezimalwert hh</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Entspricht einem Graphem-Cluster</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Entspricht, wenn die aktuelle Position am Ende der Eingabe ist, aber vor dem abschließenden Zeilenterminator, falls einer existiert</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Entspricht, wenn die aktuelle Position am Ende der Eingabe ist</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Rückverweis. Entspricht dem, was die n-te Erfassungsgruppe erfasst hat. n muss eine Zahl ≥ 1 und ≤ der Gesamtzahl der Erfassungsgruppen im Muster sein</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Entspricht einem Oktalzeichen. ooo sind ein bis drei Oktalziffern. 0377 ist das größte erlaubte Oktalzeichen. Die führende Null ist erforderlich; sie unterscheidet Oktalkonstanten von Rückverweisen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Entspricht einem beliebigen Zeichen aus dem Muster</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Entspricht einem beliebigen Zeichen</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Entspricht am Anfang einer Zeile</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Entspricht am Ende einer Zeile</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Quotiert das folgende Zeichen. Zeichen, die quotiert werden müssen, um als Literale behandelt zu werden, sind * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternative. A|B entspricht entweder A oder B</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Entspricht 0 oder mehrmals. Entspricht so oft wie möglich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Entspricht 1 oder mehrmals. Entspricht so oft wie möglich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Entspricht null oder einmal. Bevorzugt einmal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Entspricht genau n-mal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Entspricht mindestens n-mal. Entspricht so oft wie möglich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Entspricht zwischen n und m Mal. Entspricht so oft wie möglich, aber nicht mehr als m-mal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Entspricht 0 oder mehrmals. Entspricht so wenig wie möglich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Entspricht 1 oder mehrmals. Entspricht so wenig wie möglich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Entspricht null oder einmal. Bevorzugt null</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Entspricht genau n-mal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Entspricht mindestens n-mal, aber nicht mehr als für eine Gesamtmuster-Übereinstimmung erforderlich</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Entspricht zwischen n und m Mal. Entspricht so wenig wie möglich, aber nicht weniger als n-mal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Entspricht 0 oder mehrmals. Entspricht so oft wie möglich beim ersten Auftreten, wiederholt nicht mit weniger, auch wenn die Gesamtübereinstimmung fehlschlägt (Possessive Match)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Entspricht 1 oder mehrmals. Possessive Match</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Entspricht null oder einmal. Possessive Match</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Entspricht genau n-mal</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Entspricht mindestens n-mal. Possessive Match</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Entspricht zwischen n und m Mal. Possessive Match</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Erfassungsklammern. Der Bereich der Eingabe, der dem geklammerten Teilausdruck entspricht, ist nach der Übereinstimmung verfügbar</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Nicht-erfassende Klammern. Gruppiert das enthaltene Muster, erfasst aber nicht den übereinstimmenden Text. Etwas effizienter als erfassende Klammern</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Atomare Klammern. Die erste Übereinstimmung des geklammerten Teilausdrucks ist die einzige, die versucht wird; wenn sie nicht zu einer Gesamtmuster-Übereinstimmung führt, geht die Suche zu einer Position vor &quot;(?&gt;&quot; zurück</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Freiformatkommentar (?# Kommentar )</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Vorausschau-Zusicherung. Wahr, wenn das geklammerte Muster an der aktuellen Eingabeposition entspricht, aber die Eingabeposition nicht voranschreitet</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Negative Vorausschau-Zusicherung. Wahr, wenn das geklammerte Muster an der aktuellen Eingabeposition nicht entspricht. Schreitet die Eingabeposition nicht voran</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Rückblick-Zusicherung. Wahr, wenn das geklammerte Muster dem Text vor der aktuellen Eingabeposition entspricht, wobei das letzte Zeichen der Übereinstimmung das Eingabezeichen unmittelbar vor der aktuellen Position ist. Verändert die Eingabeposition nicht. Die Länge möglicher Zeichenketten, die vom Rückblick-Muster erfasst werden, darf nicht unbegrenzt sein (keine * oder + Operatoren)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Negative Rückblick-Zusicherung. Wahr, wenn das geklammerte Muster nicht dem Text vor der aktuellen Eingabeposition entspricht, wobei das letzte Zeichen der Übereinstimmung das Eingabezeichen unmittelbar vor der aktuellen Position wäre. Verändert die Eingabeposition nicht. Die Länge möglicher Zeichenketten, die vom Rückblick-Muster erfasst werden, darf nicht unbegrenzt sein (keine * oder + Operatoren)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Flag-Einstellungen. Wertet den geklammerten Ausdruck mit den angegebenen aktivierten oder -deaktivierten Flags aus. Die Flags sind in Flag-Optionen definiert</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Flag-Einstellungen. Ändert die Flag-Einstellungen. Änderungen gelten für den Teil des Musters nach der Einstellung. Zum Beispiel ändert (?i) zu einer groß-/kleinschreibungsunabhängigen Übereinstimmung. Die Flags sind in Flag-Optionen definiert</string>
+		</dict>
+	</array>
+</dict>
+</plist>

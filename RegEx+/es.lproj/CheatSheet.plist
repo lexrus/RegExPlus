@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Coincide con un BELL, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Coincide al principio de la entrada. Se diferencia de ^ en que \A no coincidirá después de una nueva línea dentro de la entrada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Coincide si la posición actual es un límite de palabra. Los límites ocurren en las transiciones entre caracteres de palabra (\w) y no-palabra (\W), ignorando las marcas de combinación. Para mejores límites de palabra, consulte useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Coincide con un BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Coincide si la posición actual no es un límite de palabra.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Coincide con un carácter control-X</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter con la Categoría General Unicode de Nd (Number, Decimal Digit.)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter que no sea un dígito decimal.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Coincide con un ESCAPE, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Termina una secuencia entrecomillada \Q ... \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Coincide con un FORM FEED, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Coincide si la posición actual está al final de la coincidencia anterior.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Coincide con un LINE FEED, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Coincide con el carácter nombrado.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter con la Propiedad Unicode especificada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter que no tenga la Propiedad Unicode especificada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Entrecomilla todos los caracteres siguientes hasta \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Coincide con un CARRIAGE RETURN, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Coincide con un carácter de espacio en blanco. El espacio en blanco se define como [\t\n\f\r\p{Z}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Coincide con un carácter que no sea espacio en blanco.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Coincide con un HORIZONTAL TABULATION, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Coincide con el carácter con el valor hexadecimal hhhh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Coincide con el carácter con el valor hexadecimal hhhhhhhh. Deben proporcionarse exactamente ocho dígitos hexadecimales, aunque el punto de código Unicode más grande sea \U0010ffff.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Coincide con un carácter de palabra. Los caracteres de palabra son [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Coincide con un carácter que no sea de palabra.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Coincide con el carácter con valor hexadecimal hhhh. Se pueden proporcionar de uno a seis dígitos hexadecimales.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Coincide con el carácter con valor hexadecimal de dos dígitos hh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Coincide con un Clúster de Grafemas.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Coincide si la posición actual está al final de la entrada, pero antes del terminador de línea final, si existe uno.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Coincide si la posición actual está al final de la entrada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Referencia hacia atrás. Coincide con lo que sea que el n-ésimo grupo de captura haya coincidido. n debe ser un número ≥ 1 y ≤ número total de grupos de captura en el patrón.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Coincide con un carácter Octal. ooo es de uno a tres dígitos octales. 0377 es el carácter Octal más grande permitido. El cero inicial es requerido; distingue las constantes Octales de las referencias hacia atrás.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter del patrón.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Coincide con cualquier carácter.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Coincide al principio de una línea.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Coincide al final de una línea.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Entrecomilla el siguiente carácter. Los caracteres que deben entrecomillarse para ser tratados como literales son * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternancia. A|B coincide con A o B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Coincide 0 o más veces. Coincide tantas veces como sea posible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Coincide 1 o más veces. Coincide tantas veces como sea posible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Coincide cero o una vez. Prefiere una.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Coincide exactamente n veces.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Coincide al menos n veces. Coincide tantas veces como sea posible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Coincide entre n y m veces. Coincide tantas veces como sea posible, pero no más de m.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Coincide 0 o más veces. Coincide tan pocas veces como sea posible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Coincide 1 o más veces. Coincide tan pocas veces como sea posible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Coincide cero o una vez. Prefiere cero.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Coincide exactamente n veces.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Coincide al menos n veces, pero no más de lo requerido para una coincidencia general del patrón.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Coincide entre n y m veces. Coincide tan pocas veces como sea posible, pero no menos de n.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Coincide 0 o más veces. Coincide tantas veces como sea posible al encontrarse por primera vez, no reintenta con menos aunque la coincidencia general falle (Coincidencia Posesiva).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Coincide 1 o más veces. Coincidencia posesiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Coincide cero o una vez. Coincidencia posesiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Coincide exactamente n veces.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Coincide al menos n veces. Coincidencia Posesiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Coincide entre n y m veces. Coincidencia Posesiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Paréntesis de captura. El rango de entrada que coincidió con la subexpresión entre paréntesis está disponible después de la coincidencia.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Paréntesis de no captura. Agrupa el patrón incluido, pero no proporciona captura del texto coincidente. Algo más eficiente que los paréntesis de captura.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Paréntesis de coincidencia atómica. La primera coincidencia de la subexpresión entre paréntesis es la única que se intenta; si no lleva a una coincidencia general del patrón, retrocede la búsqueda de una coincidencia a una posición antes del &quot;(?&gt;&quot;</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Comentario de formato libre (?# comentario ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Aserción de búsqueda hacia adelante. Verdadero si el patrón entre paréntesis coincide en la posición de entrada actual, pero no avanza la posición de entrada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Aserción negativa de búsqueda hacia adelante. Verdadero si el patrón entre paréntesis no coincide en la posición de entrada actual. No avanza la posición de entrada.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Aserción de búsqueda hacia atrás. Verdadero si el patrón entre paréntesis coincide con el texto que precede a la posición de entrada actual, siendo el último carácter de la coincidencia el carácter de entrada justo antes de la posición actual. No altera la posición de entrada. La longitud de las posibles cadenas coincidentes del patrón de búsqueda hacia atrás no debe ser ilimitada (sin operadores * o +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Aserción negativa de búsqueda hacia atrás. Verdadero si el patrón entre paréntesis no coincide con el texto que precede a la posición de entrada actual, siendo el último carácter de la coincidencia el carácter de entrada justo antes de la posición actual. No altera la posición de entrada. La longitud de las posibles cadenas coincidentes del patrón de búsqueda hacia atrás no debe ser ilimitada (sin operadores * o +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Configuración de banderas. Evalúa la expresión entre paréntesis con las banderas especificadas habilitadas o -deshabilitadas. Las banderas se definen en Opciones de Banderas.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Configuración de banderas. Cambia la configuración de las banderas. Los cambios se aplican a la porción del patrón que sigue a la configuración. Por ejemplo, (?i) cambia a una coincidencia insensible a mayúsculas y minúsculas. Las banderas se definen en Opciones de Banderas.</string>
+		</dict>
+	</array>
+</dict>
+</plist>
