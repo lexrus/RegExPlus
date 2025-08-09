@@ -56,10 +56,9 @@ private struct UITextViewWrapper: UIViewRepresentable {
         
         syntaxHighlighter.textStorage = uiView.textStorage
         syntaxHighlighter.highlightRegularExpression()
-
-        DispatchQueue.main.async {
-            UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
-        }
+        
+        // Calculate height synchronously since we're already on the main thread
+        UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
     }
 
     fileprivate static func recalculateHeight(view: UIView, result: Binding<CGFloat>) {
@@ -85,8 +84,11 @@ private struct UITextViewWrapper: UIViewRepresentable {
         }
 
         func textViewDidChange(_ uiView: UITextView) {
-            text.wrappedValue = uiView.text
-            UITextViewWrapper.recalculateHeight(view: uiView, result: calculatedHeight)
+            // Only update if text actually changed
+            if text.wrappedValue != uiView.text {
+                text.wrappedValue = uiView.text
+                UITextViewWrapper.recalculateHeight(view: uiView, result: calculatedHeight)
+            }
         }
 
         func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

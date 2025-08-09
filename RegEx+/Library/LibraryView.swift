@@ -21,6 +21,16 @@ struct LibraryView: View, Equatable {
 
     @State private var searchTerm = ""
     @State var editMode = EditMode.inactive
+    
+    private var filteredItems: [RegEx] {
+        if searchTerm.isEmpty {
+            return Array(regExItems)
+        }
+        return regExItems.filter { item in
+            item.name.localizedCaseInsensitiveContains(searchTerm) ||
+            item.raw.localizedCaseInsensitiveContains(searchTerm)
+        }
+    }
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -42,7 +52,7 @@ struct LibraryView: View, Equatable {
                 .frame(maxWidth: .greatestFiniteMagnitude, maxHeight: .greatestFiniteMagnitude)
             } else {
                 List {
-                    ForEach(regExItems.filter(filterByTerm), id: \.objectID) {
+                    ForEach(filteredItems, id: \.objectID) {
                         LibraryItemView(regEx: $0).equatable()
                     }
                     .onDelete(perform: deleteRegEx)
@@ -55,14 +65,6 @@ struct LibraryView: View, Equatable {
         .setNavigationItems(libraryView: self)
     }
 
-    private func filterByTerm(_ item: FetchedResults<RegEx>.Element) -> Bool {
-        if searchTerm.isEmpty {
-            return true
-        }
-
-        return item.name.lowercased().contains(searchTerm.lowercased())
-            || item.raw.lowercased().contains(searchTerm.lowercased())
-    }
 
     var editButton: some View {
         Button(action: {
@@ -90,46 +92,45 @@ struct LibraryView: View, Equatable {
 }
 
 private extension View {
-    func currentDeviceListStyle() -> AnyView {
+    @ViewBuilder
+    func currentDeviceListStyle() -> some View {
 #if targetEnvironment(macCatalyst)
-        return AnyView(listStyle(PlainListStyle()).padding(.horizontal))
+        self.listStyle(.plain)
+            .padding(.horizontal)
 #else
         if #available(iOS 14.0, *) {
-            return AnyView(listStyle(InsetGroupedListStyle()))
+            self.listStyle(.insetGrouped)
         } else {
-            return AnyView(listStyle(GroupedListStyle()))
+            self.listStyle(.grouped)
         }
 #endif
     }
 }
 
 private extension View {
-    func setNavigationItems(libraryView: LibraryView) -> AnyView {
-        #if targetEnvironment(macCatalyst)
-        AnyView(toolbar {
+    @ViewBuilder
+    func setNavigationItems(libraryView: LibraryView) -> some View {
+        self.toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 libraryView.editButton
             }
+#if targetEnvironment(macCatalyst)
             ToolbarItem(placement: .topBarTrailing) {
                 HStack {
                     libraryView.aboutButton
                     libraryView.addButton
                 }
             }
-        })
-        #else
-        AnyView(toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                libraryView.editButton
-            }
+#else
             ToolbarItem(placement: .topBarTrailing) {
                 libraryView.aboutButton
             }
             ToolbarItem(placement: .topBarTrailing) {
-                libraryView.addButton.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
+                libraryView.addButton
+                    .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 0))
             }
-        })
-        #endif
+#endif
+        }
     }
 }
 

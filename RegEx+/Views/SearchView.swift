@@ -45,7 +45,6 @@ struct SearchView: View {
                         .buttonStyle(.borderless)
                     }
                 }
-                    .id(text)
             )
             .disableAutocorrection(true)
             .onTapGesture {

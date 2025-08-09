@@ -113,6 +113,12 @@
         }
       }
     },
+    "Copies the substitution result to clipboard" : {
+
+    },
+    "Copy substitution result" : {
+
+    },
     "Create a sample" : {
       "localizations" : {
         "zh-Hans" : {
@@ -373,6 +379,12 @@
         }
       }
     },
+    "Share" : {
+
+    },
+    "Share this regular expression" : {
+
+    },
     "Substitution Result" : {
       "localizations" : {
         "zh-Hans" : {
@@ -453,6 +465,9 @@
           }
         }
       }
+    },
+    "View regular expression reference guide" : {
+
     },
     "Write a review" : {
       "localizations" : {

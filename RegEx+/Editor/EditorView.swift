@@ -44,32 +44,12 @@ struct EditorView: View, Equatable {
                         .padding(kTextFieldPadding)
                     }
 
-                    Section(header: Text("Substitution Template")) {
-                        TextField("Price: $$$1\\.$2\\n", text: regExBinding.substitution)
-                            .padding(kTextFieldPadding)
-                    }
-
-                    if !regExBinding.wrappedValue.substitution.isEmpty {
-                        Section(header: Text("Substitution Result")) {
-                            HStack {
-                                Text(viewModel.substitutionResult)
-                                    .padding(kTextFieldPadding)
-                                if !viewModel.substitutionResult.isEmpty {
-                                    Spacer()
-                                    Button(action: copyToClipboard) {
-                                        Text("\(copyButtonText)")
-                                            .font(.footnote)
-                                            .foregroundColor(Color.accentColor)
-                                            .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 20)
-                                                    .stroke(Color.accentColor, lineWidth: 1)
-                                            )
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    SubstitutionSection(
+                        regExBinding: regExBinding,
+                        substitutionResult: viewModel.substitutionResult,
+                        copyButtonText: copyButtonText,
+                        copyAction: copyToClipboard
+                    )
                 }
                 .navigationTitle(regExBinding.name)
                 .toolbar {
@@ -118,6 +98,8 @@ struct EditorView: View, Equatable {
             Image(systemName: "square.and.arrow.up")
                 .imageScale(.large)
         }
+        .accessibilityLabel("Share")
+        .accessibilityHint("Share this regular expression")
         .sheet(isPresented: $isSharePresented) {
             if let regEx = viewModel.regEx {
                 ActivityViewController(activityItems: [regEx.description])
@@ -137,12 +119,16 @@ private func cheatSheetButton() -> some View {
         }
         .opacity(0)
     }
+    .accessibilityLabel("Cheat Sheet")
+    .accessibilityHint("View regular expression reference guide")
 #else
     NavigationLink(destination: CheatSheetView()) {
         Image(systemName: "wand.and.stars")
             .imageScale(.large)
             .foregroundColor(.accentColor)
     }
+    .accessibilityLabel("Cheat Sheet")
+    .accessibilityHint("View regular expression reference guide")
 #endif
 }
 
@@ -282,6 +268,44 @@ struct EditorView_Previews: PreviewProvider {
             .previewDevice("iPhone 11")
             .preferredColorScheme(.dark)
             .environment(\.sizeCategory, .large)
+        }
+    }
+}
+
+private struct SubstitutionSection: View {
+    @Binding var regExBinding: RegEx
+    let substitutionResult: String
+    let copyButtonText: String
+    let copyAction: () -> Void
+    
+    var body: some View {
+        Section(header: Text("Substitution Template")) {
+            TextField("Price: $$$1\\.$2\\n", text: $regExBinding.substitution)
+                .padding(kTextFieldPadding)
+        }
+
+        if !regExBinding.substitution.isEmpty {
+            Section(header: Text("Substitution Result")) {
+                HStack {
+                    Text(substitutionResult)
+                        .padding(kTextFieldPadding)
+                    if !substitutionResult.isEmpty {
+                        Spacer()
+                        Button(action: copyAction) {
+                            Text("\(copyButtonText)")
+                                .font(.footnote)
+                                .foregroundColor(Color.accentColor)
+                                .padding(EdgeInsets(top: 1, leading: 6, bottom: 1, trailing: 6))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color.accentColor, lineWidth: 1)
+                                )
+                        }
+                        .accessibilityLabel("Copy substitution result")
+                        .accessibilityHint("Copies the substitution result to clipboard")
+                    }
+                }
+            }
         }
     }
 }
