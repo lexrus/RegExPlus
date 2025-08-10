@@ -6,8 +6,16 @@
 //  Copyright © 2025 Lex.sh. All rights reserved.
 //
 
-import SwiftUI
 import UIKit
+
+extension UIFont {
+    func withWeight(_ weight: UIFont.Weight) -> UIFont {
+        let descriptor = fontDescriptor.addingAttributes([
+            .traits: [UIFontDescriptor.TraitKey.weight: weight]
+        ])
+        return UIFont(descriptor: descriptor, size: pointSize)
+    }
+}
 
 enum ShortcutKey: String, CaseIterable {
     case leftArrow = "←"
@@ -67,63 +75,124 @@ private let keyHeight: CGFloat = 40
 private let keyHorizontalMargin: CGFloat = 6
 private let keyVerticalSpacing: CGFloat = 8
 
-struct ShortcutKeysView: View {
-    let onKeyTapped: (ShortcutKey) -> Void
-
-    var body: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-                .fill(Color(UIColor.separator))
-                .frame(height: 0.5)
-
-            HStack(alignment: .center, spacing: keyHorizontalMargin) {
-                HStack(alignment: .center, spacing: keyHorizontalMargin) {
-                    ForEach(ShortcutKey.allCases.filter { !$0.isCharKey }, id: \.rawValue) { key in
-                        Button(action: {
-                            onKeyTapped(key)
-                        }) {
-                            Text(key.displayText)
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.primary)
-                                .frame(width: keyWidth, height: keyHeight)
-                                .background(Color(UIColor.secondarySystemFill))
-                                .cornerRadius(8)
-                        }
-                        .accessibilityLabel(key.accessibilityLabel)
-                        .accessibilityHint(key.accessibilityLabel)
-                    }
-                }
-
-                Rectangle()
-                    .fill(Color(UIColor.separator))
-                    .frame(width: 1, height: keyHeight)
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .center, spacing: keyHorizontalMargin) {
-                        ForEach(ShortcutKey.allCases.filter(\.isCharKey), id: \.rawValue) { key in
-                            Button(action: {
-                                onKeyTapped(key)
-                            }) {
-                                Text(key.displayText)
-                                    .font(.title2)
-                                    .foregroundColor(.primary)
-                                    .frame(width: keyWidth, height: keyHeight)
-                                    .background(Color(UIColor.secondarySystemFill))
-                                    .cornerRadius(8)
-                            }
-                            .accessibilityLabel(key.accessibilityLabel)
-                            .accessibilityHint("Insert \(key.accessibilityLabel.lowercased()) into text")
-                        }
-                    }
-                }
-            }
-            .padding(.horizontal, keyHorizontalMargin)
-            .padding(.vertical, keyVerticalSpacing)
-            .frame(maxHeight: .greatestFiniteMagnitude)
+class ShortcutKeysUIKitView: UIView {
+    private let onKeyTapped: (ShortcutKey) -> Void
+    private let scrollView = UIScrollView()
+    private let contentStackView = UIStackView()
+    
+    init(onKeyTapped: @escaping (ShortcutKey) -> Void) {
+        self.onKeyTapped = onKeyTapped
+        super.init(frame: .zero)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupView() {
+        backgroundColor = .systemBackground
+        
+        let separatorTop = UIView()
+        separatorTop.backgroundColor = .separator
+        separatorTop.translatesAutoresizingMaskIntoConstraints = false
+        
+        let mainStackView = UIStackView()
+        mainStackView.axis = .horizontal
+        mainStackView.alignment = .center
+        mainStackView.spacing = keyHorizontalMargin
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let arrowKeysStackView = UIStackView()
+        arrowKeysStackView.axis = .horizontal
+        arrowKeysStackView.spacing = keyHorizontalMargin
+        arrowKeysStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let arrowKeys = ShortcutKey.allCases.filter { !$0.isCharKey }
+        for key in arrowKeys {
+            let button = createKeyButton(for: key, isBold: true)
+            arrowKeysStackView.addArrangedSubview(button)
         }
-        .frame(maxHeight: .greatestFiniteMagnitude)
-        .background(Color(UIColor.systemBackground))
+        
+        let separatorVertical = UIView()
+        separatorVertical.backgroundColor = .separator
+        separatorVertical.translatesAutoresizingMaskIntoConstraints = false
+        
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.alwaysBounceVertical = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentStackView.axis = .horizontal
+        contentStackView.spacing = keyHorizontalMargin
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
+
+        let charKeys = ShortcutKey.allCases.filter(\.isCharKey)
+        for key in charKeys {
+            let button = createKeyButton(for: key, isBold: false)
+            contentStackView.addArrangedSubview(button)
+        }
+        
+        scrollView.addSubview(contentStackView)
+        
+        mainStackView.addArrangedSubview(arrowKeysStackView)
+        mainStackView.addArrangedSubview(separatorVertical)
+        mainStackView.addArrangedSubview(scrollView)
+        
+        addSubview(separatorTop)
+        addSubview(mainStackView)
+        
+        NSLayoutConstraint.activate([
+            separatorTop.topAnchor.constraint(equalTo: topAnchor),
+            separatorTop.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separatorTop.trailingAnchor.constraint(equalTo: trailingAnchor),
+            separatorTop.heightAnchor.constraint(equalToConstant: 0.5),
+            
+            mainStackView.topAnchor.constraint(equalTo: separatorTop.bottomAnchor, constant: keyVerticalSpacing),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: keyHorizontalMargin),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -keyHorizontalMargin),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -keyVerticalSpacing),
+            
+            separatorVertical.widthAnchor.constraint(equalToConstant: 1),
+            separatorVertical.heightAnchor.constraint(equalToConstant: keyHeight),
+            
+            contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentStackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+        ])
+    }
+    
+    private func createKeyButton(for key: ShortcutKey, isBold: Bool) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle(key.displayText, for: .normal)
+        button.titleLabel?.font = isBold ? UIFont.preferredFont(forTextStyle: .title2).withWeight(.bold) : UIFont.preferredFont(forTextStyle: .title2)
+        button.setTitleColor(.label, for: .normal)
+        button.backgroundColor = .secondarySystemFill
+        button.layer.cornerRadius = 8
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.accessibilityLabel = key.accessibilityLabel
+        if key.isCharKey {
+            button.accessibilityHint = "Insert \(key.accessibilityLabel.lowercased()) into text"
+        } else {
+            button.accessibilityHint = key.accessibilityLabel
+        }
+        
+        button.addTarget(self, action: #selector(keyTapped(_:)), for: .touchUpInside)
+        button.tag = ShortcutKey.allCases.firstIndex(of: key) ?? 0
+        
+        NSLayoutConstraint.activate([
+            button.widthAnchor.constraint(equalToConstant: keyWidth),
+            button.heightAnchor.constraint(equalToConstant: keyHeight)
+        ])
+        
+        return button
+    }
+    
+    @objc private func keyTapped(_ sender: UIButton) {
+        let key = ShortcutKey.allCases[sender.tag]
+        onKeyTapped(key)
     }
 }
 
@@ -131,7 +200,7 @@ class ShortcutKeysAccessoryView: UIView {
     weak var textView: UITextView?
     weak var coordinator: UITextViewWrapper.Coordinator?
     
-    private var hostingController: UIHostingController<ShortcutKeysView>?
+    private var shortcutKeysView: ShortcutKeysUIKitView?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -144,25 +213,23 @@ class ShortcutKeysAccessoryView: UIView {
     }
 
     private func setupView() {
-        let shortcutKeysView = ShortcutKeysView { [weak self] key in
+        let shortcutKeysView = ShortcutKeysUIKitView { [weak self] key in
             self?.handleKeyTapped(key)
         }
         
-        let hostingController = UIHostingController(rootView: shortcutKeysView)
-        hostingController.view.backgroundColor = .clear
-        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        shortcutKeysView.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(hostingController.view)
-        self.hostingController = hostingController
+        addSubview(shortcutKeysView)
+        self.shortcutKeysView = shortcutKeysView
 
         translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            hostingController.view.topAnchor.constraint(equalTo: topAnchor),
-            hostingController.view.leadingAnchor.constraint(equalTo: leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: trailingAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            heightAnchor.constraint(equalToConstant: keyHeight + keyVerticalSpacing * 2)
+            shortcutKeysView.topAnchor.constraint(equalTo: topAnchor),
+            shortcutKeysView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            shortcutKeysView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            shortcutKeysView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            heightAnchor.constraint(equalToConstant: keyHeight + keyVerticalSpacing * 2 + 1)
         ])
     }
 
