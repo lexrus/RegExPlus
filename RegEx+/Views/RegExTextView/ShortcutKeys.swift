@@ -10,6 +10,8 @@ import SwiftUI
 import UIKit
 
 enum ShortcutKey: String, CaseIterable {
+    case leftArrow = "←"
+    case rightArrow = "→"
     case asterisk = "*"
     case question = "?"
     case openBracket = "["
@@ -47,42 +49,80 @@ enum ShortcutKey: String, CaseIterable {
         case .pipe: return "Pipe"
         case .openBrace: return "Open brace"
         case .closeBrace: return "Close brace"
+        case .leftArrow: return "Left arrow"
+        case .rightArrow: return "Right arrow"
+        }
+    }
+
+    var isCharKey: Bool {
+        switch self {
+        case .leftArrow, .rightArrow: false
+        default: true
         }
     }
 }
 
+private let keyWidth: CGFloat = 35
+private let keyHeight: CGFloat = 40
+private let keyHorizontalMargin: CGFloat = 6
+private let keyVerticalSpacing: CGFloat = 8
+
 struct ShortcutKeysView: View {
     let onKeyTapped: (ShortcutKey) -> Void
-    
+
     var body: some View {
         VStack(spacing: 0) {
             Rectangle()
                 .fill(Color(UIColor.separator))
                 .frame(height: 0.5)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .center, spacing: 8) {
-                    ForEach(ShortcutKey.allCases, id: \.rawValue) { key in
+
+            HStack(alignment: .center, spacing: keyHorizontalMargin) {
+                HStack(alignment: .center, spacing: keyHorizontalMargin) {
+                    ForEach(ShortcutKey.allCases.filter { !$0.isCharKey }, id: \.rawValue) { key in
                         Button(action: {
                             onKeyTapped(key)
                         }) {
                             Text(key.displayText)
                                 .font(.title2)
+                                .fontWeight(.bold)
                                 .foregroundColor(.primary)
-                                .frame(width: 35, height: 40)
+                                .frame(width: keyWidth, height: keyHeight)
                                 .background(Color(UIColor.secondarySystemFill))
                                 .cornerRadius(8)
                         }
                         .accessibilityLabel(key.accessibilityLabel)
-                        .accessibilityHint("Insert \(key.accessibilityLabel.lowercased()) into text")
+                        .accessibilityHint(key.accessibilityLabel)
                     }
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
+
+                Rectangle()
+                    .fill(Color(UIColor.separator))
+                    .frame(width: 1, height: keyHeight)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .center, spacing: keyHorizontalMargin) {
+                        ForEach(ShortcutKey.allCases.filter(\.isCharKey), id: \.rawValue) { key in
+                            Button(action: {
+                                onKeyTapped(key)
+                            }) {
+                                Text(key.displayText)
+                                    .font(.title2)
+                                    .foregroundColor(.primary)
+                                    .frame(width: keyWidth, height: keyHeight)
+                                    .background(Color(UIColor.secondarySystemFill))
+                                    .cornerRadius(8)
+                            }
+                            .accessibilityLabel(key.accessibilityLabel)
+                            .accessibilityHint("Insert \(key.accessibilityLabel.lowercased()) into text")
+                        }
+                    }
+                }
             }
-            .frame(height: .greatestFiniteMagnitude)
+            .padding(.horizontal, keyHorizontalMargin)
+            .padding(.vertical, keyVerticalSpacing)
+            .frame(maxHeight: .greatestFiniteMagnitude)
         }
-        .frame(maxHeight: 56)
+        .frame(maxHeight: .greatestFiniteMagnitude)
         .background(Color(UIColor.systemBackground))
     }
 }
@@ -122,7 +162,7 @@ class ShortcutKeysAccessoryView: UIView {
             hostingController.view.leadingAnchor.constraint(equalTo: leadingAnchor),
             hostingController.view.trailingAnchor.constraint(equalTo: trailingAnchor),
             hostingController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            heightAnchor.constraint(equalToConstant: 56)
+            heightAnchor.constraint(equalToConstant: keyHeight + keyVerticalSpacing * 2)
         ])
     }
 
@@ -130,6 +170,20 @@ class ShortcutKeysAccessoryView: UIView {
         guard let textView = textView else { return }
 
         let selectedRange = textView.selectedRange
+        
+        // Handle cursor movement keys
+        if key == .leftArrow {
+            let newPosition = max(0, selectedRange.location - 1)
+            textView.selectedRange = NSRange(location: newPosition, length: 0)
+            return
+        } else if key == .rightArrow {
+            let textLength = textView.text?.count ?? 0
+            let newPosition = min(textLength, selectedRange.location + 1)
+            textView.selectedRange = NSRange(location: newPosition, length: 0)
+            return
+        }
+        
+        // Handle text insertion keys
         let currentText = textView.text ?? ""
         let newText = (currentText as NSString).replacingCharacters(in: selectedRange, with: key.rawValue)
 
