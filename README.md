@@ -20,6 +20,9 @@
   - [x] English
   - [x] Simplified Chinese
   - [x] Traditional Chinese
+  - [x] Spanish
+  - [x] German
+  - [x] Japanese
 
 ## License
 
