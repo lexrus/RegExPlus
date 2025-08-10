@@ -271,6 +271,7 @@ struct EditorView_Previews: PreviewProvider {
         }
     }
 }
+#endif
 
 private struct SubstitutionSection: View {
     @Binding var regExBinding: RegEx
@@ -314,4 +315,3 @@ private struct SubstitutionSection: View {
         }
     }
 }
-#endif
