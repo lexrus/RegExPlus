@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 
-private struct UITextViewWrapper: UIViewRepresentable {
+private struct MatchesTextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
     @Binding var text: String
@@ -18,7 +18,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
     var matches: [NSTextCheckingResult]
     var onDone: (() -> Void)?
 
-    func makeUIView(context: UIViewRepresentableContext<UITextViewWrapper>) -> UITextView {
+    func makeUIView(context: UIViewRepresentableContext<MatchesTextViewWrapper>) -> UITextView {
         let tv = UITextView()
         tv.delegate = context.coordinator
 
@@ -39,7 +39,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
         return tv
     }
 
-    func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<UITextViewWrapper>) {
+    func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<MatchesTextViewWrapper>) {
         if uiView.attributedText.string != text {
             uiView.attributedText = NSAttributedString(string: text)
         }
@@ -64,7 +64,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
             }
         }
         
-        UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
+        MatchesTextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
     }
 
     fileprivate static func recalculateHeight(view: UIView, result: Binding<CGFloat>) {
@@ -93,7 +93,7 @@ private struct UITextViewWrapper: UIViewRepresentable {
 
         func textViewDidChange(_ uiView: UITextView) {
             text.wrappedValue = uiView.text
-            UITextViewWrapper.recalculateHeight(view: uiView, result: calculatedHeight)
+            MatchesTextViewWrapper.recalculateHeight(view: uiView, result: calculatedHeight)
         }
 
         func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -139,7 +139,7 @@ struct MatchesTextView: View, Equatable {
     }
 
     var body: some View {
-        UITextViewWrapper(
+        MatchesTextViewWrapper(
             text: internalText,
             calculatedHeight: $dynamicHeight,
             matches: matches,

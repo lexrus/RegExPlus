@@ -3,13 +3,13 @@
   "strings" : {
     "%@" : {
       "localizations" : {
-        "es" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
           }
         },
-        "de" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -37,16 +37,16 @@
     },
     "%lld matches" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld coincidencias"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Treffer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld coincidencias"
           }
         },
         "ja" : {
@@ -58,29 +58,29 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%d 次匹配"
+            "value" : "%lld 次匹配"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%d 次匹配"
+            "value" : "%lld 次匹配"
           }
         }
       }
     },
     "1 match" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 coincidencia"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 Treffer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 coincidencia"
           }
         },
         "ja" : {
@@ -105,16 +105,16 @@
     },
     "Allow Comments and Whitespace" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permitir comentarios y espacios en blanco"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kommentare und Leerzeichen erlauben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permitir comentarios y espacios en blanco"
           }
         },
         "ja" : {
@@ -139,16 +139,16 @@
     },
     "Anchors Match Lines" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anclas coinciden con líneas"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anker passen zu Zeilen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anclas coinciden con líneas"
           }
         },
         "ja" : {
@@ -173,16 +173,16 @@
     },
     "Case Insensitive" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insensible a mayúsculas/minúsculas"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Groß-/Kleinschreibung ignorieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insensible a mayúsculas/minúsculas"
           }
         },
         "ja" : {
@@ -207,16 +207,16 @@
     },
     "Cheat Sheet" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoja de Referencia"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spickzettel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoja de Referencia"
           }
         },
         "ja" : {
@@ -241,16 +241,16 @@
     },
     "Copies the substitution result to clipboard" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia el resultado de sustitución al portapapeles"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ersetzungsergebnis in Zwischenablage kopieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia el resultado de sustitución al portapapeles"
           }
         },
         "ja" : {
@@ -275,16 +275,16 @@
     },
     "Copy substitution result" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copiar resultado de sustitución"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ersetzungsergebnis kopieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar resultado de sustitución"
           }
         },
         "ja" : {
@@ -309,16 +309,16 @@
     },
     "Create a sample" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Crear un ejemplo"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beispiel erstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear un ejemplo"
           }
         },
         "ja" : {
@@ -343,16 +343,16 @@
     },
     "Done" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hecho"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fertig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hecho"
           }
         },
         "ja" : {
@@ -377,16 +377,16 @@
     },
     "Dot Matches Line Separators" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Punto coincide con separadores de línea"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punkt entspricht Zeilentrenner"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punto coincide con separadores de línea"
           }
         },
         "ja" : {
@@ -411,16 +411,16 @@
     },
     "Edit" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bearbeiten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
           }
         },
         "ja" : {
@@ -445,16 +445,16 @@
     },
     "Ignore Metacharacters" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignorar metacaracteres"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Metazeichen ignorieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorar metacaracteres"
           }
         },
         "ja" : {
@@ -477,18 +477,52 @@
         }
       }
     },
-    "Loading..." : {
+    "Insert %@ into text" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ in Text einfügen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cargando..."
+            "value" : "Insertar %@ en texto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@をテキストに挿入"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将%@插入文本"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將%@插入文字"
+          }
+        }
+      }
+    },
+    "Loading..." : {
+      "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laden..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando..."
           }
         },
         "ja" : {
@@ -513,16 +547,16 @@
     },
     "Metacharacters" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Metacaracteres"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Metazeichen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metacaracteres"
           }
         },
         "ja" : {
@@ -547,16 +581,16 @@
     },
     "Name" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Name"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre"
           }
         },
         "ja" : {
@@ -581,16 +615,16 @@
     },
     "Operators" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Operadores"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Operatoren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operadores"
           }
         },
         "ja" : {
@@ -615,16 +649,16 @@
     },
     "Options" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opciones"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Optionen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opciones"
           }
         },
         "ja" : {
@@ -649,16 +683,16 @@
     },
     "Price: $$$1\\.$2\\n" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Precio: $$$1\\.$2\\n"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preis: $$$1\\.$2\\n"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Precio: $$$1\\.$2\\n"
           }
         },
         "ja" : {
@@ -683,13 +717,13 @@
     },
     "RegEx+" : {
       "localizations" : {
-        "es" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "RegEx+"
           }
         },
-        "de" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "RegEx+"
@@ -717,16 +751,16 @@
     },
     "Regular Expression" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Expresión Regular"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regulärer Ausdruck"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expresión Regular"
           }
         },
         "ja" : {
@@ -751,16 +785,16 @@
     },
     "Sample Text" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto de Ejemplo"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beispieltext"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto de Ejemplo"
           }
         },
         "ja" : {
@@ -785,16 +819,16 @@
     },
     "Search..." : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buscar..."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suchen..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar..."
           }
         },
         "ja" : {
@@ -819,16 +853,16 @@
     },
     "Share" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teilen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir"
           }
         },
         "ja" : {
@@ -853,16 +887,16 @@
     },
     "Share this regular expression" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir esta expresión regular"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diesen regulären Ausdruck teilen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir esta expresión regular"
           }
         },
         "ja" : {
@@ -887,16 +921,16 @@
     },
     "Substitution Result" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultado de Sustitución"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ersetzungsergebnis"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultado de Sustitución"
           }
         },
         "ja" : {
@@ -921,16 +955,16 @@
     },
     "Substitution Template" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plantilla de Sustitución"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ersetzungsvorlage"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plantilla de Sustitución"
           }
         },
         "ja" : {
@@ -956,16 +990,16 @@
     "Untitled" : {
       "comment" : "Default item name",
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin título"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ohne Titel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin título"
           }
         },
         "ja" : {
@@ -990,16 +1024,16 @@
     },
     "Use Unicode Word Boundaries" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar límites de palabra Unicode"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unicode-Wortgrenzen verwenden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar límites de palabra Unicode"
           }
         },
         "ja" : {
@@ -1024,16 +1058,16 @@
     },
     "Use Unix Line Separators" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar separadores de línea Unix"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unix-Zeilentrenner verwenden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar separadores de línea Unix"
           }
         },
         "ja" : {
@@ -1058,16 +1092,16 @@
     },
     "View regular expression reference guide" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver guía de referencia de expresiones regulares"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regulärer Ausdruck-Referenzhandbuch anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver guía de referencia de expresiones regulares"
           }
         },
         "ja" : {
@@ -1092,16 +1126,16 @@
     },
     "Your RegEx+ library is empty" : {
       "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu biblioteca RegEx+ está vacía"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ihre RegEx+ Bibliothek ist leer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu biblioteca RegEx+ está vacía"
           }
         },
         "ja" : {

@@ -13,12 +13,14 @@ import UIKit
 
 // Credit to: Asperi https://stackoverflow.com/users/12299030/asperi
 // https://stackoverflow.com/a/58639072/1209135
-private struct UITextViewWrapper: UIViewRepresentable {
+struct UITextViewWrapper: UIViewRepresentable {
     typealias UIViewType = UITextView
 
     @Binding var text: String
     @Binding var calculatedHeight: CGFloat
     var onDone: (() -> Void)?
+    @Binding var coordinator: Coordinator?
+    var showShortcutBar: Bool
     
     private let syntaxHighlighter = RegExSyntaxHighlighter()
 
@@ -32,6 +34,9 @@ private struct UITextViewWrapper: UIViewRepresentable {
         tv.isEditable = true
         tv.font = font.withSize(font.pointSize + 2)
         tv.isSelectable = true
+        tv.autocorrectionType = .no
+        tv.spellCheckingType = .no
+        tv.keyboardType = .emailAddress
         tv.isUserInteractionEnabled = true
         tv.isScrollEnabled = false
         tv.backgroundColor = UIColor.clear
@@ -41,6 +46,19 @@ private struct UITextViewWrapper: UIViewRepresentable {
         if nil != onDone {
             tv.returnKeyType = .done
         }
+
+        context.coordinator.textView = tv
+        coordinator = context.coordinator
+
+#if !targetEnvironment(macCatalyst)
+        // Set up input accessory view for shortcut bar on iOS
+        if showShortcutBar {
+            let accessoryView = ShortcutKeysAccessoryView()
+            accessoryView.textView = tv
+            accessoryView.coordinator = context.coordinator
+            tv.inputAccessoryView = accessoryView
+        }
+#endif
 
         return tv
     }
@@ -76,11 +94,13 @@ private struct UITextViewWrapper: UIViewRepresentable {
         var text: Binding<String>
         var calculatedHeight: Binding<CGFloat>
         var onDone: (() -> Void)?
+        weak var textView: UITextView?
 
         init(text: Binding<String>, height: Binding<CGFloat>, onDone: (() -> Void)? = nil) {
             self.text = text
             self.calculatedHeight = height
             self.onDone = onDone
+            super.init()
         }
 
         func textViewDidChange(_ uiView: UITextView) {
@@ -107,6 +127,7 @@ struct RegExTextView: View, Equatable {
 
     private var placeholder: String
     private var onCommit: (() -> Void)?
+    private var showShortcutBar: Bool
 
     @Binding private var text: String
     private var internalText: Binding<String> {
@@ -118,19 +139,23 @@ struct RegExTextView: View, Equatable {
     
     @State private var dynamicHeight: CGFloat = 20
     @State private var showingPlaceholder = false
+    @State private var coordinator: UITextViewWrapper.Coordinator?
 
-    init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil) {
+    init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil, showShortcutBar: Bool = false) {
         self.placeholder = placeholder
         self.onCommit = onCommit
         self._text = text
-        self._showingPlaceholder = State<Bool>(initialValue: self.text.isEmpty)
+        self.showShortcutBar = showShortcutBar
+        self._showingPlaceholder = State<Bool>(initialValue: text.wrappedValue.isEmpty)
     }
 
     var body: some View {
         UITextViewWrapper(
             text: internalText,
             calculatedHeight: $dynamicHeight,
-            onDone: onCommit
+            onDone: onCommit,
+            coordinator: $coordinator,
+            showShortcutBar: showShortcutBar
         )
         .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
         .background(placeholderView, alignment: .topLeading)
@@ -161,17 +186,17 @@ struct RegExTextView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             VStack(alignment: .leading) {
-                RegExTextView("Enter some text here", text: testBinding) {
+                RegExTextView("Enter some text here", text: testBinding, onCommit: {
                     print("Final text: \(test)")
-                }
+                }, showShortcutBar: true)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4).stroke(Color.black)
                 )
             }
             VStack(alignment: .leading) {
-                RegExTextView("Enter some text here", text: testBinding) {
+                RegExTextView("Enter some text here", text: testBinding, onCommit: {
                     print("Final text: \(test)")
-                }
+                }, showShortcutBar: false)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4).stroke(Color.black)
                 )

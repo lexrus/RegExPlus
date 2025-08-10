@@ -25,6 +25,7 @@
 		D7732035245D3456003C0CF8 /* MatchesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7732034245D3456003C0CF8 /* MatchesTextView.swift */; };
 		D77C7970247EBC6D00D3B1B2 /* CheatSheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = D77C7972247EBC6D00D3B1B2 /* CheatSheet.plist */; };
 		D78E45502E4795E5002ACA56 /* AppAboutView in Frameworks */ = {isa = PBXBuildFile; productRef = D78E454F2E4795E5002ACA56 /* AppAboutView */; };
+		D78E45BC2E48352B002ACA56 /* ShortcutKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E45BB2E483529002ACA56 /* ShortcutKeys.swift */; };
 		D7A925DC2B81057E0023E8EA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D7A925DB2B81057E0023E8EA /* Localizable.xcstrings */; };
 		D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB73F8244F47E400343AC5 /* EditorView.swift */; };
 		D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7D8244E010D00D81C74 /* HomeView.swift */; };
@@ -60,6 +61,7 @@
 		D78E45B82E47A2B0002ACA56 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D78E45B92E47A2D2002ACA56 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D78E45BA2E47A2DD002ACA56 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = es; path = es.lproj/CheatSheet.plist; sourceTree = "<group>"; };
+		D78E45BB2E483529002ACA56 /* ShortcutKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKeys.swift; sourceTree = "<group>"; };
 		D7A925DB2B81057E0023E8EA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D7BB73F8244F47E400343AC5 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		D7CCA7D1244E010D00D81C74 /* RegEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		D7732027245D185C003C0CF8 /* RegExTextView */ = {
 			isa = PBXGroup;
 			children = (
+				D78E45BB2E483529002ACA56 /* ShortcutKeys.swift */,
 				D721780A2451776000F17390 /* RegExTextView.swift */,
 				D7732028245D1877003C0CF8 /* RegExSyntaxHighlighter.swift */,
 				D7732034245D3456003C0CF8 /* MatchesTextView.swift */,
@@ -334,6 +337,7 @@
 				D7DC514A2529645F00A495E2 /* SearchView.swift in Sources */,
 				D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */,
 				D731F64E245EF77600EEE17F /* DataManager.swift in Sources */,
+				D78E45BC2E48352B002ACA56 /* ShortcutKeys.swift in Sources */,
 				D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */,
 				D731F652245F0B9A00EEE17F /* LibraryItemView.swift in Sources */,
 				D7BB73F9244F47E400343AC5 /* EditorView.swift in Sources */,

@@ -142,7 +142,7 @@ private struct RegExTextViewSection: View {
 #if targetEnvironment(macCatalyst)
 
             HStack {
-                RegExTextView("Type RegEx here", text: $regEx.raw)
+                RegExTextView("Type RegEx here", text: $regEx.raw, showShortcutBar: false)
                     .equatable()
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
@@ -152,7 +152,7 @@ private struct RegExTextViewSection: View {
 
 #else
 
-            RegExTextView("Type RegEx here", text: $regEx.raw)
+            RegExTextView("Type RegEx here", text: $regEx.raw, showShortcutBar: true)
                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
 #endif
@@ -280,8 +280,13 @@ private struct SubstitutionSection: View {
     
     var body: some View {
         Section(header: Text("Substitution Template")) {
+#if targetEnvironment(macCatalyst)
             TextField("Price: $$$1\\.$2\\n", text: $regExBinding.substitution)
                 .padding(kTextFieldPadding)
+#else
+            RegExTextView("Price: $$$1\\.$2\\n", text: $regExBinding.substitution, showShortcutBar: true)
+                .padding(kTextFieldPadding)
+#endif
         }
 
         if !regExBinding.substitution.isEmpty {
