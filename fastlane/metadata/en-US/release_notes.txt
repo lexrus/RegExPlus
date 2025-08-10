@@ -1,1 +1,5 @@
+What's New in RegEx+:
 
+• Added keyboard shortcuts for inserting common regular expression characters - now you can quickly insert metacharacters and operators with simple key combinations
+• Performance optimizations for better app responsiveness
+• Bug fixes and stability improvements

@@ -1,0 +1,5 @@
+Novedades en RegEx+:
+
+• Agregados atajos de teclado para insertar caracteres comunes de expresiones regulares - ahora puedes insertar rápidamente metacaracteres y operadores con combinaciones de teclas simples
+• Optimizaciones de rendimiento para mejor capacidad de respuesta de la aplicación
+• Corrección de errores y mejoras de estabilidad

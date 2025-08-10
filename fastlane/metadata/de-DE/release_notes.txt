@@ -1,0 +1,5 @@
+Neues in RegEx+:
+
+• Tastaturkürzel für das Einfügen häufiger regulärer Ausdruckszeichen hinzugefügt - jetzt können Sie Metazeichen und Operatoren schnell mit einfachen Tastenkombinationen einfügen
+• Leistungsoptimierungen für bessere App-Reaktionsfähigkeit
+• Fehlerbehebungen und Stabilitätsverbesserungen
