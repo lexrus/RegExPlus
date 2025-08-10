@@ -13,13 +13,14 @@
 # fastlane specific
 fastlane/report.xml
 fastlane/Appfile
+fastlane/metadata/**/review_information/
+fastlane/keys
 
 # deliver temporary files
 fastlane/Preview.html
 
 # snapshot generated screenshots
-fastlane/screenshots/**/*.png
-fastlane/screenshots/screenshots.html
+fastlane/screenshots
 
 # scan temporary files
 fastlane/test_output

@@ -1,3 +1,18 @@
 [tasks.sc2tc]
 description = "Convert Simplified Chinese to Traditional Chinese using OpenCC"
 run = "opencc -c s2hk -i RegEx+/zh-Hans.lproj/CheatSheet.plist -o RegEx+/zh-Hant.lproj/CheatSheet.plist"
+
+[tasks.pull-metadata]
+description = "Pull all metadata from App Store for all platforms"
+run = [
+  "fastlane deliver download_metadata -j ios --api_key_path fastlane/keys/app_key.json --sync_screenshots --force",
+  "fastlane deliver download_metadata -j osx --api_key_path fastlane/keys/app_key.json --sync_screenshots --force",
+]
+
+[tasks.push-metadata]
+description = "Push all metadata to App Store for all platforms"
+run = [
+  "fastlane deliver upload_metadata -j ios --api_key_path fastlane/keys/app_key.json --sync_screenshots --force",
+  "fastlane deliver upload_metadata -j osx --api_key_path fastlane/keys/app_key.json --sync_screenshots --force",
+]
+

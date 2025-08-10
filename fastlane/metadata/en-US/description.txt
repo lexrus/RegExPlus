@@ -1,0 +1,3 @@
+Unleash the Power of Regular Expressions with RegEx+!
+
+Designed for developers by developers, RegEx+ is your go-to tool for mastering regular expressions on both macOS and iOS. Dive into a seamless experience as your data syncs effortlessly across devices via CloudKit, ensuring you have your work where you need it, when you need it. Whether you're a beginner or a seasoned pro, our comprehensive cheatsheet demystifies metacharacters and operators, empowering you to decode and construct complex patterns with ease. Elevate your coding game with RegEx+ and transform the way you handle text, data, and beyond!
