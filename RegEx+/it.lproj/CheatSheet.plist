@@ -8,223 +8,223 @@
 			<key>exp</key>
 			<string>\a</string>
 			<key>des</key>
-			<string>Match a BELL, \u0007</string>
+			<string>Corrisponde a un BELL, \u0007</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\A</string>
 			<key>des</key>
-			<string>Match at the beginning of the input. Differs from ^ in that \A will not match after a new line within the input.</string>
+			<string>Corrisponde all'inizio dell'input. Differisce da ^ in quanto \A non corrisponderà dopo una nuova riga all'interno dell'input.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\b, outside of a [Set]</string>
 			<key>des</key>
-			<string>Match if the current position is a word boundary. Boundaries occur at the transitions between word (\w) and non-word (\W) characters, with combining marks ignored. For better word boundaries, see useUnicodeWordBoundaries.</string>
+			<string>Corrisponde se la posizione corrente è un limite di parola. I limiti si verificano alle transizioni tra caratteri di parola (\w) e non-parola (\W), con i segni combinati ignorati. Per migliori limiti di parola, vedere useUnicodeWordBoundaries.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\b, within a [Set]</string>
 			<key>des</key>
-			<string>Match a BACKSPACE, \u0008.</string>
+			<string>Corrisponde a un BACKSPACE, \u0008.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\B</string>
 			<key>des</key>
-			<string>Match if the current position is not a word boundary.</string>
+			<string>Corrisponde se la posizione corrente non è un limite di parola.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\cX</string>
 			<key>des</key>
-			<string>Match a control-X character</string>
+			<string>Corrisponde a un carattere control-X</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\d</string>
 			<key>des</key>
-			<string>Match any character with the Unicode General Category of Nd (Number, Decimal Digit.)</string>
+			<string>Corrisponde a qualsiasi carattere con la categoria generale Unicode Nd (Number, Decimal Digit).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\D</string>
 			<key>des</key>
-			<string>Match any character that is not a decimal digit.</string>
+			<string>Corrisponde a qualsiasi carattere che non è una cifra decimale.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\e</string>
 			<key>des</key>
-			<string>Match an ESCAPE, \u001B.</string>
+			<string>Corrisponde a un ESCAPE, \u001B.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\E</string>
 			<key>des</key>
-			<string>Terminates a \Q ... \E quoted sequence.</string>
+			<string>Termina una sequenza citata \Q ... \E.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\f</string>
 			<key>des</key>
-			<string>Match a FORM FEED, \u000C.</string>
+			<string>Corrisponde a un FORM FEED, \u000C.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\G</string>
 			<key>des</key>
-			<string>Match if the current position is at the end of the previous match.</string>
+			<string>Corrisponde se la posizione corrente è alla fine della corrispondenza precedente.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\n</string>
 			<key>des</key>
-			<string>Match a LINE FEED, \u000A.</string>
+			<string>Corrisponde a un LINE FEED, \u000A.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\N{UNICODE CHARACTER NAME}</string>
 			<key>des</key>
-			<string>Match the named character.</string>
+			<string>Corrisponde al carattere nominato.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\p{UNICODE PROPERTY NAME}</string>
 			<key>des</key>
-			<string>Match any character with the specified Unicode Property.</string>
+			<string>Corrisponde a qualsiasi carattere con la proprietà Unicode specificata.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\P{UNICODE PROPERTY NAME}</string>
 			<key>des</key>
-			<string>Match any character not having the specified Unicode Property.</string>
+			<string>Corrisponde a qualsiasi carattere che non ha la proprietà Unicode specificata.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\Q</string>
 			<key>des</key>
-			<string>Quotes all following characters until \E.</string>
+			<string>Cita tutti i caratteri seguenti fino a \E.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\r</string>
 			<key>des</key>
-			<string>Match a CARRIAGE RETURN, \u000D.</string>
+			<string>Corrisponde a un CARRIAGE RETURN, \u000D.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\s</string>
 			<key>des</key>
-			<string>Match a white space character. White space is defined as [\t\n\f\r\p{Z}].</string>
+			<string>Corrisponde a un carattere di spaziatura. Lo spazio è definito come [\t\n\f\r\p{Z}].</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\S</string>
 			<key>des</key>
-			<string>Match a non-white space character.</string>
+			<string>Corrisponde a un carattere non-spazio.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\t</string>
 			<key>des</key>
-			<string>Match a HORIZONTAL TABULATION, \u0009.</string>
+			<string>Corrisponde a una TABULAZIONE ORIZZONTALE, \u0009.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\uhhhh</string>
 			<key>des</key>
-			<string>Match the character with the hex value hhhh.</string>
+			<string>Corrisponde al carattere con il valore esadecimale hhhh.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\Uhhhhhhhh</string>
 			<key>des</key>
-			<string>Match the character with the hex value hhhhhhhh. Exactly eight hex digits must be provided, even though the largest Unicode code point is \U0010ffff.</string>
+			<string>Corrisponde al carattere con il valore esadecimale hhhhhhhh. Devono essere fornite esattamente otto cifre esadecimali, anche se il punto di codice Unicode più grande è \U0010ffff.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\w</string>
 			<key>des</key>
-			<string>Match a word character. Word characters are [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+			<string>Corrisponde a un carattere di parola. I caratteri di parola sono [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\W</string>
 			<key>des</key>
-			<string>Match a non-word character.</string>
+			<string>Corrisponde a un carattere non-parola.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\x{hhhh}</string>
 			<key>des</key>
-			<string>Match the character with hex value hhhh. From one to six hex digits may be supplied.</string>
+			<string>Corrisponde al carattere con il valore esadecimale hhhh. Possono essere fornite da una a sei cifre esadecimali.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\xhh</string>
 			<key>des</key>
-			<string>Match the character with two digit hex value hh.</string>
+			<string>Corrisponde al carattere con il valore esadecimale a due cifre hh.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\X</string>
 			<key>des</key>
-			<string>Match a Grapheme Cluster.</string>
+			<string>Corrisponde a un cluster di grafemi.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\Z</string>
 			<key>des</key>
-			<string>Match if the current position is at the end of input, but before the final line terminator, if one exists.</string>
+			<string>Corrisponde se la posizione corrente è alla fine dell'input, ma prima del terminatore di riga finale, se esiste.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\z</string>
 			<key>des</key>
-			<string>Match if the current position is at the end of input.</string>
+			<string>Corrisponde se la posizione corrente è alla fine dell'input.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\n</string>
 			<key>des</key>
-			<string>Back Reference. Match whatever the nth capturing group matched. n must be a number ≥ 1 and ≤ total number of capture groups in the pattern.</string>
+			<string>Riferimento all'indietro. Corrisponde a ciò che ha corrisposto l'ennesimo gruppo di cattura. n deve essere un numero ≥ 1 e ≤ numero totale di gruppi di cattura nel pattern.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\0ooo</string>
 			<key>des</key>
-			<string>Match an Octal character. ooo is from one to three octal digits. 0377 is the largest allowed Octal character. The leading zero is required; it distinguishes Octal constants from back references.</string>
+			<string>Corrisponde a un carattere ottale. ooo va da uno a tre cifre ottali. 0377 è il più grande carattere ottale consentito. Lo zero iniziale è richiesto; distingue le costanti ottali dai riferimenti all'indietro.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>[pattern]</string>
 			<key>des</key>
-			<string>Match any one character from the pattern.</string>
+			<string>Corrisponde a qualsiasi carattere del pattern.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>.</string>
 			<key>des</key>
-			<string>Match any character.</string>
+			<string>Corrisponde a qualsiasi carattere.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>^</string>
 			<key>des</key>
-			<string>Match at the beginning of a line.</string>
+			<string>Corrisponde all'inizio di una riga.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>$</string>
 			<key>des</key>
-			<string>Match at the end of a line.</string>
+			<string>Corrisponde alla fine di una riga.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>\</string>
 			<key>des</key>
-			<string>Quotes the following character. Characters that must be quoted to be treated as literals are * ? + [ ( ) { } ^ $ | \ . /</string>
+			<string>Cita il carattere seguente. I caratteri che devono essere citati per essere trattati come letterali sono * ? + [ ( ) { } ^ $ | \ . /</string>
 		</dict>
 	</array>
 	<key>operators</key>
@@ -233,175 +233,175 @@
 			<key>exp</key>
 			<string>|</string>
 			<key>des</key>
-			<string>Alternation. A|B matches either A or B.</string>
+			<string>Alternanza. A|B corrisponde ad A o B.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>*</string>
 			<key>des</key>
-			<string>Match 0 or more times. Match as many times as possible.</string>
+			<string>Corrisponde 0 o più volte. Corrisponde il maggior numero di volte possibile.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>+</string>
 			<key>des</key>
-			<string>Match 1 or more times. Match as many times as possible.</string>
+			<string>Corrisponde 1 o più volte. Corrisponde il maggior numero di volte possibile.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>?</string>
 			<key>des</key>
-			<string>Match zero or one times. Prefer one.</string>
+			<string>Corrisponde zero o una volta. Preferisce una volta.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n}</string>
 			<key>des</key>
-			<string>Match exactly n times.</string>
+			<string>Corrisponde esattamente n volte.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,}</string>
 			<key>des</key>
-			<string>Match at least n times. Match as many times as possible.</string>
+			<string>Corrisponde almeno n volte. Corrisponde il maggior numero di volte possibile.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,m}</string>
 			<key>des</key>
-			<string>Match between n and m times. Match as many times as possible, but not more than m.</string>
+			<string>Corrisponde tra n e m volte. Corrisponde il maggior numero di volte possibile, ma non più di m volte.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>*?</string>
 			<key>des</key>
-			<string>Match 0 or more times. Match as few times as possible.</string>
+			<string>Corrisponde 0 o più volte. Corrisponde il minor numero di volte possibile.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>+?</string>
 			<key>des</key>
-			<string>Match 1 or more times. Match as few times as possible.</string>
+			<string>Corrisponde 1 o più volte. Corrisponde il minor numero di volte possibile.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>??</string>
 			<key>des</key>
-			<string>Match zero or one times. Prefer zero.</string>
+			<string>Corrisponde zero o una volta. Preferisce zero.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n}?</string>
 			<key>des</key>
-			<string>Match exactly n times.</string>
+			<string>Corrisponde esattamente n volte.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,}?</string>
 			<key>des</key>
-			<string>Match at least n times, but no more than required for an overall pattern match.</string>
+			<string>Corrisponde almeno n volte, ma non più di quanto richiesto per una corrispondenza complessiva del pattern.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,m}?</string>
 			<key>des</key>
-			<string>Match between n and m times. Match as few times as possible, but not less than n.</string>
+			<string>Corrisponde tra n e m volte. Corrisponde il minor numero di volte possibile, ma non meno di n volte.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>*+</string>
 			<key>des</key>
-			<string>Match 0 or more times. Match as many times as possible when first encountered, do not retry with fewer even if overall match fails (Possessive Match).</string>
+			<string>Corrisponde 0 o più volte. Corrisponde il maggior numero di volte possibile al primo incontro, non riprova con meno anche se la corrispondenza complessiva fallisce (Corrispondenza possessiva).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>++</string>
 			<key>des</key>
-			<string>Match 1 or more times. Possessive match.</string>
+			<string>Corrisponde 1 o più volte. Corrispondenza possessiva.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>?+</string>
 			<key>des</key>
-			<string>Match zero or one times. Possessive match.</string>
+			<string>Corrisponde zero o una volta. Corrispondenza possessiva.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n}+</string>
 			<key>des</key>
-			<string>Match exactly n times.</string>
+			<string>Corrisponde esattamente n volte.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,}+</string>
 			<key>des</key>
-			<string>Match at least n times. Possessive Match.</string>
+			<string>Corrisponde almeno n volte. Corrispondenza possessiva.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>{n,m}+</string>
 			<key>des</key>
-			<string>Match between n and m times. Possessive Match.</string>
+			<string>Corrisponde tra n e m volte. Corrispondenza possessiva.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(...)</string>
 			<key>des</key>
-			<string>Capturing parentheses. Range of input that matched the parenthesized subexpression is available after the match.</string>
+			<string>Parentesi di cattura. L'intervallo di input che corrisponde alla sottoespressione tra parentesi è disponibile dopo la corrispondenza.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?:...)</string>
 			<key>des</key>
-			<string>Non-capturing parentheses. Groups the included pattern, but does not provide capturing of matching text. Somewhat more efficient than capturing parentheses.</string>
+			<string>Parentesi non catturanti. Raggruppa il pattern incluso, ma non fornisce la cattura del testo corrispondente. Leggermente più efficiente delle parentesi di cattura.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?&gt;...)</string>
 			<key>des</key>
-			<string>Atomic-match parentheses. First match of the parenthesized subexpression is the only one tried; if it does not lead to an overall pattern match, back up the search for a match to a position before the &quot;(?&gt;&quot;</string>
+			<string>Parentesi di corrispondenza atomica. La prima corrispondenza della sottoespressione tra parentesi è l'unica tentata; se non porta a una corrispondenza complessiva del pattern, torna alla ricerca di una corrispondenza a una posizione prima del &quot;(?&gt;&quot;</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?# ... )</string>
 			<key>des</key>
-			<string>Free-format comment (?# comment ).</string>
+			<string>Commento in formato libero (?# commento ).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?= ... )</string>
 			<key>des</key>
-			<string>Look-ahead assertion. True if the parenthesized pattern matches at the current input position, but does not advance the input position.</string>
+			<string>Asserzione di anticipazione positiva. Vero se il pattern tra parentesi corrisponde alla posizione di input corrente, ma non avanza la posizione di input.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?! ... )</string>
 			<key>des</key>
-			<string>Negative look-ahead assertion. True if the parenthesized pattern does not match at the current input position. Does not advance the input position.</string>
+			<string>Asserzione di anticipazione negativa. Vero se il pattern tra parentesi non corrisponde alla posizione di input corrente. Non avanza la posizione di input.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?&lt;= ... )</string>
 			<key>des</key>
-			<string>Look-behind assertion. True if the parenthesized pattern matches text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string>
+			<string>Asserzione di lookbehind. Vero se il pattern tra parentesi corrisponde al testo che precede la posizione di input corrente, con l'ultimo carattere della corrispondenza che è il carattere di input appena prima della posizione corrente. Non altera la posizione di input. La lunghezza delle stringhe possibili corrispondenti al pattern di lookbehind non deve essere illimitata (nessun operatore * o +).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?&lt;! ... )</string>
 			<key>des</key>
-			<string>Negative Look-behind assertion. True if the parenthesized pattern does not match text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no * or + operators.</string>
+			<string>Asserzione di lookbehind negativa. Vero se il pattern tra parentesi non corrisponde al testo che precede la posizione di input corrente, con l'ultimo carattere della corrispondenza che è il carattere di input appena prima della posizione corrente. Non altera la posizione di input. La lunghezza delle stringhe possibili corrispondenti al pattern di lookbehind non deve essere illimitata (nessun operatore * o +).</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?ismwx-ismwx: ... )</string>
 			<key>des</key>
-			<string>Flag settings. Evaluate the parenthesized expression with the specified flags enabled or -disabled. The flags are defined in Flag Options.</string>
+			<string>Impostazioni di flag. Valuta l'espressione tra parentesi con i flag specificati abilitati o -disabilitati. I flag sono definiti nelle Opzioni di Flag.</string>
 		</dict>
 		<dict>
 			<key>exp</key>
 			<string>(?ismwx-ismwx)</string>
 			<key>des</key>
-			<string>Flag settings. Change the flag settings. Changes apply to the portion of the pattern following the setting. For example, (?i) changes to a case insensitive match.The flags are defined in Flag Options.</string>
+			<string>Impostazioni di flag. Modifica le impostazioni di flag. Le modifiche si applicano alla parte del pattern che segue l'impostazione. Ad esempio, (?i) passa a una corrispondenza non sensibile alle maiuscole. I flag sono definiti nelle Opzioni di Flag.</string>
 		</dict>
 	</array>
 </dict>
