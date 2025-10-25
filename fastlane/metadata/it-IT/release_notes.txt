@@ -1,0 +1,5 @@
+Novità in RegEx+:
+
+• Aggiunta di scorciatoie da tastiera per inserire caratteri comuni di espressioni regolari - ora puoi inserire rapidamente metacaratteri e operatori con semplici combinazioni di tasti
+• Ottimizzazioni delle prestazioni per una migliore reattività dell'app
+• Correzioni di bug e miglioramenti di stabilità
