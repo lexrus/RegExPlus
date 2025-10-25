@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Corrisponde a un BELL, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Corrisponde all'inizio dell'input. Differisce da ^ in quanto \A non corrisponderà dopo una nuova riga all'interno dell'input.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Corrisponde se la posizione corrente è un limite di parola. I limiti si verificano alle transizioni tra caratteri di parola (\w) e non-parola (\W), con i segni combinati ignorati. Per migliori limiti di parola, vedere useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Corrisponde a un BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Corrisponde se la posizione corrente non è un limite di parola.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere control-X</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere con la categoria generale Unicode Nd (Number, Decimal Digit).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere che non è una cifra decimale.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Corrisponde a un ESCAPE, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Termina una sequenza citata \Q ... \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Corrisponde a un FORM FEED, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Corrisponde se la posizione corrente è alla fine della corrispondenza precedente.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Corrisponde a un LINE FEED, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Corrisponde al carattere nominato.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere con la proprietà Unicode specificata.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere che non ha la proprietà Unicode specificata.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Cita tutti i caratteri seguenti fino a \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Corrisponde a un CARRIAGE RETURN, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere di spaziatura. Lo spazio è definito come [\t\n\f\r\p{Z}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere non-spazio.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Corrisponde a una TABULAZIONE ORIZZONTALE, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Corrisponde al carattere con il valore esadecimale hhhh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Corrisponde al carattere con il valore esadecimale hhhhhhhh. Devono essere fornite esattamente otto cifre esadecimali, anche se il punto di codice Unicode più grande è \U0010ffff.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere di parola. I caratteri di parola sono [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere non-parola.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Corrisponde al carattere con il valore esadecimale hhhh. Possono essere fornite da una a sei cifre esadecimali.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Corrisponde al carattere con il valore esadecimale a due cifre hh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Corrisponde a un cluster di grafemi.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Corrisponde se la posizione corrente è alla fine dell'input, ma prima del terminatore di riga finale, se esiste.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Corrisponde se la posizione corrente è alla fine dell'input.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Riferimento all'indietro. Corrisponde a ciò che ha corrisposto l'ennesimo gruppo di cattura. n deve essere un numero ≥ 1 e ≤ numero totale di gruppi di cattura nel pattern.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Corrisponde a un carattere ottale. ooo va da uno a tre cifre ottali. 0377 è il più grande carattere ottale consentito. Lo zero iniziale è richiesto; distingue le costanti ottali dai riferimenti all'indietro.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere del pattern.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Corrisponde a qualsiasi carattere.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Corrisponde all'inizio di una riga.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Corrisponde alla fine di una riga.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Cita il carattere seguente. I caratteri che devono essere citati per essere trattati come letterali sono * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternanza. A|B corrisponde ad A o B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Corrisponde 0 o più volte. Corrisponde il maggior numero di volte possibile.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Corrisponde 1 o più volte. Corrisponde il maggior numero di volte possibile.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Corrisponde zero o una volta. Preferisce una volta.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Corrisponde esattamente n volte.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Corrisponde almeno n volte. Corrisponde il maggior numero di volte possibile.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Corrisponde tra n e m volte. Corrisponde il maggior numero di volte possibile, ma non più di m volte.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Corrisponde 0 o più volte. Corrisponde il minor numero di volte possibile.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Corrisponde 1 o più volte. Corrisponde il minor numero di volte possibile.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Corrisponde zero o una volta. Preferisce zero.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Corrisponde esattamente n volte.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Corrisponde almeno n volte, ma non più di quanto richiesto per una corrispondenza complessiva del pattern.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Corrisponde tra n e m volte. Corrisponde il minor numero di volte possibile, ma non meno di n volte.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Corrisponde 0 o più volte. Corrisponde il maggior numero di volte possibile al primo incontro, non riprova con meno anche se la corrispondenza complessiva fallisce (Corrispondenza possessiva).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Corrisponde 1 o più volte. Corrispondenza possessiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Corrisponde zero o una volta. Corrispondenza possessiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Corrisponde esattamente n volte.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Corrisponde almeno n volte. Corrispondenza possessiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Corrisponde tra n e m volte. Corrispondenza possessiva.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Parentesi di cattura. L'intervallo di input che corrisponde alla sottoespressione tra parentesi è disponibile dopo la corrispondenza.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Parentesi non catturanti. Raggruppa il pattern incluso, ma non fornisce la cattura del testo corrispondente. Leggermente più efficiente delle parentesi di cattura.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Parentesi di corrispondenza atomica. La prima corrispondenza della sottoespressione tra parentesi è l'unica tentata; se non porta a una corrispondenza complessiva del pattern, torna alla ricerca di una corrispondenza a una posizione prima del &quot;(?&gt;&quot;</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Commento in formato libero (?# commento ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Asserzione di anticipazione positiva. Vero se il pattern tra parentesi corrisponde alla posizione di input corrente, ma non avanza la posizione di input.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Asserzione di anticipazione negativa. Vero se il pattern tra parentesi non corrisponde alla posizione di input corrente. Non avanza la posizione di input.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Asserzione di lookbehind. Vero se il pattern tra parentesi corrisponde al testo che precede la posizione di input corrente, con l'ultimo carattere della corrispondenza che è il carattere di input appena prima della posizione corrente. Non altera la posizione di input. La lunghezza delle stringhe possibili corrispondenti al pattern di lookbehind non deve essere illimitata (nessun operatore * o +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Asserzione di lookbehind negativa. Vero se il pattern tra parentesi non corrisponde al testo che precede la posizione di input corrente, con l'ultimo carattere della corrispondenza che è il carattere di input appena prima della posizione corrente. Non altera la posizione di input. La lunghezza delle stringhe possibili corrispondenti al pattern di lookbehind non deve essere illimitata (nessun operatore * o +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Impostazioni di flag. Valuta l'espressione tra parentesi con i flag specificati abilitati o -disabilitati. I flag sono definiti nelle Opzioni di Flag.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Impostazioni di flag. Modifica le impostazioni di flag. Le modifiche si applicano alla parte del pattern che segue l'impostazione. Ad esempio, (?i) passa a una corrispondenza non sensibile alle maiuscole. I flag sono definiti nelle Opzioni di Flag.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

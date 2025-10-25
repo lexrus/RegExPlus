@@ -22,6 +22,8 @@
   - [x] Spanish
   - [x] German
   - [x] Japanese
+  - [x] French
+  - [x] Italian
 
 ## License
 

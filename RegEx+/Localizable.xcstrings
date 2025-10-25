@@ -15,6 +15,18 @@
             "value" : "%@"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47,6 +59,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld coincidencias"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld correspondances"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld corrispondenze"
           }
         },
         "ja" : {
@@ -83,6 +107,18 @@
             "value" : "1 coincidencia"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 correspondance"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 corrispondenza"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -115,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir comentarios y espacios en blanco"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autoriser les commentaires et les espaces"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consenti commenti e spazi"
           }
         },
         "ja" : {
@@ -151,6 +199,18 @@
             "value" : "Anclas coinciden con líneas"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les ancres correspondent aux lignes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancore corrispondono alle righe"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -183,6 +243,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insensible a mayúsculas/minúsculas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insensible à la casse"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignora maiuscole/minuscole"
           }
         },
         "ja" : {
@@ -219,6 +291,18 @@
             "value" : "Hoja de Referencia"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antisèche"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guida di Riferimento"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -251,6 +335,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copia el resultado de sustitución al portapapeles"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copie le résultat de substitution dans le presse-papiers"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia il risultato della sostituzione negli appunti"
           }
         },
         "ja" : {
@@ -287,6 +383,18 @@
             "value" : "Copiar resultado de sustitución"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier le résultat de substitution"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia risultato di sostituzione"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -319,6 +427,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crear un ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer un exemple"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crea un esempio"
           }
         },
         "ja" : {
@@ -355,6 +475,18 @@
             "value" : "Hecho"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fatto"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +519,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punto coincide con separadores de línea"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le point correspond aux séparateurs de ligne"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il punto corrisponde ai separatori di riga"
           }
         },
         "ja" : {
@@ -423,6 +567,18 @@
             "value" : "Editar"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -455,6 +611,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ignorar metacaracteres"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorer les métacaractères"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignora metacaratteri"
           }
         },
         "ja" : {
@@ -491,6 +659,18 @@
             "value" : "Insertar %@ en texto"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insérer %@ dans le texte"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci %@ nel testo"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -523,6 +703,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cargando..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement..."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento..."
           }
         },
         "ja" : {
@@ -559,6 +751,18 @@
             "value" : "Metacaracteres"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Métacaractères"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metacaratteri"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -591,6 +795,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome"
           }
         },
         "ja" : {
@@ -627,6 +843,18 @@
             "value" : "Operadores"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opérateurs"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operatori"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -659,6 +887,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opzioni"
           }
         },
         "ja" : {
@@ -695,6 +935,18 @@
             "value" : "Precio: $$$1\\.$2\\n"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prix : $$$1\\.$2\\n"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prezzo: $$$1\\.$2\\n"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -724,6 +976,18 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RegEx+"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RegEx+"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "RegEx+"
@@ -763,6 +1027,18 @@
             "value" : "Expresión Regular"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expression Régulière"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espressione Regolare"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -795,6 +1071,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Texto de Ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texte d'Exemple"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testo di Esempio"
           }
         },
         "ja" : {
@@ -831,6 +1119,18 @@
             "value" : "Buscar..."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher..."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerca..."
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -863,6 +1163,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Compartir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condividi"
           }
         },
         "ja" : {
@@ -899,6 +1211,18 @@
             "value" : "Compartir esta expresión regular"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager cette expression régulière"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condividi questa espressione regolare"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -933,6 +1257,18 @@
             "value" : "Resultado de Sustitución"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résultat de Substitution"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Risultato di Sostituzione"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -965,6 +1301,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plantilla de Sustitución"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle de Substitution"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modello di Sostituzione"
           }
         },
         "ja" : {
@@ -1002,6 +1350,18 @@
             "value" : "Sin título"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sans titre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senza titolo"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1034,6 +1394,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usar límites de palabra Unicode"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser les limites de mots Unicode"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa limiti di parola Unicode"
           }
         },
         "ja" : {
@@ -1070,6 +1442,18 @@
             "value" : "Usar separadores de línea Unix"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser les séparateurs de ligne Unix"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa separatori di riga Unix"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1104,6 +1488,18 @@
             "value" : "Ver guía de referencia de expresiones regulares"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir le guide de référence des expressions régulières"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualizza la guida di riferimento delle espressioni regolari"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1136,6 +1532,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tu biblioteca RegEx+ está vacía"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre bibliothèque RegEx+ est vide"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua libreria RegEx+ è vuota"
           }
         },
         "ja" : {

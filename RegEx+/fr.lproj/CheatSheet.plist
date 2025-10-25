@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Correspond à un BELL, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Correspond au début de l'entrée. Diffère de ^ en ce que \A ne correspond pas après une nouvelle ligne dans l'entrée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Correspond si la position actuelle est une limite de mot. Les limites se produisent aux transitions entre les caractères de mot (\w) et de non-mot (\W), les marques combinées étant ignorées. Pour de meilleures limites de mots, voir useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Correspond à un BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Correspond si la position actuelle n'est pas une limite de mot.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Correspond à un caractère control-X</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Correspond à tout caractère de la catégorie générale Unicode Nd (Number, Decimal Digit).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Correspond à tout caractère qui n'est pas un chiffre décimal.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Correspond à un ESCAPE, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Termine une séquence citée \Q ... \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Correspond à un FORM FEED, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Correspond si la position actuelle est à la fin de la correspondance précédente.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Correspond à un LINE FEED, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Correspond au caractère nommé.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Correspond à tout caractère avec la propriété Unicode spécifiée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Correspond à tout caractère n'ayant pas la propriété Unicode spécifiée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Cite tous les caractères suivants jusqu'à \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Correspond à un CARRIAGE RETURN, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Correspond à un caractère d'espacement. L'espace est défini comme [\t\n\f\r\p{Z}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Correspond à un caractère non-espace.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Correspond à une TABULATION HORIZONTALE, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Correspond au caractère avec la valeur hexadécimale hhhh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Correspond au caractère avec la valeur hexadécimale hhhhhhhh. Exactement huit chiffres hexadécimaux doivent être fournis, même si le plus grand point de code Unicode est \U0010ffff.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Correspond à un caractère de mot. Les caractères de mot sont [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Correspond à un caractère non-mot.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Correspond au caractère avec la valeur hexadécimale hhhh. De un à six chiffres hexadécimaux peuvent être fournis.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Correspond au caractère avec la valeur hexadécimale à deux chiffres hh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Correspond à un groupe de graphèmes.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Correspond si la position actuelle est à la fin de l'entrée, mais avant le terminateur de ligne final, s'il en existe un.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Correspond si la position actuelle est à la fin de l'entrée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Référence arrière. Correspond à ce que le nième groupe de capture a correspondu. n doit être un nombre ≥ 1 et ≤ nombre total de groupes de capture dans le motif.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Correspond à un caractère octal. ooo va de un à trois chiffres octaux. 0377 est le plus grand caractère octal autorisé. Le zéro initial est requis ; il distingue les constantes octales des références arrière.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Correspond à n'importe quel caractère du motif.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Correspond à n'importe quel caractère.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Correspond au début d'une ligne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Correspond à la fin d'une ligne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Cite le caractère suivant. Les caractères qui doivent être cités pour être traités comme des littéraux sont * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternance. A|B correspond à A ou B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Correspond 0 fois ou plus. Correspond autant de fois que possible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Correspond 1 fois ou plus. Correspond autant de fois que possible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Correspond zéro ou une fois. Préfère une fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Correspond exactement n fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Correspond au moins n fois. Correspond autant de fois que possible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Correspond entre n et m fois. Correspond autant de fois que possible, mais pas plus de m fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Correspond 0 fois ou plus. Correspond aussi peu de fois que possible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Correspond 1 fois ou plus. Correspond aussi peu de fois que possible.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Correspond zéro ou une fois. Préfère zéro.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Correspond exactement n fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Correspond au moins n fois, mais pas plus que nécessaire pour une correspondance globale du motif.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Correspond entre n et m fois. Correspond aussi peu de fois que possible, mais pas moins de n fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Correspond 0 fois ou plus. Correspond autant de fois que possible lors de la première rencontre, ne réessaie pas avec moins même si la correspondance globale échoue (Correspondance possessive).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Correspond 1 fois ou plus. Correspondance possessive.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Correspond zéro ou une fois. Correspondance possessive.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Correspond exactement n fois.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Correspond au moins n fois. Correspondance possessive.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Correspond entre n et m fois. Correspondance possessive.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Parenthèses de capture. La plage d'entrée qui correspond à la sous-expression entre parenthèses est disponible après la correspondance.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Parenthèses non capturantes. Groupe le motif inclus, mais ne fournit pas de capture du texte correspondant. Légèrement plus efficace que les parenthèses de capture.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Parenthèses de correspondance atomique. La première correspondance de la sous-expression entre parenthèses est la seule tentée ; si elle ne mène pas à une correspondance globale du motif, revient à la recherche d'une correspondance à une position avant le &quot;(?&gt;&quot;</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Commentaire en format libre (?# commentaire ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Assertion de pré-vérification. Vrai si le motif entre parenthèses correspond à la position d'entrée actuelle, mais n'avance pas la position d'entrée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Assertion de pré-vérification négative. Vrai si le motif entre parenthèses ne correspond pas à la position d'entrée actuelle. N'avance pas la position d'entrée.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Assertion de post-vérification. Vrai si le motif entre parenthèses correspond au texte précédant la position d'entrée actuelle, le dernier caractère de la correspondance étant le caractère d'entrée juste avant la position actuelle. Ne modifie pas la position d'entrée. La longueur des chaînes possibles correspondantes au motif de post-vérification ne doit pas être illimitée (pas d'opérateurs * ou +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Assertion de post-vérification négative. Vrai si le motif entre parenthèses ne correspond pas au texte précédant la position d'entrée actuelle, le dernier caractère de la correspondance étant le caractère d'entrée juste avant la position actuelle. Ne modifie pas la position d'entrée. La longueur des chaînes possibles correspondantes au motif de post-vérification ne doit pas être illimitée (pas d'opérateurs * ou +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Paramètres de drapeaux. Évalue l'expression entre parenthèses avec les drapeaux spécifiés activés ou -désactivés. Les drapeaux sont définis dans les Options de Drapeaux.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Paramètres de drapeaux. Modifie les paramètres de drapeaux. Les modifications s'appliquent à la partie du motif suivant le paramètre. Par exemple, (?i) passe à une correspondance insensible à la casse. Les drapeaux sont définis dans les Options de Drapeaux.</string>
+		</dict>
+	</array>
+</dict>
+</plist>
