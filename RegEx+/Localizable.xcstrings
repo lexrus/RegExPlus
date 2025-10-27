@@ -1,1571 +1,1775 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "%@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+  "sourceLanguage": "en",
+  "strings": {
+    "%@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
-    "%lld matches" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld Treffer"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld coincidencias"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld correspondances"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld corrispondenze"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld マッチ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 次匹配"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 次匹配"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         }
       }
     },
-    "1 match" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Treffer"
+    "%lld matches": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Treffer"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 coincidencia"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld coincidencias"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 correspondance"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld correspondances"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 corrispondenza"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld corrispondenze"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1マッチ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld マッチ"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一次匹配"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld개 일치"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一次匹配"
-          }
-        }
-      }
-    },
-    "Allow Comments and Whitespace" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kommentare und Leerzeichen erlauben"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 次匹配"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permitir comentarios y espacios en blanco"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autoriser les commentaires et les espaces"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Consenti commenti e spazi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "コメントと空白を許可"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "允许注释和空格"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "允許註釋和空格"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 次匹配"
           }
         }
       }
     },
-    "Anchors Match Lines" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anker passen zu Zeilen"
+    "1 match": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Treffer"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anclas coinciden con líneas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 coincidencia"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les ancres correspondent aux lignes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 correspondance"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ancore corrispondono alle righe"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 corrispondenza"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アンカーで行をマッチ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1マッチ"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "锚点匹配行"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1개 일치"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "錨點匹配行"
-          }
-        }
-      }
-    },
-    "Case Insensitive" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Groß-/Kleinschreibung ignorieren"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次匹配"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insensible a mayúsculas/minúsculas"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insensible à la casse"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignora maiuscole/minuscole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "大文字小文字を区別しない"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不区分大小写"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不區分大小寫"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次匹配"
           }
         }
       }
     },
-    "Cheat Sheet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spickzettel"
+    "Allow Comments and Whitespace": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kommentare und Leerzeichen erlauben"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoja de Referencia"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permitir comentarios y espacios en blanco"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antisèche"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autoriser les commentaires et les espaces"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guida di Riferimento"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consenti commenti e spazi"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "チートシート"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コメントと空白を許可"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小抄"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "주석 및 공백 허용"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小抄"
-          }
-        }
-      }
-    },
-    "Copies the substitution result to clipboard" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ersetzungsergebnis in Zwischenablage kopieren"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许注释和空格"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia el resultado de sustitución al portapapeles"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copie le résultat de substitution dans le presse-papiers"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia il risultato della sostituzione negli appunti"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "置換結果をクリップボードにコピー"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "将替换结果复制到剪贴板"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "將替換結果複製到剪貼板"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允許註釋和空格"
           }
         }
       }
     },
-    "Copy substitution result" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ersetzungsergebnis kopieren"
+    "Anchors Match Lines": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anker passen zu Zeilen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copiar resultado de sustitución"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anclas coinciden con líneas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copier le résultat de substitution"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les ancres correspondent aux lignes"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia risultato di sostituzione"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ancore corrispondono alle righe"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "置換結果をコピー"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アンカーで行をマッチ"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "复制替换结果"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앵커로 라인 일치"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "複製替換結果"
-          }
-        }
-      }
-    },
-    "Create a sample" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beispiel erstellen"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锚点匹配行"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Crear un ejemplo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Créer un exemple"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Crea un esempio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サンプルを作成"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新建样例"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新建樣例"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "錨點匹配行"
           }
         }
       }
     },
-    "Done" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fertig"
+    "Case Insensitive": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Groß-/Kleinschreibung ignorieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hecho"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insensible a mayúsculas/minúsculas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terminé"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insensible à la casse"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fatto"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignora maiuscole/minuscole"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "完了"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大文字小文字を区別しない"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "完成"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "대소문자 구분 안 함"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "完成"
-          }
-        }
-      }
-    },
-    "Dot Matches Line Separators" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Punkt entspricht Zeilentrenner"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不区分大小写"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Punto coincide con separadores de línea"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le point correspond aux séparateurs de ligne"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il punto corrisponde ai separatori di riga"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ドットで改行文字をマッチ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "点符号匹配行分隔符"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "點符號匹配行分隔符"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不區分大小寫"
           }
         }
       }
     },
-    "Edit" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bearbeiten"
+    "Cheat Sheet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spickzettel"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoja de Referencia"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifier"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antisèche"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifica"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guida di Riferimento"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "編集"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "チートシート"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "编辑"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "치트 시트"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "編輯"
-          }
-        }
-      }
-    },
-    "Ignore Metacharacters" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Metazeichen ignorieren"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小抄"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignorar metacaracteres"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignorer les métacaractères"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignora metacaratteri"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メタ文字を無視"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "忽略元字符"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "忽略元字符"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小抄"
           }
         }
       }
     },
-    "Insert %@ into text" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ in Text einfügen"
+    "Copies the substitution result to clipboard": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersetzungsergebnis in Zwischenablage kopieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insertar %@ en texto"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia el resultado de sustitución al portapapeles"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insérer %@ dans le texte"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copie le résultat de substitution dans le presse-papiers"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inserisci %@ nel testo"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia il risultato della sostituzione negli appunti"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@をテキストに挿入"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "置換結果をクリップボードにコピー"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "将%@插入文本"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "치환 결과를 클립보드에 복사"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "將%@插入文字"
-          }
-        }
-      }
-    },
-    "Loading..." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laden..."
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将替换结果复制到剪贴板"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargando..."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chargement..."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Caricamento..."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "読み込み中..."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加载中..."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "載入中..."
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將替換結果複製到剪貼板"
           }
         }
       }
     },
-    "Metacharacters" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Metazeichen"
+    "Copy substitution result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersetzungsergebnis kopieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Metacaracteres"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar resultado de sustitución"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Métacaractères"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier le résultat de substitution"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Metacaratteri"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia risultato di sostituzione"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メタ文字"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "置換結果をコピー"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "元字符"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制替换结果"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "元字符"
-          }
-        }
-      }
-    },
-    "Name" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "複製替換結果"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nom"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nome"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "名前"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "名字"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "名字"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "치환 결과 복사"
           }
         }
       }
     },
-    "Operators" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Operatoren"
+    "Create a sample": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beispiel erstellen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Operadores"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crear un ejemplo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opérateurs"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créer un exemple"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Operatori"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crea un esempio"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "演算子"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サンプルを作成"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "操作符"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建样例"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "操作符"
-          }
-        }
-      }
-    },
-    "Options" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Optionen"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建樣例"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opciones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Options"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opzioni"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "オプション"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "选项"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選項"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "샘플 만들기"
           }
         }
       }
     },
-    "Price: $$$1\\.$2\\n" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preis: $$$1\\.$2\\n"
+    "Done": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Precio: $$$1\\.$2\\n"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hecho"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prix : $$$1\\.$2\\n"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminé"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prezzo: $$$1\\.$2\\n"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fatto"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "価格: $$$1\\.$2\\n"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完了"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "价格: $$$1\\.$2\\n"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "價格: $$$1\\.$2\\n"
-          }
-        }
-      }
-    },
-    "RegEx+" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "완료"
           }
         }
       }
     },
-    "Regular Expression" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Regulärer Ausdruck"
+    "Dot Matches Line Separators": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punkt entspricht Zeilentrenner"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Expresión Regular"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punto coincide con separadores de línea"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Expression Régulière"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le point correspond aux séparateurs de ligne"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Espressione Regolare"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il punto corrisponde ai separatori di riga"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正規表現"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドットで改行文字をマッチ"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正则表达式"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点符号匹配行分隔符"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正則表達式"
-          }
-        }
-      }
-    },
-    "Sample Text" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beispieltext"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "點符號匹配行分隔符"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto de Ejemplo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texte d'Exemple"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Testo di Esempio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サンプルテキスト"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "示例文字"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "示例文字"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "점이 줄 구분 기호와 일치"
           }
         }
       }
     },
-    "Search..." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suchen..."
+    "Edit": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bearbeiten"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buscar..."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rechercher..."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerca..."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifica"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "検索..."
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編集"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "搜索..."
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "搜索..."
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編輯"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "편집"
           }
         }
       }
     },
-    "Share" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Teilen"
+    "Ignore Metacharacters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metazeichen ignorieren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorar metacaracteres"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partager"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorer les métacaractères"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Condividi"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignora metacaratteri"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "共有"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メタ文字を無視"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略元字符"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略元字符"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메타 문자 무시"
           }
         }
       }
     },
-    "Share this regular expression" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Diesen regulären Ausdruck teilen"
+    "Insert %@ into text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ in Text einfügen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir esta expresión regular"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insertar %@ en texto"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partager cette expression régulière"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insérer %@ dans le texte"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Condividi questa espressione regolare"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inserisci %@ nel testo"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "この正規表現を共有"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@をテキストに挿入"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享这个正则表达式"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将%@插入文本"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享這個正則表達式"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將%@插入文字"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@를 텍스트에 삽입"
           }
         }
       }
     },
-    "Substitution Result" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ersetzungsergebnis"
+    "Loading...": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laden..."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultado de Sustitución"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando..."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résultat de Substitution"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chargement..."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Risultato di Sostituzione"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caricamento..."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "置換結果"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "読み込み中..."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "替换结果"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加载中..."
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "替換結果"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "載入中..."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로드 중..."
           }
         }
       }
     },
-    "Substitution Template" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ersetzungsvorlage"
+    "Metacharacters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metazeichen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plantilla de Sustitución"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metacaracteres"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modèle de Substitution"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Métacaractères"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modello di Sostituzione"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metacaratteri"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "置換テンプレート"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メタ文字"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "替换模板"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "元字符"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "替換模板"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "元字符"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메타 문자"
           }
         }
       }
     },
-    "Untitled" : {
-      "comment" : "Default item name",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ohne Titel"
+    "Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin título"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sans titre"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Senza titolo"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無題"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名前"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "未命名"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名字"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "未命名"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名字"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이름"
           }
         }
       }
     },
-    "Use Unicode Word Boundaries" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unicode-Wortgrenzen verwenden"
+    "Operators": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Operatoren"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar límites de palabra Unicode"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Operadores"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utiliser les limites de mots Unicode"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opérateurs"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa limiti di parola Unicode"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Operatori"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unicode単語境界を使用"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "演算子"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 Unicode 字符边界"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作符"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 Unicode 字符邊界"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作符"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "연산자"
           }
         }
       }
     },
-    "Use Unix Line Separators" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unix-Zeilentrenner verwenden"
+    "Options": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optionen"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar separadores de línea Unix"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opciones"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utiliser les séparateurs de ligne Unix"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Options"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa separatori di riga Unix"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opzioni"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unix改行文字を使用"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オプション"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 Unix 换行符"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选项"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 Unix 換行符"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選項"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "옵션"
           }
         }
       }
     },
-    "View regular expression reference guide" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Regulärer Ausdruck-Referenzhandbuch anzeigen"
+    "Price: $$$1\\.$2\\n": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preis: $$$1\\.$2\\n"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver guía de referencia de expresiones regulares"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precio: $$$1\\.$2\\n"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voir le guide de référence des expressions régulières"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prix : $$$1\\.$2\\n"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visualizza la guida di riferimento delle espressioni regolari"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prezzo: $$$1\\.$2\\n"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正規表現リファレンスガイドを表示"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "価格: $$$1\\.$2\\n"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查看正则表达式参考指南"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "价格: $$$1\\.$2\\n"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查看正則表達式參考指南"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "價格: $$$1\\.$2\\n"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가격: $$$1\\.$2\\n"
           }
         }
       }
     },
-    "Your RegEx+ library is empty" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ihre RegEx+ Bibliothek ist leer"
+    "RegEx+": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu biblioteca RegEx+ está vacía"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre bibliothèque RegEx+ est vide"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La tua libreria RegEx+ è vuota"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RegEx+ライブラリが空です"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你的 RegEx+ 仓库是空的"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你的 RegEx+ 倉庫是空的"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+"
+          }
+        }
+      }
+    },
+    "Regular Expression": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regulärer Ausdruck"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expresión Regular"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expression Régulière"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espressione Regolare"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正規表現"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正则表达式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正則表達式"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "정규 표현식"
+          }
+        }
+      }
+    },
+    "Sample Text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beispieltext"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto de Ejemplo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texte d'Exemple"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testo di Esempio"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サンプルテキスト"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "示例文字"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "示例文字"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "샘플 텍스트"
+          }
+        }
+      }
+    },
+    "Search...": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suchen..."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar..."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher..."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca..."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索..."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索..."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索..."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "검색..."
+          }
+        }
+      }
+    },
+    "Share": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partager"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condividi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共有"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "공유"
+          }
+        }
+      }
+    },
+    "Share this regular expression": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diesen regulären Ausdruck teilen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir esta expresión regular"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partager cette expression régulière"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condividi questa espressione regolare"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "この正規表現を共有"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享这个正则表达式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享這個正則表達式"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 정규 표현식 공유"
+          }
+        }
+      }
+    },
+    "Substitution Result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersetzungsergebnis"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado de Sustitución"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Résultat de Substitution"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Risultato di Sostituzione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "置換結果"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换结果"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替換結果"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "치환 결과"
+          }
+        }
+      }
+    },
+    "Substitution Template": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersetzungsvorlage"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plantilla de Sustitución"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modèle de Substitution"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modello di Sostituzione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "置換テンプレート"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换模板"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替換模板"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "치환 템플릿"
+          }
+        }
+      }
+    },
+    "Untitled": {
+      "comment": "Default item name",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ohne Titel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin título"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans titre"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senza titolo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無題"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未命名"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未命名"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목 없음"
+          }
+        }
+      }
+    },
+    "Use Unicode Word Boundaries": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unicode-Wortgrenzen verwenden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar límites de palabra Unicode"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliser les limites de mots Unicode"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa limiti di parola Unicode"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unicode単語境界を使用"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Unicode 字符边界"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Unicode 字符邊界"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유니코드 단어 경계 사용"
+          }
+        }
+      }
+    },
+    "Use Unix Line Separators": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unix-Zeilentrenner verwenden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar separadores de línea Unix"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliser les séparateurs de ligne Unix"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa separatori di riga Unix"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unix改行文字を使用"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Unix 换行符"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Unix 換行符"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unix 줄 구분 기호 사용"
+          }
+        }
+      }
+    },
+    "View regular expression reference guide": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regulärer Ausdruck-Referenzhandbuch anzeigen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver guía de referencia de expresiones regulares"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir le guide de référence des expressions régulières"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visualizza la guida di riferimento delle espressioni regolari"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正規表現リファレンスガイドを表示"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看正则表达式参考指南"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看正則表達式參考指南"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "정규 표현식 참조 가이드 보기"
+          }
+        }
+      }
+    },
+    "Your RegEx+ library is empty": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihre RegEx+ Bibliothek ist leer"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu biblioteca RegEx+ está vacía"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre bibliothèque RegEx+ est vide"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La tua libreria RegEx+ è vuota"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+ライブラリが空です"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 RegEx+ 仓库是空的"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 RegEx+ 倉庫是空的"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RegEx+ 라이브러리가 비어 있습니다"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
