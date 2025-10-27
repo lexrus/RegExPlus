@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>BELL 문자와 일치, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>입력의 시작 부분과 일치합니다. 입력 내 줄바꿈 후에는 일치하지 않는다는 점에서 ^와 다릅니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>현재 위치가 단어 경계인 경우 일치합니다. 경계는 결합 표시를 무시하고 단어(\w)와 비단어(\W) 문자 간의 전환에서 발생합니다. 더 나은 단어 경계를 원하면 useUnicodeWordBoundaries를 참조하세요.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>BACKSPACE와 일치, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>현재 위치가 단어 경계가 아닌 경우 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>제어-X 문자와 일치합니다</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>유니코드 일반 범주가 Nd(숫자, 10진수)인 모든 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>10진수가 아닌 모든 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>ESCAPE와 일치, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>\Q ... \E 인용 시퀀스를 종료합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>FORM FEED와 일치, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>현재 위치가 이전 일치의 끝에 있는 경우 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>LINE FEED와 일치, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>명명된 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>지정된 유니코드 속성을 가진 모든 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>지정된 유니코드 속성을 갖지 않은 모든 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>\E까지 다음 모든 문자를 인용합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>CARRIAGE RETURN과 일치, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>공백 문자와 일치합니다. 공백은 [\t\n\f\r\p{Z}]로 정의됩니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>공백이 아닌 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>HORIZONTAL TABULATION과 일치, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>16진수 값 hhhh를 가진 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>16진수 값 hhhhhhhh를 가진 문자와 일치합니다. 가장 큰 유니코드 코드 포인트가 \U0010ffff이더라도 정확히 8개의 16진수를 제공해야 합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>단어 문자와 일치합니다. 단어 문자는 [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]입니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>단어가 아닌 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>16진수 값 hhhh를 가진 문자와 일치합니다. 1개에서 6개의 16진수를 제공할 수 있습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>두 자리 16진수 값 hh를 가진 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>자소 클러스터와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>현재 위치가 입력의 끝에 있지만 최종 줄 종결자가 있는 경우 그 앞에 있으면 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>현재 위치가 입력의 끝에 있으면 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>역참조. n번째 캡처 그룹이 일치한 내용과 일치합니다. n은 ≥ 1이고 패턴의 총 캡처 그룹 수 ≤인 숫자여야 합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>8진수 문자와 일치합니다. ooo는 1개에서 3개의 8진수입니다. 0377은 허용되는 가장 큰 8진수 문자입니다. 앞의 0은 필수이며 8진수 상수를 역참조와 구별합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>패턴의 모든 문자 중 하나와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>모든 문자와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>줄의 시작 부분과 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>줄의 끝 부분과 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>다음 문자를 인용합니다. 리터럴로 처리되기 위해 인용해야 하는 문자는 * ? + [ ( ) { } ^ $ | \ . /입니다</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>대체. A|B는 A 또는 B와 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>0회 이상 일치합니다. 가능한 한 많이 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>1회 이상 일치합니다. 가능한 한 많이 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>0회 또는 1회 일치합니다. 1회를 선호합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>정확히 n회 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>최소 n회 일치합니다. 가능한 한 많이 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>n회에서 m회 사이로 일치합니다. 가능한 한 많이 일치하지만 m회를 초과하지 않습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>0회 이상 일치합니다. 가능한 한 적게 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>1회 이상 일치합니다. 가능한 한 적게 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>0회 또는 1회 일치합니다. 0회를 선호합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>정확히 n회 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>최소 n회 일치하지만 전체 패턴 일치에 필요한 것보다 많지 않습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>n회에서 m회 사이로 일치합니다. 가능한 한 적게 일치하지만 n회보다 적지 않습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>0회 이상 일치합니다. 처음 발견했을 때 가능한 한 많이 일치하고, 전체 일치가 실패하더라도 더 적게 재시도하지 않습니다(소유 일치).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>1회 이상 일치합니다. 소유 일치.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>0회 또는 1회 일치합니다. 소유 일치.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>정확히 n회 일치합니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>최소 n회 일치합니다. 소유 일치.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>n회에서 m회 사이로 일치합니다. 소유 일치.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>캡처 괄호. 괄호로 묶인 하위 표현식과 일치하는 입력 범위는 일치 후에 사용할 수 있습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>비캡처 괄호. 포함된 패턴을 그룹화하지만 일치하는 텍스트의 캡처를 제공하지 않습니다. 캡처 괄호보다 다소 효율적입니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>원자 일치 괄호. 괄호로 묶인 하위 표현식의 첫 번째 일치만 시도됩니다. 전체 패턴 일치로 이어지지 않으면 "(?&gt;" 앞의 위치로 일치 검색을 백업합니다</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>자유 형식 주석 (?# comment ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>전방 탐색 어서션. 괄호로 묶인 패턴이 현재 입력 위치와 일치하지만 입력 위치를 진행하지 않으면 참입니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>부정 전방 탐색 어서션. 괄호로 묶인 패턴이 현재 입력 위치와 일치하지 않으면 참입니다. 입력 위치를 진행하지 않습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>후방 탐색 어서션. 괄호로 묶인 패턴이 현재 입력 위치 앞의 텍스트와 일치하고 일치의 마지막 문자가 현재 위치 바로 앞의 입력 문자인 경우 참입니다. 입력 위치를 변경하지 않습니다. 후방 탐색 패턴과 일치할 수 있는 문자열의 길이는 무제한이 아니어야 합니다(* 또는 + 연산자 없음).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>부정 후방 탐색 어서션. 괄호로 묶인 패턴이 현재 입력 위치 앞의 텍스트와 일치하지 않고 일치의 마지막 문자가 현재 위치 바로 앞의 입력 문자인 경우 참입니다. 입력 위치를 변경하지 않습니다. 후방 탐색 패턴과 일치할 수 있는 문자열의 길이는 무제한이 아니어야 합니다(* 또는 + 연산자 없음).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>플래그 설정. 지정된 플래그가 활성화되거나 -비활성화된 상태에서 괄호로 묶인 표현식을 평가합니다. 플래그는 플래그 옵션에 정의되어 있습니다.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>플래그 설정. 플래그 설정을 변경합니다. 변경 사항은 설정 다음의 패턴 부분에 적용됩니다. 예를 들어 (?i)는 대소문자를 구분하지 않는 일치로 변경합니다. 플래그는 플래그 옵션에 정의되어 있습니다.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

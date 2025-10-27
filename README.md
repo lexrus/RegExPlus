@@ -24,6 +24,7 @@
   - [x] Japanese
   - [x] French
   - [x] Italian
+  - [x] Korean
 
 ## License
 
