@@ -1,1 +1,1 @@
-
+Pruebe, depure y guarde patrones regex más rápido en iPhone, iPad y Mac. Coincidencias en vivo, guía de consulta y sincronización CloudKit.

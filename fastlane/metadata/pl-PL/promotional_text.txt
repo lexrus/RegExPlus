@@ -1,1 +1,1 @@
-Testuj, debuguj i zapisuj wzorce regex szybciej na iPhone, iPad i Mac. Dopasowywanie na żywo, ściąga i synchronizacja CloudKit w jednym narzędziu.
+Testuj, debuguj i zapisuj wyrażenia regex szybciej na iPhone, iPad i Mac. Dopasowanie na żywo, ściąga i synchronizacja CloudKit.

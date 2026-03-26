@@ -1,1 +1,1 @@
-regex,regexp,expression régulière,NSRegularExpression,outil regex,test regex,antisèche regexp
+regexp,expression,régulière,développeur,code,éditeur,motif,syntaxe,ios,mac,logiciel,outil

@@ -1,1 +1,1 @@
-regex,regexp,expresiones regulares,NSRegularExpression,herramienta regex,test regex,desarrollador
+regexp,expresiones,regulares,programador,código,editor,patrón,sintaxis,ios,mac,software,herramienta

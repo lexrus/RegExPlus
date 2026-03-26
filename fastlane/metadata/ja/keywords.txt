@@ -1,1 +1,1 @@
-regex,regexp,正規表現,NSRegularExpression,regexツール,regexテスト,開発者
+正規表現,開発者,プログラミング,コード,エディタ,パターン,構文,ソフトウェア,ツール,ios,mac,regexp

@@ -1,1 +1,1 @@
-regexp,tester,builder,match,zamień,capture,grupa,walidator,wzorzec,swift,nsregularexpression,edytor
+regexp,wyrażenia,regularne,programista,kod,edytor,wzór,składnia,ios,mac,oprogramowanie,narzędzie

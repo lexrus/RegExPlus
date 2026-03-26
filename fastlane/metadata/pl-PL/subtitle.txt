@@ -1,1 +1,1 @@
-Regex ściąga + Cloud Sync
+Ściąga Regex i Cloud Sync

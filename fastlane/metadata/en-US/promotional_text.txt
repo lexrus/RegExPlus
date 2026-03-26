@@ -1,1 +1,1 @@
-
+Test, debug, and save regex patterns faster on iPhone, iPad, and Mac. Live matching, cheat sheet, and CloudKit sync in one focused tool.
