@@ -1,0 +1,1 @@
+Test, debug en bewaar regex-patronen sneller op iPhone, iPad en Mac. Live matching, spiekbriefje en CloudKit-synchronisatie in één gefocuste tool.

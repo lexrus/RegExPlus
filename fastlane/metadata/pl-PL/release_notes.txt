@@ -1,0 +1,5 @@
+Co nowego w RegEx+:
+
+• Dodano skróty klawiszowe do wstawiania typowych znaków wyrażeń regularnych - teraz możesz szybko wstawiać znaki specjalne i operatory za pomocą prostych kombinacji klawiszy.
+• Optymalizacja wydajności dla lepszej responsywności aplikacji.
+• Poprawki błędów i ulepszenia stabilności.

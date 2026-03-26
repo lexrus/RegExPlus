@@ -65,6 +65,8 @@
 		D78E45BD2E47A2E8002ACA56 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D78E45BE2E47A2F3002ACA56 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = it; path = it.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D78E45BF2E47A300002ACA56 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ko; path = ko.lproj/CheatSheet.plist; sourceTree = "<group>"; };
+		D78E45C02E47A310002ACA56 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = nl; path = nl.lproj/CheatSheet.plist; sourceTree = "<group>"; };
+		D78E45C12E47A320002ACA56 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/CheatSheet.plist; sourceTree = "<group>"; };
 		D7A925DB2B81057E0023E8EA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D7BB73F8244F47E400343AC5 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		D7CCA7D1244E010D00D81C74 /* RegEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +277,8 @@
 				fr,
 				it,
 				ko,
+				nl,
+				pl,
 			);
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
@@ -370,6 +374,8 @@
 				D78E45BD2E47A2E8002ACA56 /* fr */,
 				D78E45BE2E47A2F3002ACA56 /* it */,
 				D78E45BF2E47A300002ACA56 /* ko */,
+				D78E45C02E47A310002ACA56 /* nl */,
+				D78E45C12E47A320002ACA56 /* pl */,
 			);
 			name = CheatSheet.plist;
 			sourceTree = "<group>";

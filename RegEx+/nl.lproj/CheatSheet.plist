@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Komt overeen met een BELL, \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Komt overeen met het begin van de invoer. Verschilt van ^ doordat \A niet overeenkomt na een nieuwe regel in de invoer.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Komt overeen als de huidige positie een woordgrens is. Grenzen treden op bij overgangen tussen woord- (\w) en niet-woord- (\W) tekens, waarbij combinerende markeringen worden genegeerd. Voor betere woordgrenzen, zie useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Komt overeen met een BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Komt overeen als de huidige positie geen woordgrens is.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Komt overeen met een control-X teken</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Komt overeen met elk teken met de Unicode Algemene Categorie Nd (Getal, Decimaal Cijfer.)</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Komt overeen met elk teken dat geen decimaal cijfer is.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Komt overeen met een ESCAPE, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Beëindigt een \Q ... \E geciteerde reeks.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Komt overeen met een FORM FEED, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Komt overeen als de huidige positie aan het einde van de vorige overeenkomst is.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Komt overeen met een LINE FEED, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Komt overeen met het benoemde teken.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Komt overeen met elk teken met de opgegeven Unicode-eigenschap.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Komt overeen met elk teken dat niet de opgegeven Unicode-eigenschap heeft.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Citeert alle volgende tekens tot \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Komt overeen met een CARRIAGE RETURN, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Komt overeen met een witruimte-teken. Witruimte is gedefinieerd als [\t\n\f\r\p{Z}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Komt overeen met een niet-witruimte-teken.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Komt overeen met een HORIZONTALE TABULATIE, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Komt overeen met het teken met de hex-waarde hhhh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Komt overeen met het teken met de hex-waarde hhhhhhhh. Er moeten precies acht hex-cijfers worden opgegeven, ook al is het grootste Unicode-codepunt \U0010ffff.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Komt overeen met een woordteken. Woordtekens zijn [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Komt overeen met een niet-woordteken.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Komt overeen met het teken met de hex-waarde hhhh. Er kunnen één tot zes hex-cijfers worden opgegeven.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Komt overeen met het teken met de tweecijferige hex-waarde hh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Komt overeen met een Grafeemcluster.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Komt overeen als de huidige positie aan het einde van de invoer is, maar voor de laatste regeleenheid, als die bestaat.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Komt overeen als de huidige positie aan het einde van de invoer is.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Terugverwijzing. Komt overeen met wat de n-de vastleggroep heeft gevonden. n moet een getal ≥ 1 en ≤ het totale aantal vastleggroepen in het patroon zijn.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Komt overeen met een octaal teken. ooo is één tot drie octale cijfers. 0377 is het grootste toegestane octale teken. De leidende nul is vereist; deze onderscheidt octale constanten van terugverwijzingen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Komt overeen met elk willekeurig teken uit het patroon.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Komt overeen met elk willekeurig teken.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Komt overeen aan het begin van een regel.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Komt overeen aan het einde van een regel.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Citeert het volgende teken. Tekens die geciteerd moeten worden om als letterlijk te worden behandeld zijn * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternatie. A|B komt overeen met A of B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Komt 0 of meer keer overeen. Komt zo vaak mogelijk overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Komt 1 of meer keer overeen. Komt zo vaak mogelijk overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Komt nul of één keer overeen. Voorkeur voor één.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Komt precies n keer overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Komt ten minste n keer overeen. Komt zo vaak mogelijk overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Komt tussen n en m keer overeen. Komt zo vaak mogelijk overeen, maar niet vaker dan m.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Komt 0 of meer keer overeen. Komt zo weinig mogelijk overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Komt 1 of meer keer overeen. Komt zo weinig mogelijk overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Komt nul of één keer overeen. Voorkeur voor nul.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Komt precies n keer overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Komt ten minste n keer overeen, maar niet vaker dan nodig voor een algehele patroonovereenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Komt tussen n en m keer overeen. Komt zo weinig mogelijk overeen, maar niet minder dan n.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Komt 0 of meer keer overeen. Komt zo vaak mogelijk overeen bij de eerste ontmoeting, probeer niet opnieuw met minder, zelfs niet als de algehele overeenkomst mislukt (Bezitterige Overeenkomst).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Komt 1 of meer keer overeen. Bezitterige overeenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Komt nul of één keer overeen. Bezitterige overeenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Komt precies n keer overeen.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Komt ten minste n keer overeen. Bezitterige Overeenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Komt tussen n en m keer overeen. Bezitterige Overeenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Vastleggende haakjes. Het bereik van de invoer dat overeenkwam met de subexpressie tussen haakjes is beschikbaar na de overeenkomst.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Niet-vastleggende haakjes. Groepeert het opgenomen patroon, maar biedt geen vastlegging van overeenkomende tekst. Iets efficiënter dan vastleggende haakjes.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Atoom-overeenkomst haakjes. De eerste overeenkomst van de subexpressie tussen haakjes is de enige die wordt geprobeerd; als dit niet leidt tot een algehele patroonovereenkomst, ga dan terug naar een positie voor de &quot;(?&gt;&quot;</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Vrij-formaat commentaar (?# commentaar ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Look-ahead bewering. Waar als het patroon tussen haakjes overeenkomt op de huidige invoerpositie, maar de invoerpositie niet opschuift.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Negatieve look-ahead bewering. Waar als het patroon tussen haakjes niet overeenkomt op de huidige invoerpositie. Schuift de invoerpositie niet op.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Look-behind bewering. Waar als het patroon tussen haakjes overeenkomt met tekst die voorafgaat aan de huidige invoerpositie, waarbij het laatste teken van de overeenkomst het invoerteken is vlak voor de huidige positie. Verandert de invoerpositie niet. De lengte van mogelijke tekenreeksen die overeenkomen met het look-behind patroon mag niet onbegrensd zijn (geen * of + operatoren).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Negatieve look-behind bewering. Waar als het patroon tussen haakjes niet overeenkomt met tekst die voorafgaat aan de huidige invoerpositie, waarbij het laatste teken van de overeenkomst het invoerteken is vlak voor de huidige positie. Verandert de invoerpositie niet. De lengte van mogelijke tekenreeksen die overeenkomen met het look-behind patroon mag niet onbegrensd zijn (geen * of + operatoren).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Vlaginstellingen. Evalueer de expressie tussen haakjes met de opgegeven vlaggen ingeschakeld of -uitgeschakeld. De vlaggen zijn gedefinieerd in Vlagopties.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Vlaginstellingen. Wijzig de vlaginstellingen. Wijzigingen zijn van toepassing op het deel van het patroon dat volgt op de instelling. Bijvoorbeeld, (?i) wijzigt in een hoofdletterongevoelige overeenkomst. De vlaggen zijn gedefinieerd in Vlagopties.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

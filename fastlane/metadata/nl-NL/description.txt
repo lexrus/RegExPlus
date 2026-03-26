@@ -1,0 +1,3 @@
+Ontketen de kracht van Reguliere Expressies met RegEx+!
+
+RegEx+ is ontworpen door ontwikkelaars voor ontwikkelaars en is dé tool voor het beheersen van reguliere expressies op zowel macOS als iOS. Ervaar een naadloze ervaring terwijl je gegevens moeiteloos worden gesynchroniseerd tussen apparaten via CloudKit, zodat je je werk altijd bij de hand hebt. Of je nu een beginner bent of een ervaren pro, ons uitgebreide spiekbriefje verheldert metatekens en operatoren, waardoor je complexe patronen met gemak kunt ontcijferen en construeren. Til je programmeervaardigheden naar een hoger niveau met RegEx+ en transformeer de manier waarop je tekst, gegevens en meer verwerkt!

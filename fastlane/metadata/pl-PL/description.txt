@@ -1,0 +1,3 @@
+Uwolnij moc Wyrażeń Regularnych z RegEx+!
+
+Zaprojektowany przez programistów dla programistów, RegEx+ to Twoje podstawowe narzędzie do opanowania wyrażeń regularnych na macOS i iOS. Ciesz się płynną pracą, gdy Twoje dane synchronizują się bez wysiłku między urządzeniami przez CloudKit, zapewniając dostęp do pracy zawsze wtedy, gdy jej potrzebujesz. Niezależnie od tego, czy jesteś początkującym, czy doświadczonym profesjonalistą, nasza kompleksowa ściąga wyjaśnia znaki specjalne i operatory, pozwalając z łatwością dekodować i budować złożone wzorce. Podnieś swoje umiejętności kodowania dzięki RegEx+ i odmień sposób, w jaki pracujesz z tekstem, danymi i nie tylko!

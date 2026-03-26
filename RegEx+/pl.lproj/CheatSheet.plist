@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metacharacters</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>\a</string>
+			<key>des</key>
+			<string>Dopasowanie dzwonka (BELL), \u0007</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\A</string>
+			<key>des</key>
+			<string>Dopasowanie na początku wejścia. Różni się od ^ tym, że \A nie dopasuje po nowej linii wewnątrz wejścia.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, outside of a [Set]</string>
+			<key>des</key>
+			<string>Dopasowanie, jeśli obecna pozycja jest granicą słowa. Granice występują na przejściach między znakami słownymi (\w) i niesłownymi (\W), z pominięciem znaków łączących. Dla lepszych granic słów zobacz useUnicodeWordBoundaries.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\b, within a [Set]</string>
+			<key>des</key>
+			<string>Dopasowanie znaku BACKSPACE, \u0008.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\B</string>
+			<key>des</key>
+			<string>Dopasowanie, jeśli obecna pozycja nie jest granicą słowa.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\cX</string>
+			<key>des</key>
+			<string>Dopasowanie znaku control-X</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\d</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego znaku z kategorii Unicode Nd (Liczba, cyfra dziesiętna).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\D</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego znaku, który nie jest cyfrą dziesiętną.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\e</string>
+			<key>des</key>
+			<string>Dopasowanie znaku ESCAPE, \u001B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\E</string>
+			<key>des</key>
+			<string>Kończy sekwencję cytowaną \Q ... \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\f</string>
+			<key>des</key>
+			<string>Dopasowanie znaku FORM FEED, \u000C.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\G</string>
+			<key>des</key>
+			<string>Dopasowanie, jeśli obecna pozycja znajduje się na końcu poprzedniego dopasowania.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Dopasowanie znaku LINE FEED, \u000A.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\N{UNICODE CHARACTER NAME}</string>
+			<key>des</key>
+			<string>Dopasowanie nazwanego znaku.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\p{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego znaku o określonej właściwości Unicode.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\P{UNICODE PROPERTY NAME}</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego znaku niemającego określonej właściwości Unicode.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Q</string>
+			<key>des</key>
+			<string>Cytuje wszystkie następne znaki aż do \E.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\r</string>
+			<key>des</key>
+			<string>Dopasowanie znaku CARRIAGE RETURN, \u000D.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\s</string>
+			<key>des</key>
+			<string>Dopasowanie białego znaku. Białe znaki to [\t\n\f\r\p{Z}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\S</string>
+			<key>des</key>
+			<string>Dopasowanie znaku niebędącego białym znakiem.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\t</string>
+			<key>des</key>
+			<string>Dopasowanie tabulacji poziomej, \u0009.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\uhhhh</string>
+			<key>des</key>
+			<string>Dopasowanie znaku o wartości szesnastkowej hhhh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Uhhhhhhhh</string>
+			<key>des</key>
+			<string>Dopasowanie znaku o wartości szesnastkowej hhhhhhhh. Należy podać dokładnie osiem cyfr szesnastkowych, mimo że największym punktem kodowym Unicode jest \U0010ffff.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\w</string>
+			<key>des</key>
+			<string>Dopasowanie znaku słowa. Znaki słowa to [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\W</string>
+			<key>des</key>
+			<string>Dopasowanie znaku niebędącego znakiem słowa.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\x{hhhh}</string>
+			<key>des</key>
+			<string>Dopasowanie znaku o wartości szesnastkowej hhhh. Można podać od jednej do sześciu cyfr szesnastkowych.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\xhh</string>
+			<key>des</key>
+			<string>Dopasowanie znaku o dwucyfrowej wartości szesnastkowej hh.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\X</string>
+			<key>des</key>
+			<string>Dopasowanie klastra grafemów.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\Z</string>
+			<key>des</key>
+			<string>Dopasowanie, jeśli obecna pozycja znajduje się na końcu wejścia, ale przed końcowym separatorem linii, jeśli taki istnieje.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\z</string>
+			<key>des</key>
+			<string>Dopasowanie, jeśli obecna pozycja znajduje się na końcu wejścia.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\n</string>
+			<key>des</key>
+			<string>Referencja wsteczna. Dopasowuje to, co dopasowała n-ta grupa przechwytująca. n musi być liczbą ≥ 1 i ≤ całkowitej liczbie grup przechwytujących w rzędzie.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\0ooo</string>
+			<key>des</key>
+			<string>Dopasowanie znaku ósemkowego. ooo to od jednej do trzech cyfr ósemkowych. 0377 to największy dozwolony znak ósemkowy. Wymagane jest zero wiodące; odróżnia ono stałe ósemkowe od referencji wstecznych.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>[pattern]</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego pojedynczego znaku z wzorca.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>.</string>
+			<key>des</key>
+			<string>Dopasowanie dowolnego znaku.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>^</string>
+			<key>des</key>
+			<string>Dopasowanie na początku linii.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>$</string>
+			<key>des</key>
+			<string>Dopasowanie na końcu linii.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>\</string>
+			<key>des</key>
+			<string>Cytuje następny znak. Znaki, które muszą być cytowane, aby być traktowane dosłownie, to * ? + [ ( ) { } ^ $ | \ . /</string>
+		</dict>
+	</array>
+	<key>operators</key>
+	<array>
+		<dict>
+			<key>exp</key>
+			<string>|</string>
+			<key>des</key>
+			<string>Alternatywa. A|B dopasowuje albo A, albo B.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*</string>
+			<key>des</key>
+			<string>Dopasowanie 0 lub więcej razy. Dopasowuje tak wiele razy, jak to możliwe.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+</string>
+			<key>des</key>
+			<string>Dopasowanie 1 lub więcej razy. Dopasowuje tak wiele razy, jak to możliwe.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?</string>
+			<key>des</key>
+			<string>Dopasowanie zero lub jeden raz. Preferuje jeden.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}</string>
+			<key>des</key>
+			<string>Dopasowanie dokładnie n razy.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}</string>
+			<key>des</key>
+			<string>Dopasowanie co najmniej n razy. Dopasowuje tak wiele razy, jak to możliwe.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}</string>
+			<key>des</key>
+			<string>Dopasowanie od n do m razy. Dopasowuje tak wiele razy, jak to możliwe, ale nie więcej niż m.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*?</string>
+			<key>des</key>
+			<string>Dopasowanie 0 lub więcej razy. Dopasowuje tak mało razy, jak to możliwe.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>+?</string>
+			<key>des</key>
+			<string>Dopasowanie 1 lub więcej razy. Dopasowuje tak mało razy, jak to możliwe.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>??</string>
+			<key>des</key>
+			<string>Dopasowanie zero lub jeden raz. Preferuje zero.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}?</string>
+			<key>des</key>
+			<string>Dopasowanie dokładnie n razy.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}?</string>
+			<key>des</key>
+			<string>Dopasowanie co najmniej n razy, ale nie więcej niż wymaga dopasowanie całego wzorca.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}?</string>
+			<key>des</key>
+			<string>Dopasowanie od n do m razy. Dopasowuje tak mało razy, jak to możliwe, ale nie mniej niż n.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>*+</string>
+			<key>des</key>
+			<string>Dopasowanie 0 lub więcej razy. Dopasowuje tak wiele razy, jak to możliwe przy pierwszym napotkaniu, nie próbuje ponownie z mniejszą liczbą, nawet jeśli całe dopasowanie się nie powiedzie (dopasowanie zachłanne/posesywne).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>++</string>
+			<key>des</key>
+			<string>Dopasowanie 1 lub więcej razy. Dopasowanie posesywne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>?+</string>
+			<key>des</key>
+			<string>Dopasowanie zero lub jeden raz. Dopasowanie posesywne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n}+</string>
+			<key>des</key>
+			<string>Dopasowanie dokładnie n razy.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,}+</string>
+			<key>des</key>
+			<string>Dopasowanie co najmniej n razy. Dopasowanie posesywne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>{n,m}+</string>
+			<key>des</key>
+			<string>Dopasowanie od n do m razy. Dopasowanie posesywne.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(...)</string>
+			<key>des</key>
+			<string>Nawiasy przechwytujące. Zakres wejścia, który pasował do podwyrażenia w nawiasach, jest dostępny po dopasowaniu.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?:...)</string>
+			<key>des</key>
+			<string>Nawiasy nieprzechwytujące. Grupuje zawarty wzorzec, ale nie zapewnia przechwytywania dopasowanego tekstu. Nieco bardziej wydajne niż nawiasy przechwytujące.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&gt;...)</string>
+			<key>des</key>
+			<string>Nawiasy dopasowania atomowego. Wypróbowywane jest tylko pierwsze dopasowanie podwyrażenia w nawiasach; jeśli nie prowadzi ono do dopasowania całego wzorca, wyszukiwanie jest cofane do pozycji przed &quot;(?&gt;&quot;</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?# ... )</string>
+			<key>des</key>
+			<string>Komentarz o dowolnym formacie (?# komentarz ).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?= ... )</string>
+			<key>des</key>
+			<string>Asercja look-ahead (wyprzedzająca). Prawda, jeśli wzorzec w nawiasach pasuje w bieżącej pozycji wejściowej, ale nie przesuwa pozycji wejściowej.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?! ... )</string>
+			<key>des</key>
+			<string>Negatywna asercja look-ahead. Prawda, jeśli wzorzec w nawiasach nie pasuje w bieżącej pozycji wejściowej. Nie przesuwa pozycji wejściowej.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;= ... )</string>
+			<key>des</key>
+			<string>Asercja look-behind (wsteczna). Prawda, jeśli wzorzec w nawiasach pasuje do tekstu poprzedzającego bieżącą pozycję wejściową, przy czym ostatni znak dopasowania jest znakiem wejściowym tuż przed bieżącą pozycją. Nie zmienia pozycji wejściowej. Długość możliwych ciągów pasujących do wzorca look-behind nie może być nieograniczona (brak operatorów * lub +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?&lt;! ... )</string>
+			<key>des</key>
+			<string>Negatywna asercja look-behind. Prawda, jeśli wzorzec w nawiasach nie pasuje do tekstu poprzedzającego bieżącą pozycję wejściową, przy czym ostatni znak dopasowania jest znakiem wejściowym tuż przed bieżącą pozycją. Nie zmienia pozycji wejściowej. Długość możliwych ciągów pasujących do wzorca look-behind nie może być nieograniczona (brak operatorów * lub +).</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx: ... )</string>
+			<key>des</key>
+			<string>Ustawienia flag. Ewaluuje wyrażenie w nawiasach z włączonymi lub wyłączonymi (-) określonymi flagami. Flagi są zdefiniowane w Opcjach Flag.</string>
+		</dict>
+		<dict>
+			<key>exp</key>
+			<string>(?ismwx-ismwx)</string>
+			<key>des</key>
+			<string>Ustawienia flag. Zmienia ustawienia flag. Zmiany dotyczą części wzorca następującej po ustawieniu. Na przykład (?i) zmienia na dopasowanie niewrażliwe na wielkość liter. Flagi są zdefiniowane w Opcjach Flag.</string>
+		</dict>
+	</array>
+</dict>
+</plist>
