@@ -17,7 +17,8 @@ struct AboutView: View {
           feedbackEmail: "lexrus@gmail.com",
           appStoreID: "1511763524",
           privacyPolicy: URL(string: "https://lex.sh/regexplus/privacypolicy")!,
-          copyrightText: "©2025 lex.sh"
+          copyrightText: "©2026 lex.sh",
+          appsShowcaseURL: URL(string: "https://lex.sh/apps/apps.json")
         )
         .background(Color.init(white: 0.5, opacity: 0.1))
         .navigationBarTitleDisplayMode(.inline)
