@@ -1,5 +1,4 @@
-Nouveautés dans RegEx+ :
+Quoi de neuf dans RegEx+ :
 
-• Ajout de raccourcis clavier pour insérer les caractères d'expressions régulières courants - vous pouvez maintenant insérer rapidement des métacaractères et des opérateurs avec de simples combinaisons de touches
-• Optimisations des performances pour une meilleure réactivité de l'application
-• Corrections de bugs et améliorations de la stabilité
+• Ajout de la prise en charge des langues française, italienne, coréenne, néerlandaise et polonaise.
+• Optimisations des performances et améliorations de la stabilité.

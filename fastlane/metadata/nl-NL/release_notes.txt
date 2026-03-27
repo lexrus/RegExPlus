@@ -1,5 +1,4 @@
-Wat is nieuw in RegEx+:
+Wat is er nieuw in RegEx+:
 
-• Sneltoetsen toegevoegd voor het invoegen van veelvoorkomende tekens voor reguliere expressies - voeg nu snel metatekens en operatoren in met eenvoudige toetscombinaties.
-• Prestatieoptimalisaties voor een snellere app.
-• Bugfixes en stabiliteitsverbeteringen.
+• Ondersteuning voor de Franse, Italiaanse, Koreaanse, Nederlandse en Poolse taal toegevoegd.
+• Prestatieoptimalisaties en stabiliteitsverbeteringen.
