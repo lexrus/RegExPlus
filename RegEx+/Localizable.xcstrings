@@ -326,13 +326,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Groß-\/Kleinschreibung ignorieren"
+            "value" : "Groß-/Kleinschreibung ignorieren"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Insensible a mayúsculas\/minúsculas"
+            "value" : "Insensible a mayúsculas/minúsculas"
           }
         },
         "fr" : {
@@ -344,7 +344,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ignora maiuscole\/minuscole"
+            "value" : "Ignora maiuscole/minuscole"
           }
         },
         "ja" : {
@@ -833,6 +833,12 @@
         }
       }
     },
+    "Enter a regular expression to see the flow diagram" : {
+
+    },
+    "Flow Diagram" : {
+
+    },
     "Ignore Metacharacters" : {
       "localizations" : {
         "de" : {
@@ -1280,6 +1286,9 @@
           }
         }
       }
+    },
+    "OR" : {
+
     },
     "Price: $$$1\\.$2\\n" : {
       "localizations" : {

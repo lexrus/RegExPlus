@@ -21,12 +21,14 @@ struct UITextViewWrapper: UIViewRepresentable {
     var onDone: (() -> Void)?
     @Binding var coordinator: Coordinator?
     var showShortcutBar: Bool
+    var highlightingMode: RegExTextHighlightingMode
     
     private let syntaxHighlighter = RegExSyntaxHighlighter()
 
     func makeUIView(context: UIViewRepresentableContext<UITextViewWrapper>) -> UITextView {
         let tv = UITextView()
         tv.delegate = context.coordinator
+        syntaxHighlighter.highlightingMode = highlightingMode
         tv.textStorage.delegate = syntaxHighlighter
 
         let font = UIFont.preferredFont(forTextStyle: .body)
@@ -64,16 +66,15 @@ struct UITextViewWrapper: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UITextView, context: UIViewRepresentableContext<UITextViewWrapper>) {
-        guard uiView.text != text else {
-            return
-        }
-
         uiView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         uiView.textContainer.lineBreakMode = .byCharWrapping
-        uiView.text = text
-        
+        if uiView.text != text {
+            uiView.text = text
+        }
+
         syntaxHighlighter.textStorage = uiView.textStorage
-        syntaxHighlighter.highlightRegularExpression()
+        syntaxHighlighter.highlightingMode = highlightingMode
+        syntaxHighlighter.highlightRegularExpression(force: true)
         
         // Calculate height synchronously since we're already on the main thread
         UITextViewWrapper.recalculateHeight(view: uiView, result: $calculatedHeight)
@@ -128,6 +129,7 @@ struct RegExTextView: View, Equatable {
     private var placeholder: String
     private var onCommit: (() -> Void)?
     private var showShortcutBar: Bool
+    private var highlightingMode: RegExTextHighlightingMode
 
     @Binding private var text: String
     private var internalText: Binding<String> {
@@ -141,11 +143,18 @@ struct RegExTextView: View, Equatable {
     @State private var showingPlaceholder = false
     @State private var coordinator: UITextViewWrapper.Coordinator?
 
-    init (_ placeholder: String = "", text: Binding<String>, onCommit: (() -> Void)? = nil, showShortcutBar: Bool = false) {
+    init (
+        _ placeholder: String = "",
+        text: Binding<String>,
+        onCommit: (() -> Void)? = nil,
+        showShortcutBar: Bool = false,
+        highlightingMode: RegExTextHighlightingMode = .regularExpression([])
+    ) {
         self.placeholder = placeholder
         self.onCommit = onCommit
         self._text = text
         self.showShortcutBar = showShortcutBar
+        self.highlightingMode = highlightingMode
         self._showingPlaceholder = State<Bool>(initialValue: text.wrappedValue.isEmpty)
     }
 
@@ -155,7 +164,8 @@ struct RegExTextView: View, Equatable {
             calculatedHeight: $dynamicHeight,
             onDone: onCommit,
             coordinator: $coordinator,
-            showShortcutBar: showShortcutBar
+            showShortcutBar: showShortcutBar,
+            highlightingMode: highlightingMode
         )
         .frame(minHeight: dynamicHeight, maxHeight: dynamicHeight)
         .background(placeholderView, alignment: .topLeading)
@@ -173,7 +183,7 @@ struct RegExTextView: View, Equatable {
     }
 
     static func == (lhs: RegExTextView, rhs: RegExTextView) -> Bool {
-        lhs.text == rhs.text
+        lhs.text == rhs.text && lhs.highlightingMode == rhs.highlightingMode
     }
 
 }

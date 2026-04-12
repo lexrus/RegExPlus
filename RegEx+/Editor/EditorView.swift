@@ -18,6 +18,7 @@ struct EditorView: View, Equatable {
     @StateObject private var viewModel = EditorViewModel()
     @State private var isSharePresented = false
     @State private var copyButtonText = "Copy"
+    @State private var isFlowViewVisible = false
 
     init(regEx: RegEx) {
         self.regEx = regEx
@@ -33,6 +34,13 @@ struct EditorView: View, Equatable {
                     }
 
                     RegExTextViewSection(regEx: regExBinding)
+
+                    Section(header: FlowViewHeaderView(isVisible: $isFlowViewVisible)) {
+                        if isFlowViewVisible {
+                            RegExFlowView(pattern: regExBinding.wrappedValue.raw)
+                                .frame(minHeight: 80)
+                        }
+                    }
 
                     Section(header: SampleHeaderView(count: viewModel.matches.count)) {
                         MatchesTextView(
@@ -142,7 +150,12 @@ private struct RegExTextViewSection: View {
 #if targetEnvironment(macCatalyst)
 
             HStack {
-                RegExTextView("Type RegEx here", text: $regEx.raw, showShortcutBar: false)
+                RegExTextView(
+                    "Type RegEx here",
+                    text: $regEx.raw,
+                    showShortcutBar: false,
+                    highlightingMode: .regularExpression(regEx.regularExpressionOptions)
+                )
                     .equatable()
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
@@ -152,7 +165,12 @@ private struct RegExTextViewSection: View {
 
 #else
 
-            RegExTextView("Type RegEx here", text: $regEx.raw, showShortcutBar: true)
+            RegExTextView(
+                "Type RegEx here",
+                text: $regEx.raw,
+                showShortcutBar: true,
+                highlightingMode: .regularExpression(regEx.regularExpressionOptions)
+            )
                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 5))
 
 #endif
@@ -285,7 +303,12 @@ private struct SubstitutionSection: View {
             TextField("Price: $$$1\\.$2\\n", text: $regExBinding.substitution)
                 .padding(kTextFieldPadding)
 #else
-            RegExTextView("Price: $$$1\\.$2\\n", text: $regExBinding.substitution, showShortcutBar: true)
+            RegExTextView(
+                "Price: $$$1\\.$2\\n",
+                text: $regExBinding.substitution,
+                showShortcutBar: true,
+                highlightingMode: .plainText
+            )
                 .padding(kTextFieldPadding)
 #endif
         }
@@ -313,5 +336,26 @@ private struct SubstitutionSection: View {
                 }
             }
         }
+    }
+}
+
+private struct FlowViewHeaderView: View {
+    @Binding var isVisible: Bool
+    
+    var body: some View {
+        Button(action: {
+            withAnimation {
+                isVisible.toggle()
+            }
+        }) {
+            HStack {
+                Text("Flow Diagram")
+                Spacer()
+                Image(systemName: isVisible ? "chevron.down" : "chevron.right")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .foregroundColor(isVisible ? .primary : .accentColor)
     }
 }

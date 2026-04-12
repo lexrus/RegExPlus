@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B98B5427488929CF4B9104F /* RegExFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3E4B7BCD55ACE7E2C6A55 /* RegExFlowView.swift */; };
 		D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D709006B245DB72C00326016 /* CloudKit.framework */; };
 		D7090092245DB87C00326016 /* RegEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7090090245DB87C00326016 /* RegEx.xcdatamodeld */; };
 		D71871E6245EE9AC001F1E4E /* RegExFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71871E5245EE9AC001F1E4E /* RegExFetch.swift */; };
@@ -36,9 +37,11 @@
 		D7CCA7EF244E041000D81C74 /* CheatSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CCA7EE244E041000D81C74 /* CheatSheetView.swift */; };
 		D7DC514A2529645F00A495E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC51492529645F00A495E2 /* SearchView.swift */; };
 		D7EF735A2453E7FB005974F0 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF73592453E7FB005974F0 /* EditorViewModel.swift */; };
+		D7F100012F100001002ACA56 /* _RegexParser in Frameworks */ = {isa = PBXBuildFile; productRef = D7F100032F100001002ACA56 /* _RegexParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73E3E4B7BCD55ACE7E2C6A55 /* RegExFlowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegExFlowView.swift; sourceTree = "<group>"; };
 		D709006B245DB72C00326016 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D7090091245DB87C00326016 /* RegEx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegEx.xcdatamodel; sourceTree = "<group>"; };
 		D7129F942567FDFF0031D31B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 			files = (
 				D709006C245DB72C00326016 /* CloudKit.framework in Frameworks */,
 				D78E45502E4795E5002ACA56 /* AppAboutView in Frameworks */,
+				D7F100012F100001002ACA56 /* _RegexParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 			children = (
 				D7BB73F8244F47E400343AC5 /* EditorView.swift */,
 				D7EF73592453E7FB005974F0 /* EditorViewModel.swift */,
+				73E3E4B7BCD55ACE7E2C6A55 /* RegExFlowView.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			name = "RegEx+";
 			packageProductDependencies = (
 				D78E454F2E4795E5002ACA56 /* AppAboutView */,
+				D7F100032F100001002ACA56 /* _RegexParser */,
 			);
 			productName = RegExPro;
 			productReference = D7CCA7D1244E010D00D81C74 /* RegEx.app */;
@@ -283,6 +289,7 @@
 			mainGroup = D7CCA7C8244E010D00D81C74;
 			packageReferences = (
 				D78E454E2E4795E5002ACA56 /* XCRemoteSwiftPackageReference "AppAboutView" */,
+				D7F100022F100001002ACA56 /* XCRemoteSwiftPackageReference "swift-experimental-string-processing" */,
 			);
 			productRefGroup = D7CCA7D2244E010D00D81C74 /* Products */;
 			projectDirPath = "";
@@ -356,6 +363,7 @@
 				D75902AD2513C6300032013F /* AppDelegate.swift in Sources */,
 				D731F650245F053A00EEE17F /* LibraryView+Data.swift in Sources */,
 				D7CCA7D9244E010D00D81C74 /* HomeView.swift in Sources */,
+				2B98B5427488929CF4B9104F /* RegExFlowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +617,14 @@
 				minimumVersion = 0.0.4;
 			};
 		};
+		D7F100022F100001002ACA56 /* XCRemoteSwiftPackageReference "swift-experimental-string-processing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftlang/swift-experimental-string-processing";
+			requirement = {
+				kind = revision;
+				revision = e3f7b258f75a42b78624972131a0175cb0b662da;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -616,6 +632,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D78E454E2E4795E5002ACA56 /* XCRemoteSwiftPackageReference "AppAboutView" */;
 			productName = AppAboutView;
+		};
+		D7F100032F100001002ACA56 /* _RegexParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7F100022F100001002ACA56 /* XCRemoteSwiftPackageReference "swift-experimental-string-processing" */;
+			productName = _RegexParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 
